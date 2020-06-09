@@ -1,0 +1,15 @@
+.button {
+    background-color: "#2687FF";
+    border-bottom-color: "#395980";
+    border-bottom-width: .6rem;
+    border-radius: 5;
+    display: flex;
+    justify-content: "center";
+    align-items: "center";
+    box-shadow: 0 5 rgba(0, 0, 0, .2);
+}
+
+.button:hover {
+    border-bottom-width: .3rem;
+    box-shadow: 0 3 rgba(0, 0, 0, .2);
+}
