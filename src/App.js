@@ -1,9 +1,13 @@
 import React from 'react';
+import { useStore } from './hooks/UseStore';
 
 function App() {
+  const store = useStore();
   return (
     <div className="App">
-      Hello world!
+      {store.arts.map(art => (
+          <p key={art.name}>{art.name}</p>
+      ))}
     </div>
   );
 }
