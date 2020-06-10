@@ -4,6 +4,7 @@ import { useStore } from './hooks/UseStore';
 import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
 import Characters from './components/Screens/Characters/Characters';
+import Camera from './components/Screens/Camera/QRCode';
 
 function App() {
   const store = useStore();
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/characters">
           <Characters />
+        </Route>
+        <Route path="/camera">
+          <Camera />
         </Route>
         <Route path="/">
           <Home />

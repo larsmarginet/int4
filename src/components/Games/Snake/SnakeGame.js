@@ -141,7 +141,7 @@ const getRandomCoordinates = () => {
                                 }} 
                                 pressed={"buttonPress"}
                                 unpress={"button"} 
-                                content={"start"} 
+                                content={<span className={style.btnText}>start</span>} 
                                 height={86}/>
                         </div>}
                        
@@ -152,8 +152,8 @@ const getRandomCoordinates = () => {
                     <div className={style.btnUp} >
                         <Button
                             action={() => this.setState({direction: 'UP'})}
-                            pressed={"buttonPress"}
-                            unpress={"button"} 
+                            pressed={"squareButtonPress"}
+                            unpress={"squareButton"} 
                             content={
                                 <img className={style.up} alt="arrow" src="./assets/arrow.svg" />
                             } 
@@ -162,8 +162,8 @@ const getRandomCoordinates = () => {
                     <div className={style.btnLeft}>
                         <Button 
                             action={() => this.setState({direction: 'LEFT'})} 
-                            pressed={"buttonPress"}
-                            unpress={"button"} 
+                            pressed={"squareButtonPress"}
+                            unpress={"squareButton"} 
                             content={
                                 <img className={style.left} alt="arrow" src="./assets/arrow.svg" />
                             } 
@@ -172,8 +172,8 @@ const getRandomCoordinates = () => {
                     <div  className={style.btnDown}>         
                         <Button 
                             action={() => this.setState({direction: 'DOWN'})} 
-                            pressed={"buttonPress"}
-                            unpress={"button"} 
+                            pressed={"squareButtonPress"}
+                            unpress={"squareButton"} 
                             content={
                                 <img className={style.down} alt="arrow" src="./assets/arrow.svg" />
                             } 
@@ -182,8 +182,8 @@ const getRandomCoordinates = () => {
                     <div  className={style.btnRight}>
                         <Button 
                             action={() => this.setState({direction: 'RIGHT'})} 
-                            pressed={"buttonPress"}
-                            unpress={"button"} 
+                            pressed={"squareButtonPress"}
+                            unpress={"squareButton"} 
                             content={
                                 <img alt="arrow" src="./assets/arrow.svg" />
                             } 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import style from "./Button.module.css";
 
 const Button = ({ height, width, pressed, unpress, content, action}) => {
+    console.log(pressed);
     const [press, setPress] = useState(false);
 
     return (

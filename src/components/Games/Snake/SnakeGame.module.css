@@ -54,3 +54,7 @@
     transform: rotate(180deg);
 }
 
+.btnText {
+    composes: buttonText from "../../../styles/components.module.css";
+}
+

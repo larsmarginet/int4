@@ -1,0 +1,59 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue from tokens;
+
+.camera {
+    height: calc(100vh - 9.1rem);
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    height: calc(100vh - 20rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomBar {
+    background-color: mainBlue;
+    height: 9rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: .4rem solid shadeBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.succesMessage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.succesButton {
+    grid-column: 3/4;
+    justify-self: end;
+    margin-right: 3rem;
+}
+
+.succesWrapper {
+    grid-column: 2/3;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.btnText {
+    composes: buttonText from "../../../styles/components.module.css";
+}

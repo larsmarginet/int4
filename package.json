@@ -6,14 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "deepcopy": "^2.0.0",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-qr-scanner": "^0.0.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "uuid": "^8.1.0",
-    "deepcopy": "^2.0.0"
+    "uuid": "^8.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
