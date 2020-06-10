@@ -1,12 +1,12 @@
 import React from "react";
 
-import SnakeGame from '../Games/Snake/SnakeGame';
+import MemoryGame from '../Games/Memory/MemoryGame';
 
 
 const Home = () => {
     return (
         <>
-        <SnakeGame />
+        <MemoryGame />
         </>
     )
 }
