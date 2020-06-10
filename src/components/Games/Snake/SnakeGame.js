@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from "./SnakeGame.module.css"
 import Snake from "./components/Snake";
 import Food from "./components/Food";
-import Button from "../../Ui/Button";
+import Button from "../../Ui/Button/Button";
 
 const getRandomCoordinates = () => {
     let min = 1;

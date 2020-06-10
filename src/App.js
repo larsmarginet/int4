@@ -1,15 +1,24 @@
 import React from 'react';
+import { Switch, Route } from "react-router-dom";
 import { useStore } from './hooks/UseStore';
-import Home from './components/Screens/Home';
+import Navigation from "./components/Ui/Navigation/Navigation"
+import Home from './components/Screens/Home/Home';
+import Characters from './components/Screens/Characters/Characters';
 
 function App() {
   const store = useStore();
   return (
     <div className="App">
-      {store.arts.map(art => (
-          <p key={art.name}>{art.name}</p>
-      ))}
-      <Home />
+      <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+      <Switch>
+        <Route path="/characters">
+          <Characters />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+     
     </div>
   );
 }

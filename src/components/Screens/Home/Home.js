@@ -1,6 +1,6 @@
 import React from "react";
 
-import MemoryGame from '../Games/Memory/MemoryGame';
+import MemoryGame from '../../Games/Memory/MemoryGame';
 
 
 const Home = () => {

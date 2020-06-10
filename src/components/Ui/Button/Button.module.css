@@ -1,0 +1,23 @@
+.button {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.press {
+    margin-left: .4rem;
+}
+
+.text {
+    position: absolute;
+}
+
+.svg {
+    width:100%;
+}

@@ -15,5 +15,5 @@
 	display: grid;
 	grid-template-columns: repeat(6, auto);
 	grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1remr;
+	grid-gap: 1remr;
 }
