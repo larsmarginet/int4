@@ -3,7 +3,6 @@ import style from "./SnakeGame.module.css"
 import Snake from "./components/Snake";
 import Food from "./components/Food";
 import Button from "../../Ui/Button";
-import { useObserver } from 'mobx-react-lite';
 
 const getRandomCoordinates = () => {
     let min = 1;
@@ -125,7 +124,6 @@ const getRandomCoordinates = () => {
     }
   
     onGameOver() {
-      //alert(`Game Over. Snake length is ${this.state.snakeDots.length}`);
         this.setState(initialState)
         this.setState({start: true})
     }
