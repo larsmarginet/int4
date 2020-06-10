@@ -1,0 +1,56 @@
+.gameArea {
+    position: relative;
+    margin: 5rem auto;
+    background-image: url("./components/art.jpg");
+    background-size: cover;
+    width: 60rem;
+    height: 60rem;
+    border: .5rem solid #F87980;
+}
+
+.startGame {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.btnUp {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.btnLeft {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.btnDown {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.btnRight {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.up {
+    transform: rotate(-90deg);
+}
+
+.down {
+    transform: rotate(90deg);
+}
+
+.left {
+    transform: rotate(180deg);
+}
+

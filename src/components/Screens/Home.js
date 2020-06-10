@@ -1,11 +1,13 @@
 import React from "react";
 
-import Button from '../Ui/Button';
+import SnakeGame from '../Games/Snake/SnakeGame';
 
 
 const Home = () => {
     return (
-        <Button width={120} height={50} content={"click me!"} />
+        <>
+        <SnakeGame />
+        </>
     )
 }
 
