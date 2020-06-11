@@ -7,6 +7,8 @@ import LevelModel from "../models/LevelModel";
 // De Kruisoprichting
 const level1 = new LevelModel({
     name: "Deel 1",
+    done: true,
+    unlocked: true
 })
 
 const level2 = new LevelModel({
@@ -21,9 +23,25 @@ const level4 = new LevelModel({
     name: "Deel 4",
 })
 
+const level5 = new LevelModel({
+    name: "Deel 5",
+})
+
+const level6 = new LevelModel({
+    name: "Deel 6",
+})
+
+const level7 = new LevelModel({
+    name: "Deel 7",
+})
+
+const level8 = new LevelModel({
+    name: "Deel 8",
+})
+
 const art1 = new ArtModel({
     name: "De Kruisoprichting",
-    levels: [level1, level2, level3, level4], 
+    levels: [level1, level2, level3, level4, level5, level6, level7, level8], 
     price: 1000
 })
 

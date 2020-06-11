@@ -19,8 +19,6 @@ class Store {
 
   updateMoney(amount) {
     this.money = amount;
-    console.log(this.money);
-    console.log(this.arts[0].price)
   }
 
 }

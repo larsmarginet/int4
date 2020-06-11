@@ -62,7 +62,7 @@ class CameraLegacy extends Component {
             width={305} /> 
             :
             <>
-                <Link to={'/ChapterOne'}>
+                <Link to={'/MacroMap'}>
                     <Button
                         button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 
@@ -71,9 +71,7 @@ class CameraLegacy extends Component {
                 </Link>
                 <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 100, height: 100}} autoplay></lottie-player>
             </>
-            
         }
-        
         <p className={style.text}>{this.state.text}</p>
       </div>
     )

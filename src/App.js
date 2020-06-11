@@ -5,6 +5,7 @@ import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
 import Characters from './components/Screens/Characters/Characters';
 import Camera from './components/Screens/Camera/QRCode';
+import Overview from './components/Screens/Overview/Overview';
 import ChapterOne from './components/Chapters/ChapterOne/ChapterOne';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/camera">
           <Camera />
+        </Route>
+        <Route path="/Overview">
+          <Overview />
         </Route>
         <Route path="/ChapterOne">
           <ChapterOne />
