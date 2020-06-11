@@ -41,10 +41,9 @@ class Camera extends Component {
                     <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 70, height: 70}} autoplay></lottie-player>
                     <p className={style.btnText}>{this.state.text}</p>
                 </div>
-                <Link className={style.succesButton} to={'/'}>
+                <Link className={style.succesButton} to={'/Snake'}>
                     <Button
-                        pressed={"buttonPress"}
-                        unpress={"button"} 
+                        button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 
                         height={86}
                         width={305} />

@@ -1,3 +1,14 @@
+.home {
+    width: 100vw;
+    height: calc(100vh - 9.1rem);
+    display: block;
+    
+}
+
+.map {
+   border: 3rem solid blueviolet;
+}
+
 .homeButton {
     margin-top: 5rem;
     display: flex;

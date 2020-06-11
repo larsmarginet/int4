@@ -5,6 +5,7 @@ import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
 import Characters from './components/Screens/Characters/Characters';
 import Camera from './components/Screens/Camera/QRCode';
+import Snake from './components/Games/Snake/SnakeGame';
 
 function App() {
   const store = useStore();
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/camera">
           <Camera />
+        </Route>
+        <Route path="/Snake">
+          <Snake />
         </Route>
         <Route path="/">
           <Home />

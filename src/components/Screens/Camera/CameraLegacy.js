@@ -56,17 +56,15 @@ class CameraLegacy extends Component {
         />
         {this.state.result === 'noResult' ? <Button
             action={this.openImageDialog}
-            pressed={"buttonPress"}
-            unpress={"button"} 
+            button={"button"} 
             content={<span className={style.btnText}>scan</span>} 
             height={86}
             width={305} /> 
             :
             <>
-                <Link to={'/'}>
+                <Link to={'/Snake'}>
                     <Button
-                        pressed={"buttonPress"}
-                        unpress={"button"} 
+                        button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 
                         height={86}
                         width={305} />

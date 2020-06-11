@@ -12,8 +12,7 @@ const Navigation = ({ title, image }) => {
                 <li className={style.link}>
                     <Link to="/" >
                         <Button
-                            pressed={"homePress"}
-                            unpress={"home"} 
+                            button={"home"} 
                             height={56}
                             width={49}/>        
                     </Link>
@@ -21,8 +20,7 @@ const Navigation = ({ title, image }) => {
                 <li>
                     <Link to="characters">
                         <Button
-                            pressed={"characterPress"}
-                            unpress={"character"} 
+                            button={"character"}
                             height={49}
                             width={47}/>        
                     </Link>

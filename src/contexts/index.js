@@ -23,7 +23,8 @@ const level4 = new LevelModel({
 
 const art1 = new ArtModel({
     name: "De Kruisoprichting",
-    levels: [level1, level2, level3, level4]
+    levels: [level1, level2, level3, level4], 
+    price: 1000
 })
 
 
@@ -31,13 +32,15 @@ const art1 = new ArtModel({
 const art2 = new ArtModel({
     name: "Madonna met Kind",
     levels: [],
+    price: 1400
 })
 
 
-// Madonna bij de fontein
+// De dulle griet
 const art3 = new ArtModel({
-    name: "Madonna bij de fontein",
+    name: "De dulle griet",
     levels: [],
+    price: 2000
 })
 
 
