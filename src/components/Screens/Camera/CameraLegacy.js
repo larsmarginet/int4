@@ -62,7 +62,7 @@ class CameraLegacy extends Component {
             width={305} /> 
             :
             <>
-                <Link to={'/Snake'}>
+                <Link to={'/ChapterOne'}>
                     <Button
                         button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import style from "./Characters.module.css";
+import style from "./ChapterOne.module.css";
 import AnimatedText from '../../Ui/AnimatedText/AnimatedText';
 
 
-const Characters = () => {
+const ChapterOne = () => {
     const [anim, setAnim] = useState(true);
     let test = {}
     const scroll = e => {
@@ -23,4 +23,4 @@ const Characters = () => {
     )
 }
 
-export default Characters;
+export default ChapterOne;
