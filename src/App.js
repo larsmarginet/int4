@@ -6,6 +6,7 @@ import Home from './components/Screens/Home/Home';
 import Characters from './components/Screens/Characters/Characters';
 import Camera from './components/Screens/Camera/QRCode';
 import Overview from './components/Screens/Overview/Overview';
+import DetailedOverview from './components/Screens/DetailedOverview/DetailedOverview';
 import ChapterOne from './components/Chapters/ChapterOne/ChapterOne';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/Overview">
           <Overview />
+        </Route>
+        <Route path="/DetailedOverview">
+          <DetailedOverview />
         </Route>
         <Route path="/ChapterOne">
           <ChapterOne />

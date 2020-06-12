@@ -218,7 +218,7 @@ const MacroMap = ({ width, height }) => {
                 <ellipse cx="361" cy="334.893" rx="23" ry="20.5" fill="#DFDFDF"/>
                 {store.arts[0].levels[4].unlocked ? 
                 <g>
-                    <g filter="url(#filter3_d)" onClick={() => history.push('/MicroMap')}>
+                    <g filter="url(#filter3_d)" onClick={() => history.push('/DetailedOverview')}>
                         <ellipse cx="361" cy="332.893" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <filter id="filter3_d" x="340" y="315.393" width="42" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -231,7 +231,7 @@ const MacroMap = ({ width, height }) => {
                     </filter>
                 </g> : store.arts[0].levels[3].done ?
                 <g>
-                    <g filter="url(#filter3_d)" onClick={() => history.push('/MicroMap')}>
+                    <g filter="url(#filter3_d)" onClick={() => history.push('/DetailedOverview')}>
                         <ellipse cx="361" cy="332.893" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <filter id="filter3_d" x="340" y="315.393" width="42" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">

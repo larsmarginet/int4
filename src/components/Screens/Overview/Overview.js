@@ -17,7 +17,7 @@ function useWindowSize() {
   
 const Overview = () => {
     const [width, height] = useWindowSize();
-    const ratio = (height - 91)/width;
+    const ratio = (height - 81)/width;
     return (
         <section  >
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>

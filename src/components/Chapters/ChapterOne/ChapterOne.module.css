@@ -1,6 +1,6 @@
 .wrapper {
     width: 100%; 
-    height: calc(100vh - 9.1rem); 
+    height: calc(100vh - 8.1rem); 
     overflow-x: scroll; 
     overflow-y: hidden; 
     background-color: blueviolet;

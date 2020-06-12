@@ -13,26 +13,37 @@ const level1 = new LevelModel({
 
 const level2 = new LevelModel({
     name: "Deel 2",
+    done: true,
+    unlocked: true
 })
 
 const level3 = new LevelModel({
     name: "Deel 3",
+    done: true,
+    unlocked: true
 })
 
 const level4 = new LevelModel({
     name: "Deel 4",
+    done: true,
+    unlocked: true
 })
 
 const level5 = new LevelModel({
     name: "Deel 5",
+    done: true,
+    unlocked: true
 })
 
 const level6 = new LevelModel({
     name: "Deel 6",
+    done: true,
+    unlocked: true
 })
 
 const level7 = new LevelModel({
     name: "Deel 7",
+
 })
 
 const level8 = new LevelModel({

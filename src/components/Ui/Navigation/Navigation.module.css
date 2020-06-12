@@ -3,7 +3,7 @@
 
 .navigation {
     display: flex;
-    padding: 1rem 3rem;
+    padding: .5rem 3rem;
     background-color: mainYellow;
     border-bottom: .4rem solid shadeYellow;
     justify-content: space-between;
