@@ -1,29 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { useStore } from "../../../hooks/UseStore";
 import style from "./QRCode.module.css";
-import QrReader from 'react-qr-scanner'
+import QrReader from 'react-qr-scanner';
 import Button from '../../Ui/Button/Button';
 
 
 const Camera = () => {
+  const { id } = useParams();
+  const store = useStore();
+  const history = useHistory();
+
   const delay = 500;
   const [text, setText] = useState('Scan je kaartje');
   const [result, setResult] = useState('noResult');
-
-  const history = useHistory();
+  
+  const level = store.arts[0].resolveLevel(id);
+  const code = level.code;
 
   const handleScan = (result) => {
-    if(result){
+    if(result) {
+      if(result === code ){
         setText('succes!');
         setResult(result);
+        level.unlock();
+      } else if (result !== code) {
+        setText('Deze code is niet gelding voor dit level.');
       }
+    }
   }
   const handleError = (err) => {
     console.error(err)
   }
 
-    return(
+    return (
       <div className={style.camera}>
         <div className={style.button}>
               <Button
@@ -49,7 +60,7 @@ const Camera = () => {
                     <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 70, height: 70}} autoplay></lottie-player>
                     <p className={style.btnText}>{text}</p>
                 </div>
-                <Link className={style.succesButton} to={'/MacroMap'}>
+                <Link className={style.succesButton} to={`/${level.name}`}>
                     <Button
                         button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 

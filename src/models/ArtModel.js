@@ -15,6 +15,8 @@ class ArtModel {
   unlock() {
     this.unlocked = true;
   }
+
+  resolveLevel = id => this.levels.find(level => level.id === id);
 }
 
 decorate(ArtModel, {

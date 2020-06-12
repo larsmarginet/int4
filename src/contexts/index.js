@@ -6,48 +6,51 @@ import LevelModel from "../models/LevelModel";
 
 // De Kruisoprichting
 const level1 = new LevelModel({
-    name: "Deel 1",
+    name: "chapterOne",
+    code: "AAAAA11111",
     done: true,
     unlocked: true
 })
 
 const level2 = new LevelModel({
-    name: "Deel 2",
+    name: "chapterTwo",
+    code: "BBBBBB22222",
     done: true,
     unlocked: true
 })
 
 const level3 = new LevelModel({
-    name: "Deel 3",
-    done: true,
-    unlocked: true
+    name: "chapterThree",
+    code: "CCCCC33333"
 })
 
 const level4 = new LevelModel({
-    name: "Deel 4",
-    done: true,
-    unlocked: true
+    name: "chapterFour",
+    code: "DDDDD44444"
 })
 
 const level5 = new LevelModel({
-    name: "Deel 5",
+    name: "chapterFive",
+    code: "EEEEE55555",
     done: true,
     unlocked: true
 })
 
 const level6 = new LevelModel({
-    name: "Deel 6",
+    name: "chapterSix",
+    code: "FFFFF66666",
     done: true,
     unlocked: true
 })
 
 const level7 = new LevelModel({
-    name: "Deel 7",
-
+    name: "chapterSeven",
+    code: "GGGGG77777",
 })
 
 const level8 = new LevelModel({
-    name: "Deel 8",
+    name: "chapterEight",
+    code: "HHHHH88888",
 })
 
 const art1 = new ArtModel({

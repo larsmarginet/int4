@@ -1,11 +1,18 @@
 import React, { useRef, useState }from "react";
 import Lottie from 'react-lottie'
+import { useStore } from '../../../hooks/UseStore';
+import { useHistory } from 'react-router-dom';
 import style from "./ChapterOne.module.css";
 import AnimatedText from '../../Ui/AnimatedText/AnimatedText';
 import * as animation from "./animare.json";
 
 
 const ChapterOne = () => {
+    const store = useStore();
+    const history = useHistory();
+    if(store.arts[0].levels[0].unlocked === false) {
+        history.push('/');
+    } 
     const [anim, setAnim] = useState(true);
     const lottie = useRef();
     const scroll = (e) => {
