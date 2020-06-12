@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useRef, useState }from "react";
+import Lottie from 'react-lottie'
 import style from "./ChapterOne.module.css";
 import AnimatedText from '../../Ui/AnimatedText/AnimatedText';
+import * as animation from "./animare.json";
 
 
 const ChapterOne = () => {
     const [anim, setAnim] = useState(true);
-    let test = {}
-    const scroll = e => {
+    const lottie = useRef();
+    const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        console.log(container);
-        if (container > 520) { 
+        lottie.current.anim.goToAndStop(container); 
+        if (container > 3400) {
             setAnim(false);
-         }
+        }   
     }
+
+    const defaultOptions = {
+        loop: false,
+        autoplay: false,
+        animationData: animation.default,
+      };
+
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
-            <div className={style.characters}>
-                <p style={test} className={style.spacer}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div  className={style.characters}>
+                <Lottie ref={lottie} height={'90%'} options={defaultOptions}/>
+                <p className={style.spacer}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <AnimatedText paused={anim} text={"Hello world! It is me Lars"}/>
             </div>
         </section>

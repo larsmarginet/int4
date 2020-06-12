@@ -12,10 +12,12 @@
     "react": "^16.13.1",
     "react-animated-text": "^0.1.4",
     "react-dom": "^16.13.1",
+    "react-lottie": "^1.2.3",
     "react-pinch-zoom-pan": "^1.4.5",
     "react-qr-scanner": "^0.0.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "use-sound": "^1.0.2",
     "uuid": "^8.1.0"
   },
   "scripts": {

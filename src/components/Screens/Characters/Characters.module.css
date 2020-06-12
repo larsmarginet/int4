@@ -1,0 +1,21 @@
+.wrapper {
+    width: 100%; 
+    height: calc(100vh - 8.1rem); 
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    background-color: blueviolet;
+}
+
+.characters {
+    display: flex;
+    width: 500rem;
+    height: 100%;
+    color: white;
+    font-size: 5rem;
+} 
+
+.spacer {
+    width: 150rem;
+    padding: 2rem;
+    background-color: blue;
+}

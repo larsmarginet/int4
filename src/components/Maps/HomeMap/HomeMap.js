@@ -1,10 +1,21 @@
 import React from "react";
 import { useHistory } from "react-router-dom"
 import { useStore } from "../../../hooks/UseStore";
-
+import useSound from 'use-sound';
+import boopSfx from './sound.mp3'
 const HomeMap = ({ width, height }) => {
     let history = useHistory()
     const store = useStore();
+
+    const [play] = useSound(boopSfx);
+
+    const buy = (amount, art) => {
+        store.updateMoney(store.money - amount);
+        store.arts[art].unlock();
+        play();
+        // setTimeout(function(){ history.push('/Overview') }, 1000) ;
+    }
+
     return (
         <div style={{width:"100%", height: "100%", overflowX: "scroll"}}>
         <svg  width={width} height={height} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" >
@@ -104,12 +115,12 @@ const HomeMap = ({ width, height }) => {
             
 
             {/* De kruisoprichting */}
-            {store.arts[0].unlocked ? <g opacity=".8">
+            {store.arts[0].unlocked ? <g onClick={() => history.push('/Overview')}>
                     <path d="M232 460.465L333.314 459L334 491L233.028 490.023L232 460.465Z" fill="#2E5A9C"/>
                     <path d="M229 457.465L330.314 456L331 488L230.028 487.023L229 457.465Z" fill="#3F7AD3"/>
                     <text fill="#FFF1F0" fontSize="15" fontWeight="bold" letterSpacing="0em"><tspan x="243.496" y="477.5">Bekijk</tspan></text>
                 </g> : store.money >= store.arts[0].price ?  
-                <g onClick={() => history.push(`/Overview`)}>
+                <g onClick={() => buy(1000, 0)}>
                     <path d="M232 460.465L333.314 459L334 491L233.028 490.023L232 460.465Z" fill="#2E5A9C"/>
                     <path d="M229 457.465L330.314 456L331 488L230.028 487.023L229 457.465Z" fill="#3F7AD3"/>
                     <text fill="#FFF1F0" fontSize="15" fontWeight="bold" letterSpacing="0em"><tspan x="243.496" y="477.5">Ontgrendel</tspan></text>
@@ -124,7 +135,7 @@ const HomeMap = ({ width, height }) => {
             {store.arts[1].unlocked ? <g opacity=".8">
                 <path d="M656 357.465L757.314 356L758 388L657.028 387.023L656 357.465Z" fill="#2E5A9C"/>
                 <path d="M653 354.465L754.314 353L755 385L654.028 384.023L653 354.465Z" fill="#3F7AD3"/>
-                <text fill="#FFF1F0" fontSize="15" fontWeight="bold" letterSpacing="0em"><tspan x="667.496" y="374.5">Bekijk</tspan></text>
+                <text fill="#FFF1F0" fontSize="15" fontWeight="bold" letterSpacing="0em" textAlign="center"><tspan x="667.496" y="374.5">Bekijk</tspan></text>
             </g> : store.money >= store.arts[1].price ? 
             <g onClick={() => history.push(`/Overview`)}>
                 <path d="M656 357.465L757.314 356L758 388L657.028 387.023L656 357.465Z" fill="#2E5A9C"/>
@@ -141,7 +152,7 @@ const HomeMap = ({ width, height }) => {
             {store.arts[2].unlocked ? <g opacity=".8">
                 <path d="M409 256.465L510.314 255L511 287L410.028 286.023L409 256.465Z" fill="#2E5A9C"/>
                 <path d="M406 253.465L507.314 252L508 284L407.028 283.023L406 253.465Z" fill="#3F7AD3"/>
-                <text fill="#FFF1F0" fontWeight="bold" letterSpacing="0em"><tspan x="423.496" y="273.5">Bekijk</tspan></text>
+                <text fill="#FFF1F0" fontWeight="bold" letterSpacing="0em" textAlign="center"><tspan x="423.496" y="273.5">Bekijk</tspan></text>
             </g> : store.money >= store.arts[2].price ? 
             <g  onClick={() => history.push(`/Overview`)}>
                 <path d="M409 256.465L510.314 255L511 287L410.028 286.023L409 256.465Z" fill="#2E5A9C"/>
