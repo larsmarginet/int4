@@ -1,25 +1,35 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import QrReader from 'react-qr-scanner';
-import { Link } from 'react-router-dom';
-
-
+import { Link, useHistory, useParams } from 'react-router-dom';
+import { useStore } from "../../../hooks/UseStore";
 import style from "./QRCode.module.css";
 import Button from '../../Ui/Button/Button';
 
 
 
 const CameraLegacy = () => {
+  const { id } = useParams();
+  const store = useStore();
+  const history = useHistory();
+
   const delay = 500;
   const [text, setText] = useState('Scan je kaartje');
   const [result, setResult] = useState('noResult');
 
   const qrReader1 = React.createRef();
 
+  const level = store.arts[0].resolveLevel(id);
+  const code = level.code;
+
   const handleScan = (result) => {
     if(result){
-      setText('succes!')
-      setResult(result)
+      if(result === code ){
+        setText('succes!');
+        setResult(result);
+        level.unlock();
+      } else if (result !== code) {
+        setText('Deze code is niet gelding voor dit level.');
+      }
     } else {
       setText('Oeps... Er is iets fout gegaan. Probeer het opnieuw.')
     }
@@ -32,8 +42,6 @@ const CameraLegacy = () => {
   const openImageDialog = () => {
     qrReader1.current.openImageDialog()
   }
-
-  const history = useHistory();
 
     return (
       <div className={style.wrapper}>
@@ -67,7 +75,7 @@ const CameraLegacy = () => {
             width={305} /> 
             :
             <>
-                <Link to={'/MacroMap'}>
+                <Link to={`/${level.name}`}>
                     <Button
                         button={"button"} 
                         content={<span className={style.btnText}>Begin</span>} 

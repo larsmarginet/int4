@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { useStore } from "../../../hooks/UseStore";
 import style from "./QRCode.module.css";
 import QrReader from 'react-qr-scanner';
