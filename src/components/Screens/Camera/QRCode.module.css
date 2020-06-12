@@ -58,3 +58,20 @@
 .btnText {
     composes: buttonText from "../../../styles/components.module.css";
 }
+
+.button {
+    position: fixed;
+    top: 9.5rem;
+    left: 3rem;
+    z-index: 99;
+}
+
+.back {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 810px) {
+    .button {
+        left: 1rem;
+    }
+}

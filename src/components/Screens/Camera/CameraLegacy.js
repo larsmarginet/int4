@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import QrReader from 'react-qr-scanner';
 import { Link } from 'react-router-dom';
 
@@ -8,54 +9,58 @@ import Button from '../../Ui/Button/Button';
 
 
 
-class CameraLegacy extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      delay: 100,
-      result: 'noResult',
-      text: 'Scan je kaartje'
-    }
+const CameraLegacy = () => {
+  const delay = 500;
+  const [text, setText] = useState('Scan je kaartje');
+  const [result, setResult] = useState('noResult');
 
-    this.handleScan = this.handleScan.bind(this)
-    this.openImageDialog = this.openImageDialog.bind(this)
-  }
+  const qrReader1 = React.createRef();
 
-  handleScan(result){
+  const handleScan = (result) => {
     if(result){
-      this.setState({ result })
-      this.setState({ text: 'succes!' })
+      setText('succes!')
+      setResult(result)
     } else {
-        this.setState({ text: 'Oeps... Er is iets fout gegaan. Probeer het opnieuw.' })
+      setText('Oeps... Er is iets fout gegaan. Probeer het opnieuw.')
     }
   }
 
-  handleError(err){
+  const handleError = (err) => {
     console.error(err)
   }
 
-  openImageDialog() {
-    this.refs.qrReader1.openImageDialog()
+  const openImageDialog = () => {
+    qrReader1.current.openImageDialog()
   }
 
-  render(){
-    const previewStyle = {
-      height: 0,
-      width: 0,
-    }
+  const history = useHistory();
 
-    return(
+    return (
       <div className={style.wrapper}>
+        <div className={style.button}>
+              <Button
+                action={() => history.goBack()}
+                button={"square"} 
+                content={
+                    <svg className={style.back} width="71" height="36" viewBox="0 0 71 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M38.0377 22.7673L0.239083 26.7291L2.9839 7.83182L40.4752 10.5751L40.4752 0.211637L70.6504 16.3664L38.0377 35.874L38.0377 22.7673Z" fill="#FFDD66"/>
+                    </svg>
+                } 
+                height={86}/>
+            </div>
         <QrReader
-          ref="qrReader1"
-          delay={this.state.delay}
-          style={previewStyle}
-          onError={this.handleError}
-          onScan={this.handleScan}
+          ref={qrReader1}
+          delay={delay}
+          style={{
+            height: 0,
+            width: 0,
+          }}
+          onError={handleError}
+          onScan={handleScan}
           legacyMode
         />
-        {this.state.result === 'noResult' ? <Button
-            action={this.openImageDialog}
+        {result === 'noResult' ? <Button
+            action={openImageDialog}
             button={"button"} 
             content={<span className={style.btnText}>scan</span>} 
             height={86}
@@ -72,10 +77,9 @@ class CameraLegacy extends Component {
                 <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 100, height: 100}} autoplay></lottie-player>
             </>
         }
-        <p className={style.text}>{this.state.text}</p>
+        <p className={style.text}>{text}</p>
       </div>
     )
   }
-}
 
 export default CameraLegacy;
