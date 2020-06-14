@@ -10,6 +10,7 @@ import Button from '../../Ui/Button/Button';
 import * as buildingAnimation from "./building.json";
 import * as pigeonAnimation from "./pigeon.json";
 import * as lightsAnimation from "./lights.json";
+import * as mapAnimation from "./map.json";
 import pigeonSound from './pigeon.mp3';
 import SecretCode from "../../Games/SecretCode/SecretCode";
 
@@ -24,6 +25,7 @@ const ChapterOne = () => {
     const [play] = useSound(pigeonSound);
     const building = useRef();
     const pigeon = useRef();
+    const map = useRef();
     const [notification, setNotification] = useState(false);
     const [pigeonText, setPigeonText] = useState(false);
     const [pastorText, setPastorText] = useState(false);
@@ -37,7 +39,7 @@ const ChapterOne = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        // console.log(container);
+        console.log(container);
         if (container > 0 && container < 700) {
             //setAni(false)
         } 
@@ -58,6 +60,9 @@ const ChapterOne = () => {
         }
         if (container > 13600 && container < 16000) {
             setPosposThird(container)
+        } 
+        if (container > 17600 && container < 19600) {
+            map.current.anim.goToAndStop((container-17600)*2); 
         } 
     }
 
@@ -202,9 +207,12 @@ const ChapterOne = () => {
                 <div className={style.secretCodeWrapper}>
                     <SecretCode notification={() => setNotification(true)}/>
                 </div>
-                <img src="./assets/map.svg" alt="kaart" />
-                <img src="./assets/wall.svg" alt="muur" />
-                <Lottie ref={building} height={'100%'} width={'140rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                <Lottie ref={map} height={'100%'} width={'180rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 55}} options={{
+                    loop: false,
+                    autoplay: false,
+                    animationData: mapAnimation.default,
+                }}/>
+                <Lottie height={'100%'} width={'200rem'} isClickToPauseDisabled={true} style={{margin: 0, transform: 'scale(1.2) translateX(-400px)'}} options={{
                     loop: true,
                     autoplay: true,
                     animationData: lightsAnimation.default,
