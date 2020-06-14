@@ -18,18 +18,22 @@ import ChapterEight from './components/Chapters/ChapterEight/ChapterEight';
 function App() {
   return (
     <div className="App">
-      <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+     
       <Switch>
         <Route path="/characters">
+          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
           <Characters />
         </Route>
         <Route path="/camera/:id">
+          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
           <Camera />
         </Route>
         <Route path="/overview">
+          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
           <Overview />
         </Route>
         <Route path="/detailedOverview">
+          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
           <DetailedOverview />
         </Route>
         <Route path="/chapterOne">
@@ -57,6 +61,7 @@ function App() {
           <ChapterEight />
         </Route>
         <Route path="/">
+          <Navigation title={"Kaart"} image={"cross"}/>
           <Home />
         </Route>
       </Switch>

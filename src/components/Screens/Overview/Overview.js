@@ -1,22 +1,11 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React from 'react';
+import useWindowSize from "../../../hooks/useWindowSize";
 import MacroMap from "../../Maps/MacroMap/MacroMap"
 import {PinchView} from 'react-pinch-zoom-pan'
 
-function useWindowSize() {
-    const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
-      function updateSize() {
-        setSize([window.innerWidth, window.innerHeight]);
-      }
-      window.addEventListener('resize', updateSize);
-      updateSize();
-      return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-  }
   
 const Overview = () => {
-    const [width, height] = useWindowSize();
+  const {width, height} = useWindowSize();
     const ratio = (height - 81)/width;
     return (
         <section  >

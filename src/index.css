@@ -33,3 +33,10 @@ html {
           url(./styles/fonts/AlegreyaSans-Bold.woff2) format('woff2');
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'alegreya-sans-sc';
+  src:    url(./styles/fonts/AlegreyaSansSC-Bold.woff) format('woff'), 
+          url(./styles/fonts/AlegreyaSansSC-Bold.woff2) format('woff2');
+  font-weight: bold;
+}

@@ -7,6 +7,8 @@ import character from "./character.svg"
 import characterPress from "./characterPress.svg"
 import square from "./squareButton.svg"
 import squarePress from "./squareButtonPress.svg"
+import smallSquare from "./smallSquare.svg"
+import smallSquarePress from "./smallSquarePress.svg"
 
 import style from "./Button.module.css";
 
@@ -26,6 +28,9 @@ const Button = ({ height, width, button, content, action}) => {
     } else if (button === "square") {
         buttonUnpressed = square;
         buttonPressed = squarePress;
+    } else if (button === "smallSquare") {
+        buttonUnpressed = smallSquare;
+        buttonPressed = smallSquarePress;
     }
 
     return (

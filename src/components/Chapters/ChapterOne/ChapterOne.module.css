@@ -1,34 +1,198 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainYellow, mainRed, mainLight, shadeBrown from tokens;
+
 .wrapper {
     width: 100%; 
-    height: calc(100vh - 8.1rem); 
+    height: 100vh; 
     overflow-x: scroll; 
     overflow-y: hidden; 
-    background-color: blueviolet;
+    background-color: mainBlue;
 }
 
-.characters {
+.story {
     display: flex;
-    width: 500rem;
+    width: 2500rem;
     height: 100%;
     color: white;
+    justify-content: flex-start;
     font-size: 5rem;
 } 
 
-.spacer {
-    width: 150rem;
-    padding: 2rem;
-    background-color: blue;
+.notification {
+    position: absolute;
+    width: 20rem;
+    height: 7rem;
+    margin-top: 3rem;
+    background-image: url(./notif.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(200px, 0);
+    top: 0;
+    right: 0;
+    animation:moveOpen 4s;
+    color: mainYellow;
+    font-family: alegreya-sans-sc, sans-serif;
+    z-index: 999;
+}
+
+@keyframes moveOpen {
+  from {transform: translate(200px, 0);}
+  10% {transform: translate(-20px, 0);}
+  12% {transform: translate(-22px, 0);}
+  16% {transform: translate(-20px, 0);}
+  80% {transform: translate(-20px, 0);}
+  85% {transform: translate(-25px, 0);}
+  to {transform: translate(200px, 0);}
 }
 
 .button {
     position: fixed;
-    top: 9.5rem;
+    top: 3rem;
     left: 3rem;
-    z-index: 99;
+    z-index: 100;
 }
 
 .back {
     transform: rotate(180deg);
+}
+
+.title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: alegreya-sans-sc;
+    color: mainLight;
+    font-size: 6.8rem;
+    margin-left: 3rem;
+}
+
+.titleBar {
+    margin-bottom: 2rem;
+}
+
+.pigeonWrapper {
+    margin-left: 20rem;
+    padding-top: 5rem;
+    z-index: 5;
+}
+
+.pigeonGameWrapper {
+    margin-left: 0rem;
+    padding-top: 5rem;
+    z-index: 55;
+}
+
+.pastorWrapper {
+    padding-top: 5rem;
+    width: 55rem;
+}
+
+.dyckWrapper {
+    padding-top: 5rem;
+}
+
+.glow {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0)); 
+    }
+    to { 
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+    }
+  }
+
+.textBalloon {
+    width: 50rem;
+    padding: 3rem 5rem;
+    height: 47rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(./textBalloon.svg);
+}
+
+.textBalloonMargin {
+    margin-left: 5rem;
+}
+
+.textBalloonBigMargin {
+    margin-left: 20rem;
+}
+
+.textBalloonContent {
+    color: shadeBrown;
+    font-size: 2.7rem;
+    line-height: 1.4;
+}
+
+.textBalloonContentSmall{
+    color: shadeBrown;
+    font-size: 2.3rem;
+    line-height: 1.4;
+}
+
+.spacer {
+    width: 50rem;
+    height: 47rem;
+    z-index: 99;
+}
+
+.textWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 20rem;
+    font-size: 3rem;
+    line-height: 1.3;
+    width: 50rem;
+    z-index: 99;
+}
+
+
+.firstPart {
+    position: relative;
+    height: 100%;
+}
+
+.secondPart {
+    position: relative;
+    height: 100%;
+    width: 100rem;
+}
+
+.layer1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.layer3 {
+    position: absolute;
+    z-index: 3;
+}
+
+.letter {
+    margin-left: -15rem;
+    background-image: url("./BG2.svg");
+    display: flex;
+}
+
+.secretCodeWrapper {
+    background-color: shadeBlue;
+    height: 90%;
+    margin-left: -25rem;
+    align-self: center;
 }
 
 @media screen and (max-width: 810px) {

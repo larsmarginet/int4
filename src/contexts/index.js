@@ -15,8 +15,6 @@ const level1 = new LevelModel({
 const level2 = new LevelModel({
     name: "chapterTwo",
     code: "BBBBBB22222",
-    done: true,
-    unlocked: true
 })
 
 const level3 = new LevelModel({
@@ -32,15 +30,12 @@ const level4 = new LevelModel({
 const level5 = new LevelModel({
     name: "chapterFive",
     code: "EEEEE55555",
-    done: true,
-    unlocked: true
 })
 
 const level6 = new LevelModel({
     name: "chapterSix",
     code: "FFFFF66666",
-    done: true,
-    unlocked: true
+   
 })
 
 const level7 = new LevelModel({

@@ -10,6 +10,7 @@ const AnimatedText = ({ text, paused }) => {
             effectChange={.5}
             effectDirection='down'
             iterations={1}
+            speed={40}
             paused={paused}
       />
     )
