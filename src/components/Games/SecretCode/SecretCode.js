@@ -5,10 +5,12 @@ import style from "./SecretCode.module.css";
 import Button from "../../Ui/Button/Button";
 import * as chestAnimation from "./kist.json";
 import moneySound from '../../Maps/HomeMap/sound.mp3';
+import { useStore } from "../../../hooks/UseStore";
 
 const SecretCode = ({notification}) => {
+    const store = useStore();
     const [paused, setPaused] = useState(true);
-    
+
     const first = useRef();
     const second = useRef();
     const third = useRef();
@@ -88,6 +90,7 @@ const SecretCode = ({notification}) => {
                     action={() => {
                         notification();
                         play();
+                        store.updateMoney(500);
                     }}
                     button={"button"} 
                     content={

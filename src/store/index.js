@@ -18,7 +18,7 @@ class Store {
   }
 
   updateMoney(amount) {
-    this.money = amount;
+    this.money += amount;
   }
 
 }

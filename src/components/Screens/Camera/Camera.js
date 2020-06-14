@@ -11,13 +11,15 @@ const Camera = () => {
   const store = useStore();
   const history = useHistory();
 
-  const delay = 500;
-  const [text, setText] = useState('Scan je kaartje');
-  const [result, setResult] = useState('noResult');
-  
+ 
   const level = store.arts[0].resolveLevel(id);
   const code = level.code;
+  const number = store.arts[0].levels.indexOf(level);
 
+  const delay = 500;
+  const [text, setText] = useState(`Scan je kaartje #${number+1}`);
+  const [result, setResult] = useState('noResult');
+ 
   const handleScan = (result) => {
     if(result) {
       if(result === code ){
@@ -47,7 +49,7 @@ const Camera = () => {
                 height={86}/>
             </div>
         <QrReader
-            style={{flex:1, alignItems:'center',justifyContent:'center', alignSelf:'stretch', height: '100vh'}}
+            style={{flex:1, alignItems:'center',justifyContent:'center', alignSelf:'stretch',minHeight: '100vh',  minWidth: '100vw'}}
             delay={delay}
             onError={handleError}
             onScan={handleScan}

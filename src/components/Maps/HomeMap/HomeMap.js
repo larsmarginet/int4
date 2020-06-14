@@ -10,10 +10,9 @@ const HomeMap = ({ width, height }) => {
     const [play] = useSound(boopSfx);
 
     const buy = (amount, art) => {
-        store.updateMoney(store.money - amount);
+        store.updateMoney(-amount);
         store.arts[art].unlock();
         play();
-        // setTimeout(function(){ history.push('/Overview') }, 1000) ;
     }
 
     return (

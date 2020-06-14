@@ -12,14 +12,15 @@ const CameraLegacy = () => {
   const store = useStore();
   const history = useHistory();
 
+  const level = store.arts[0].resolveLevel(id);
+  const code = level.code;
+  const number = store.arts[0].levels.indexOf(level);
+
   const delay = 500;
-  const [text, setText] = useState('Scan je kaartje');
+  const [text, setText] = useState(`Scan je kaartje #${number+1}`);
   const [result, setResult] = useState('noResult');
 
   const qrReader1 = React.createRef();
-
-  const level = store.arts[0].resolveLevel(id);
-  const code = level.code;
 
   const handleScan = (result) => {
     if(result){
