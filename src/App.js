@@ -21,19 +21,19 @@ function App() {
      
       <Switch>
         <Route path="/characters">
-          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+          <Navigation title={"Personages"} characters={true}/>
           <Characters />
         </Route>
         <Route path="/camera/:id">
-          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+          <Navigation title={"Kaartje"} characters={true}/>
           <Camera />
         </Route>
         <Route path="/overview">
-          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+          <Navigation title={"Kaart"} characters={true}/>
           <Overview />
         </Route>
         <Route path="/detailedOverview">
-          <Navigation title={"De Kruisoprichting"} image={"cross"}/>
+          <Navigation title={"Kortrijk"} characters={true}/>
           <DetailedOverview />
         </Route>
         <Route path="/chapterOne">
@@ -61,7 +61,7 @@ function App() {
           <ChapterEight />
         </Route>
         <Route path="/">
-          <Navigation title={"Kaart"} image={"cross"}/>
+          <Navigation title={"Kaart"} characters={false}/>
           <Home />
         </Route>
       </Switch>

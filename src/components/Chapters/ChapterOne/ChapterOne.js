@@ -76,7 +76,8 @@ const ChapterOne = () => {
                         height={86}/>
                 </div>
                 {notification ?  <div className={style.notification}>
-                        <p>+ €500</p>
+                        <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
+                        <p> +500</p>
                 </div> : null}
                
                 <p className={style.title}>

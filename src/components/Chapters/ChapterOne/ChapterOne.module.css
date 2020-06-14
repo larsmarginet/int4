@@ -16,10 +16,11 @@
     color: white;
     justify-content: flex-start;
     font-size: 5rem;
+    
 } 
 
 .notification {
-    position: absolute;
+    position: fixed;
     width: 20rem;
     height: 7rem;
     margin-top: 3rem;
@@ -34,6 +35,11 @@
     color: mainYellow;
     font-family: alegreya-sans-sc, sans-serif;
     z-index: 999;
+    overflow-y: hidden; 
+}
+
+.coin {
+    margin-right: 1rem;
 }
 
 @keyframes moveOpen {

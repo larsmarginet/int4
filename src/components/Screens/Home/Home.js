@@ -5,7 +5,7 @@ import {PinchView} from 'react-pinch-zoom-pan';
 
 const Home = () => {
     const {width, height} = useWindowSize();
-    const ratio = (height - 81 )/width;
+    const ratio = (height - 80 )/width;
     return (
         <section  >
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>

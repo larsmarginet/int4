@@ -10,7 +10,7 @@ import { useHistory } from 'react-router-dom';
 const DetailedOverview = () => {
     const {width, height} = useWindowSize();
     let history = useHistory()
-    const ratio = (height - 81)/width;
+    const ratio = (height - 80)/width;
     return (
         <section>
             <div className={style.button}>

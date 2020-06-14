@@ -2,7 +2,7 @@
 @value mainBlue, shadeBlue from tokens;
 
 .camera {
-    height: calc(100vh - 8.1rem);
+    height: calc(100vh - 8rem);
     display:flex;
     justify-content: center;
     overflow: hidden;
@@ -11,7 +11,7 @@
 
 .wrapper {
     display: flex;
-    height: calc(100vh - 8.1rem);
+    height: calc(100vh - 8rem);
     flex-direction: column;
     justify-content: center;
     align-items: center;
