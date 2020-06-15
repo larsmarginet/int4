@@ -6,12 +6,11 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import { useHistory } from 'react-router-dom';
 import style from "./ChapterOne.module.css";
 import Button from '../../Ui/Button/Button';
-//import AnimatedText from '../../Ui/AnimatedText/AnimatedText';
-import * as buildingAnimation from "./building.json";
-import * as pigeonAnimation from "./pigeon.json";
-import * as lightsAnimation from "./lights.json";
-import * as mapAnimation from "./map.json";
-import pigeonSound from './pigeon.mp3';
+import * as buildingAnimation from "./assets/building.json";
+import * as pigeonAnimation from "./assets/pigeon.json";
+import * as lightsAnimation from "./assets/lights.json";
+import * as mapAnimation from "./assets/map.json";
+import pigeonSound from './assets/pigeon.mp3';
 import SecretCode from "../../Games/SecretCode/SecretCode";
 
 
@@ -34,8 +33,6 @@ const ChapterOne = () => {
     const [posFirst, setPosFirst] = useState(2000);
     const [posSecond, setPosSecond] = useState(7000);
     const [posThird, setPosposThird] = useState(13600);
-    // const [ani, setAni] = useState(true);
-    // const [anim, setAnim] = useState(true);
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
@@ -49,19 +46,20 @@ const ChapterOne = () => {
         if (container > (height * 9.5) && container < (height * 12.3268)) {
             setPosSecond(container);
         } 
-        if (container > (height * 14.6094) && container < (height * 17.7083)) {
+        if (container > (height * 14.6094) && container < (height * 17.3)) {
             pigeon.current.anim.goToAndStop((container-(height * 14.6094))*2); 
         }
-        if (container > (height * 17.7083) && container < (height * 20.8333)) {
+        if (container > (height * 17.3) && container < (height * 20.8333)) {
             setPosposThird(container)
         } 
-        if (container > (height * 22.1354) && container < (height * 27.7396)) {
-            map.current.anim.goToAndStop((container-(height * 22.1354))*2.5); 
+        if (container > (height * 22) && container < (height * 27.7396)) {
+            map.current.anim.goToAndStop((container-(height * 22))*2.5); 
         } 
     }
 
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
+            <h2 style={{display: "none"}}>Deel 1</h2>
             <div className={style.story} style={{width: (height * 27)}}>
                 <div className={style.button}>
                     <Button
@@ -88,9 +86,8 @@ const ChapterOne = () => {
                 </p>
                 <div className={style.textWrapper}>
                     <p>Op een mooie maandagmorgen wordt de Kortrijkse bevolking wakker. Het zijn de klokken van de Onze-Lieve-Vrouwekerk die door de straten weerklinken.</p>
-                    {/* <AnimatedText paused={ani} text={"Op een mooie maandagmorgen wordt de Kortrijkse bevolking wakker. Het   zijn de klokken van de Onze-Lieve-   Vrouwekerk die door de straten      weerklinken."}/> */}
                 </div>
-                <div className={style.pigeonWrapper}>
+                <div style={{zIndex: 6}} className={style.pigeonWrapper}>
                     {pigeonText ? <div className={style.textBalloon}>
                     <Button
                         action={() => setPigeonText(false)}
@@ -99,7 +96,6 @@ const ChapterOne = () => {
                             <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M16.5823 12.6137L25.4564 3.73956L22.3246 0L14.1129 9.94926L13.9639 9.75904L5.10174 0.896906L2.48223 4.48262L11.2895 12.3167L11.1478 12.4324L0 22.3244L4.2779 24.9181L13.7057 15.0999L13.7826 15.1936L22.4289 25.1155L26.6778 22.5858L16.3606 12.8016L16.5823 12.6137Z" fill="white"/>
                             </svg>
-
                         } 
                         height={43}
                         width={45}/>
@@ -108,7 +104,7 @@ const ChapterOne = () => {
                     <img className={ pigeonText ? "" : style.glow } onClick={() => {
                         play()
                         setPigeonText(true)
-                        }} alt="duif" src="./assets/duif.svg"/>
+                        }} alt="duif" style={{zIndex: 6}} src="./assets/duif.svg"/>
                 </div>
                
                 <Lottie ref={building} height={'100%'} width={'250rem'} isClickToPauseDisabled={true} style={{marginLeft: "-10rem", marginRight: 0, zIndex: 4}} options={{
@@ -137,19 +133,18 @@ const ChapterOne = () => {
                 <div className={style.textWrapper} style={{marginLeft: "-10rem"}}>
                     <p>Pastoor Roger staat vol trots voor zijn kerk. Er zit hem iets dwars. Er mist iets in zijn kerk maar hij weet niet goed wat... </p>
                 </div>
-                <div style={{position: "relative", height:"100%", width: (height * 5.6)}}>
-                    <object className={style.layer2} data='./assets/kerk.svg' aria-labelledby="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500)}}></object>
-                    <object className={style.layer1} data='./assets/BG.svg' aria-labelledby="stad" style={{height: "100%", marginLeft: -2000}}></object>
+                <div style={{position: "relative", height:"100%", width: (height * 5.)}}>
+                    <object className={style.layer2} data='./assets/kerk.svg' aria-label="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500)}}></object>
+                    <object className={style.layer1} data='./assets/BG.svg' aria-label="stad" style={{height: "100%", marginLeft: -2000}}></object>
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 2)}}>
-                    <object className={style.layer2} data='./assets/pastoorWelkSchilderij.svg' aria-labelledby="pastoor" style={{height: "100%", top: 0, left: 0, transform: `translateX(${((posSecond/10)-900)}px)`, zIndex: 99}}></object>
-                    <object className={style.layer1} data='./assets/welkSchilderij.svg' aria-labelledby="keuze maken" style={{height: "100%", zIndex: 98}}></object>
+                    <object className={style.layer2} data='./assets/pastoorWelkSchilderij.svg' aria-label="pastoor" style={{height: "100%", top: 0, left: 0, transform: `translateX(${((posSecond/10)-900)}px)`, zIndex: 4}}></object>
+                    <object className={style.layer1} data='./assets/welkSchilderij.svg' aria-label="keuze maken" style={{height: "100%", zIndex: 3}}></object>
                 </div >
-                <object data='./assets/schrijven.svg' style={{height: "100%", marginLeft: "-70rem"}} aria-labelledby="schrijven"></object>
+                <object data='./assets/schrijven.svg' style={{height: "100%", marginLeft: "-70rem"}} aria-label="schrijven"></object>
                 <div className={style.letter} style={{width: (height * 3)}}>
                     <div className={style.textWrapper}>
                         <p>Via een witte duif stuurt Roger zijn boodschap de lucht in. De duif maakt zijn reis richting Antwerpen.</p>
-                        {/* <AnimatedText paused={anim} text={"Via een witte duif stuurt Roger zijn  boodschap de lucht in. De duif      maakt zijn reis richting Antwerpen."}/> */}
                     </div>
                     <Lottie ref={pigeon} height={'100%'} width={1000} style={{marginLeft: "20rem", marginRight: 0}} options={{
                         loop: false,
@@ -158,7 +153,7 @@ const ChapterOne = () => {
                     }}/>
                 </div>
                 <div style={{position: "relative", height:"100%", marginLeft: -50, width: (height * 3.8)}}>
-                    <div className={`${style.layer3} ${style.dyckWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posThird/7)-1110)}px)`}}>
+                    <div className={`${style.layer3} ${style.dyckWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posThird/7)-1110)}px)`, zIndex: 6}}>
                         {dyckText ? <div className={`${style.textBalloonReverse} ${style.textBalloonBigMargin}`}>
                         <Button
                             action={() => setDyckText(false)}
@@ -172,11 +167,10 @@ const ChapterOne = () => {
                             width={45}/>
                             <p className={style.textBalloonContentSmall}>Ik ben Antoon van Dyck. Ik ben geboren en getogen in Antwerpen. Desserts zijn mijn allergrootste passie. Ik leef voor taarten, wafels en gebak. Men zegt dat ik een groots schilder ben. Ik maak schilderijen in ruil voor desserts. </p>
                         </div> : <div  className={style.spacer}></div>}
-                        <img onClick={() => setDyckText(true)} className={dyckText ? "" : style.glow} style={{marginTop: -290, width: "100%"}}  src='./assets/vanDyckEzel.svg' alt="Van Dyck"/>
-                        {/* <object data='./assets/vanDyckEzel.svg' className={style.layer3} style={{height: "60%"}} aria-labelledby="Van Dyck" ></object> */}
+                        <img onClick={() => setDyckText(true)} className={dyckText ? "" : style.glow} style={{marginTop: -290, width: "100%", zIndex: 6}}  src='./assets/vanDyckEzel.svg' alt="Van Dyck"/>
                     </div>
-                    <object className={style.layer2} data='./assets/gebouwenAntwerpen.svg' aria-labelledby="Antwerpen" style={{height: "80%", top: 0, left: 0, transform: `translateX(${((posThird/15)-870)}px)`}}></object>
-                    <object className={style.layer1} data='./assets/BG3.svg' aria-labelledby="stad" style={{height: "100%"}}></object>
+                    <object className={style.layer2} data='./assets/gebouwenAntwerpen.svg' aria-label="Antwerpen" style={{height: "80%", top: 0, left: 0, transform: `translateX(${((posThird/15)-870)}px)`}}></object>
+                    <object className={style.layer1} data='./assets/BG3.svg' aria-label="stad" style={{height: "100%"}}></object>
                 </div>
                 <div className={style.pigeonGameWrapper}>
                     {pigeonGameText ? <div className={style.textBalloon}>

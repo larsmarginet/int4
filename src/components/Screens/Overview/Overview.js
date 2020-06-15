@@ -8,7 +8,8 @@ const Overview = () => {
   const {width, height} = useWindowSize();
     const ratio = (height - 80)/width;
     return (
-        <section  >
+        <section>
+           <h2 style={{display: "none"}}>Overzicht De Kruisoprichting</h2>
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
                 <MacroMap />
            </PinchView>

@@ -7,7 +7,8 @@ const Home = () => {
     const {width, height} = useWindowSize();
     const ratio = (height - 80 )/width;
     return (
-        <section  >
+        <section>
+            <h2 style={{display: "none"}}>Overzicht</h2>
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
                 <HomeMap />
            </PinchView>

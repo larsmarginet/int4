@@ -17,7 +17,7 @@ const HomeMap = () => {
 
     return (
         <div style={{ height: "100vh", width: "100vw",overflow: "scroll"}}>
-        <svg height={"100vh"} minHeight={"100vh"} width={"100vw"} minWidth={"100vw"} overflow={"scroll"} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" >
+        <svg height={"100vh"} width={"100vw"} overflow={"scroll"} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" >
             <g clipPath="url(#clip0)" >
             <rect width="1194" height="834" stroke="blue" fill="#25549B"/>
             <path d="M0 0H688V85.8926L544 190.893L489.5 290.393L457 684.393L0 834V0Z" fill="#F6E9E8"/>

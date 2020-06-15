@@ -13,6 +13,7 @@ const DetailedOverview = () => {
     const ratio = (height - 80)/width;
     return (
         <section>
+            <h2 style={{display: "none"}}>Overzicht De Kruisoprichting</h2>
             <div className={style.button}>
               <Button
                 action={() => history.goBack()}
