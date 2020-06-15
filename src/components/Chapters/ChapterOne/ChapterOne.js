@@ -40,29 +40,23 @@ const ChapterOne = () => {
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
         console.log(container);
-        if (container > 0 && container < 700) {
-            //setAni(false)
-        } 
-        if (container > 750 && container < 2250) {
+        if (container > (height * .94) && container < (height * 2.9297)) {
             building.current.anim.goToAndStop(container-750); 
         } 
-        if (container > 2250 && container < 4850) {
+        if (container > (height * 2.9297) && container < (height * 6.3151)) {
             setPosFirst(container);
         } 
-        if (container > 7500 && container < 10000) {
+        if (container > (height * 9.5) && container < (height * 12.3268)) {
             setPosSecond(container);
         } 
-        if (container > 10000 && container < 11000) {
-            //setAnim(false)
-        } 
-        if (container > 11500 && container < 13600) {
-            pigeon.current.anim.goToAndStop((container-11500)*2); 
+        if (container > (height * 14.6094) && container < (height * 17.7083)) {
+            pigeon.current.anim.goToAndStop((container-(height * 14.6094))*2); 
         }
-        if (container > 13600 && container < 16000) {
+        if (container > (height * 17.7083) && container < (height * 20.8333)) {
             setPosposThird(container)
         } 
-        if (container > 17000 && container < 19000) {
-            map.current.anim.goToAndStop((container-17000)*2.5); 
+        if (container > (height * 22.1354) && container < (height * 27.7396)) {
+            map.current.anim.goToAndStop((container-(height * 22.1354))*2.5); 
         } 
     }
 
@@ -93,7 +87,7 @@ const ChapterOne = () => {
                     <span>1630</span>
                 </p>
                 <div className={style.textWrapper}>
-                    Op een mooie maandagmorgen wordt de Kortrijkse bevolking wakker. Het zijn de klokken van de Onze-Lieve-Vrouwekerk die door de straten weerklinken.
+                    <p>Op een mooie maandagmorgen wordt de Kortrijkse bevolking wakker. Het zijn de klokken van de Onze-Lieve-Vrouwekerk die door de straten weerklinken.</p>
                     {/* <AnimatedText paused={ani} text={"Op een mooie maandagmorgen wordt de Kortrijkse bevolking wakker. Het   zijn de klokken van de Onze-Lieve-   Vrouwekerk die door de straten      weerklinken."}/> */}
                 </div>
                 <div className={style.pigeonWrapper}>
@@ -143,7 +137,7 @@ const ChapterOne = () => {
                 <div className={style.textWrapper} style={{marginLeft: "-10rem"}}>
                     <p>Pastoor Roger staat vol trots voor zijn kerk. Er zit hem iets dwars. Er mist iets in zijn kerk maar hij weet niet goed wat... </p>
                 </div>
-                <div style={{position: "relative", height:"100%", width: (height * 5.2)}}>
+                <div style={{position: "relative", height:"100%", width: (height * 5.6)}}>
                     <object className={style.layer2} data='./assets/kerk.svg' aria-labelledby="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500)}}></object>
                     <object className={style.layer1} data='./assets/BG.svg' aria-labelledby="stad" style={{height: "100%", marginLeft: -2000}}></object>
                 </div>
@@ -153,10 +147,10 @@ const ChapterOne = () => {
                 </div >
                 <object data='./assets/schrijven.svg' style={{height: "100%", marginLeft: "-70rem"}} aria-labelledby="schrijven"></object>
                 <div className={style.letter} style={{width: (height * 3)}}>
-                <div className={style.textWrapper}>
-                    Via een witte duif stuurt Roger zijn boodschap de lucht in. De duif maakt zijn reis richting Antwerpen.
-                    {/* <AnimatedText paused={anim} text={"Via een witte duif stuurt Roger zijn  boodschap de lucht in. De duif      maakt zijn reis richting Antwerpen."}/> */}
-                </div>
+                    <div className={style.textWrapper}>
+                        <p>Via een witte duif stuurt Roger zijn boodschap de lucht in. De duif maakt zijn reis richting Antwerpen.</p>
+                        {/* <AnimatedText paused={anim} text={"Via een witte duif stuurt Roger zijn  boodschap de lucht in. De duif      maakt zijn reis richting Antwerpen."}/> */}
+                    </div>
                     <Lottie ref={pigeon} height={'100%'} width={1000} style={{marginLeft: "20rem", marginRight: 0}} options={{
                         loop: false,
                         autoplay: false,
@@ -165,7 +159,7 @@ const ChapterOne = () => {
                 </div>
                 <div style={{position: "relative", height:"100%", marginLeft: -50, width: (height * 3.8)}}>
                     <div className={`${style.layer3} ${style.dyckWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posThird/7)-1110)}px)`}}>
-                        {dyckText ? <div className={`${style.textBalloon} ${style.textBalloonBigMargin}`}>
+                        {dyckText ? <div className={`${style.textBalloonReverse} ${style.textBalloonBigMargin}`}>
                         <Button
                             action={() => setDyckText(false)}
                             button={"smallSquare"} 
@@ -178,7 +172,7 @@ const ChapterOne = () => {
                             width={45}/>
                             <p className={style.textBalloonContentSmall}>Ik ben Antoon van Dyck. Ik ben geboren en getogen in Antwerpen. Desserts zijn mijn allergrootste passie. Ik leef voor taarten, wafels en gebak. Men zegt dat ik een groots schilder ben. Ik maak schilderijen in ruil voor desserts. </p>
                         </div> : <div  className={style.spacer}></div>}
-                        <img onClick={() => setDyckText(true)} className={dyckText ? "" : style.glow} style={{marginTop: -250, width: "100%"}}  src='./assets/vanDyckEzel.svg' alt="Van Dyck"/>
+                        <img onClick={() => setDyckText(true)} className={dyckText ? "" : style.glow} style={{marginTop: -290, width: "100%"}}  src='./assets/vanDyckEzel.svg' alt="Van Dyck"/>
                         {/* <object data='./assets/vanDyckEzel.svg' className={style.layer3} style={{height: "60%"}} aria-labelledby="Van Dyck" ></object> */}
                     </div>
                     <object className={style.layer2} data='./assets/gebouwenAntwerpen.svg' aria-labelledby="Antwerpen" style={{height: "80%", top: 0, left: 0, transform: `translateX(${((posThird/15)-870)}px)`}}></object>
@@ -217,6 +211,7 @@ const ChapterOne = () => {
                     autoplay: true,
                     animationData: lightsAnimation.default,
                 }}/>
+    
             </div>
         </section>
     )

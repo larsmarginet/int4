@@ -10,7 +10,7 @@ const Overview = () => {
     return (
         <section  >
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
-                <MacroMap width={width}  height={height}/>
+                <MacroMap />
            </PinchView>
         </section>
     )

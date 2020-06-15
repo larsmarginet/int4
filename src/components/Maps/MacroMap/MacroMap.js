@@ -2,12 +2,12 @@ import React from 'react';
 import { useHistory } from "react-router-dom"
 import { useStore } from "../../../hooks/UseStore";
 
-const MacroMap = ({ width, height }) => {
+const MacroMap = () => {
     let history = useHistory()
     const store = useStore();
     return (
-        <div style={{width:"100%", height: "100%", overflowX: "scroll"}}>
-            <svg width={width} height={height} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div style={{ height: "100vh", width: "100vw",overflow: "scroll"}}>
+            <svg height={"100vh"} minHeight={"100vh"} width={"100vw"} minWidth={"100vw"} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0)">
                 <rect width="1194" height="834" fill="#BF5A5F"/>
                 <path d="M0 0H688V85.8926L544 190.893L489.5 290.393L457 684.393L0 834V0Z" fill="#F6E9E8"/>

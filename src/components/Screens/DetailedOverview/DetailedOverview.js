@@ -23,7 +23,7 @@ const DetailedOverview = () => {
                 height={86}/>
             </div>
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
-                <MicroMap width={width}  height={height}/>
+                <MicroMap />
            </PinchView>
         </section>
     )

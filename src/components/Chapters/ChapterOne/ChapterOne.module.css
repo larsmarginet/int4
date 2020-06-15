@@ -14,9 +14,26 @@
     height: 100%;
     color: white;
     justify-content: flex-start;
-    font-size: 5rem;
-    
-} 
+    font-size: 5rem; 
+    position: relative;
+}
+
+.story:after {
+    /* content is required when using :after */
+    content: "";
+    /* The animation */
+    /* The grainy image */
+    background-image: url("../grain.png");
+    /* Specify a height and width above and beyond the page header for movement */
+    height: 300%;
+    width: 300%;
+    /* We're using opacity in place of a transparent image */
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+    /* We'll need this when the animation kicks in to hold the position of the texture */
+    position: fixed;
+  }
+
 
 .notification {
     position: fixed;
@@ -86,7 +103,7 @@
 .pigeonGameWrapper {
     margin-left: 0rem;
     padding-top: 5rem;
-    z-index: 55;
+    z-index: 100;
 }
 
 .pastorWrapper {
@@ -120,6 +137,17 @@
     flex-direction: column;
     align-items: flex-end;
     background-image: url(./textBalloon.svg);
+}
+
+.textBalloonReverse {
+    width: 50rem;
+    padding: 3rem 5rem;
+    height: 47rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(./textBalloonReverse.svg);
 }
 
 .textBalloonMargin {
@@ -189,7 +217,7 @@
 }
 
 .letter {
-    margin-left: -15rem;
+    margin-left: -.5rem;
     background-image: url("./BG2.svg");
     display: flex;
 }
@@ -197,6 +225,7 @@
 .secretCodeWrapper {
     background-color: shadeBlue;
     height: 90%;
+    z-index: 99;
     margin-left: -25rem;
     align-self: center;
 }

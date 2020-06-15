@@ -68,12 +68,14 @@ const SecretCode = ({notification}) => {
             
             {paused ? 
             <form ref={lock} onSubmit={submit} className={style.form}>
-                <input type="number" className={style.formInput} ref={first}></input>
-                <input type="number" className={style.formInput} ref={second}></input>
-                <input type="number" className={style.formInput} ref={third}></input>
-                <input type="number" className={style.formInput} ref={fourth}></input>
-                <input type="number" className={style.formInput} ref={fifth}></input>
-                <input type="number" className={style.formInput} ref={sixth}></input>
+                <div className={style.inputWrapper}>
+                    <input type="number" className={style.formInput} ref={first}></input>
+                    <input type="number" className={style.formInput} ref={second}></input>
+                    <input type="number" className={style.formInput} ref={third}></input>
+                    <input type="number" className={style.formInput} ref={fourth}></input>
+                    <input type="number" className={style.formInput} ref={fifth}></input>
+                    <input type="number" className={style.formInput} ref={sixth}></input>
+                </div>
                 <Button
                     button={"square"} 
                     content={

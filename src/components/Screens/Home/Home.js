@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <section  >
            <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
-                <HomeMap width={width}  height={height}/>
+                <HomeMap />
            </PinchView>
         </section>
     )
