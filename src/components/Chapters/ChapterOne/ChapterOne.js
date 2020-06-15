@@ -39,7 +39,7 @@ const ChapterOne = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        console.log(container);
+        // console.log(container);
         if (container > (height * .94) && container < (height * 2.9297)) {
             building.current.anim.goToAndStop(container-750); 
         } 
