@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import QrReader from 'react-qr-scanner';
+import Lottie from 'react-lottie';
 import { Link, useHistory, useParams } from 'react-router-dom';
 import { useStore } from "../../../hooks/UseStore";
 import style from "./QRCode.module.css";
 import Button from '../../Ui/Button/Button';
-
+import * as check from './check.json';
 
 
 const CameraLegacy = () => {
@@ -83,7 +84,11 @@ const CameraLegacy = () => {
                         height={86}
                         width={305} />
                 </Link>
-                <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 100, height: 100}} autoplay></lottie-player>
+                <Lottie height={100} width={100} style={{margin: 0}} options={{
+                      loop: false,
+                      autoplay: true,
+                      animationData: check.default,
+                  }}/>
             </>
         }
         <p className={style.text}>{text}</p>

@@ -1,5 +1,5 @@
 import React, { useRef, useState }from "react";
-import Lottie from 'react-lottie'
+import Lottie from 'react-lottie';
 import useSound from 'use-sound';
 import { useStore } from '../../../hooks/UseStore';
 import useWindowSize from "../../../hooks/useWindowSize";

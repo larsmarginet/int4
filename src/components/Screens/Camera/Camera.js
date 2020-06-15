@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useHistory, useParams } from 'react-router-dom';
+import Lottie from 'react-lottie';
 import { useStore } from "../../../hooks/UseStore";
 import style from "./QRCode.module.css";
 import QrReader from 'react-qr-scanner';
 import Button from '../../Ui/Button/Button';
+import * as check from './check.json';
 
 
 const Camera = () => {
@@ -58,7 +60,11 @@ const Camera = () => {
               {result !== 'noResult' ? 
               <div className={style.succesMessage}>
                 <div className={style.succesWrapper}>
-                    <lottie-player src="https://assets4.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json"  background="transparent"  speed="1"  style={{width: 70, height: 70}} autoplay></lottie-player>
+                  <Lottie height={70} width={70} style={{margin: 0}} options={{
+                      loop: false,
+                      autoplay: true,
+                      animationData: check.default,
+                  }}/>
                     <p className={style.btnText}>{text}</p>
                 </div>
                 <Link className={style.succesButton} to={`/${level.name}`}>
