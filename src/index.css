@@ -13,11 +13,19 @@ html {
 }
 /* stylelint-enable */
 
+
+.loader--hide {
+  display: none;
+}
+
+
+
 #root {
   font-size: 1.6rem;
   font-family: 'alegreya-sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
+
 
 
 @font-face {

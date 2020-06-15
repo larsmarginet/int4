@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
@@ -15,10 +15,12 @@ import ChapterSix from './components/Chapters/ChapterSix/ChapterSix';
 import ChapterSeven from './components/Chapters/ChapterSeven/ChapterSeven';
 import ChapterEight from './components/Chapters/ChapterEight/ChapterEight';
 
-function App() {
+function App({ hideLoader }) {
+  useEffect(() => {
+    hideLoader();
+  });
   return (
     <div className="App">
-     
       <Switch>
         <Route path="/characters">
           <Navigation title={"Personages"} characters={true}/>

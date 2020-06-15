@@ -69,6 +69,7 @@
 
 .back {
     transform: rotate(180deg);
+    margin-right: 1rem;
 }
 
 @media screen and (max-width: 810px) {

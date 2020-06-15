@@ -61,14 +61,14 @@ const ChapterOne = () => {
         if (container > 13600 && container < 16000) {
             setPosposThird(container)
         } 
-        if (container > 17600 && container < 19600) {
-            map.current.anim.goToAndStop((container-17600)*2); 
+        if (container > 17000 && container < 19000) {
+            map.current.anim.goToAndStop((container-17000)*2.5); 
         } 
     }
 
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
-            <div className={style.story}>
+            <div className={style.story} style={{width: (height * 27)}}>
                 <div className={style.button}>
                     <Button
                         action={() => history.goBack()}
