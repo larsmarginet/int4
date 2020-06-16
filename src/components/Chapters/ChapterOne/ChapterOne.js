@@ -205,7 +205,6 @@ const ChapterOne = () => {
                     autoplay: true,
                     animationData: lightsAnimation.default,
                 }}/>
-    
             </div>
         </section>
     )

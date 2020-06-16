@@ -6,6 +6,8 @@ import { useHistory } from 'react-router-dom';
 import style from "./ChapterTwo.module.css";
 import Button from '../../Ui/Button/Button';
 import * as armyAnimation from "./assets/army.json";
+import * as mapAnimation from "./assets/map.json";
+import * as paperAnimation from "./assets/krant.json";
 
 const ChapterTwo = () => {
     const store = useStore();
@@ -15,21 +17,49 @@ const ChapterTwo = () => {
     } 
     const {height} = useWindowSize();
     const army = useRef();
+    const map = useRef();
+    const paper = useRef();
     const [churchText, setChurchText] = useState(false);
+    const [posFirst, setPosFirst] = useState(0);
+    const [posSecond, setPosSecond] = useState(0);
+    const [posThird, setPosThird] = useState(0);
+    const [posFourth, setPosFourth] = useState(0);
+    const [posFifth, setPosFifth] = useState(0);
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        //console.log(container);
+        console.log(container);
             
         if (container > (height * .49) && container < (height * 3.086)) {
             army.current.anim.goToAndStop((container*1.2)-(height * .49)); 
-        } 
+        }
+        if (container > (height * 3.086) && container < (height * 6.6)) {
+            setPosFirst(container-(height * 3.086));
+        }
+        if (container > (height * 8.1) && container < (height * 10.8)) {
+            setPosSecond(container-(height * 8.1));
+        }
+        if (container > (height * 11.4) && container < (height * 14.4)) {
+            setPosThird(container-(height * 11.4));
+        }
+        if (container > (height * 14.6) && container < (height * 16.8)) {
+            map.current.anim.goToAndStop(((container)-(height * 14.6))*2); 
+        }
+        if (container > (height * 19.7) && container < (height * 21.4)) {
+            setPosFourth(container-(height * 19.7));
+        }
+        if (container > (height * 21.4) && container < (height * 25.4)) {
+            setPosFifth(container-(height * 21.4));
+        }
+        if (container > (height * 25.4) && container < (height * 27.4)) {
+            paper.current.anim.goToAndStop(((container)-(height * 25.4))*3);
+        }
     }
     
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
         <h2 style={{display: "none"}}>Deel 2</h2>
-            <div className={style.story} style={{width: (height * 27)}}>
+            <div className={style.story} style={{width: (height * 30)}}>
                 <div className={style.button}>
                     <Button
                         action={() => history.goBack()}
@@ -51,28 +81,68 @@ const ChapterTwo = () => {
                 <div className={style.textWrapper}>
                     <p>Het is oorlog. De streken rond Kortrijk worden opgeschrikt door het Franse leger. Met honderden marcheren ze door de velden richting Kortrijk. Ze hopen daar hun plundertocht verder te kunnen zetten.</p>
                 </div>
-                <Lottie ref={army} height={'100%'} width={"240rem"} style={{margin: 0}} options={{
+                <Lottie ref={army} height={'100%'} width={"240rem"} style={{margin: 0, zIndex: 2}} options={{
                         loop: false,
                         autoplay: false,
                         animationData: armyAnimation.default,
                 }}/>
-                 <div style={{position: "relative", height:"100%", width: (height * 3)}} className={style.pigeonWrapper}>
-                    {churchText ? <div className={style.textBalloon}>
-                    <Button
-                        action={() => setChurchText(false)}
-                        button={"smallSquare"} 
-                        content={
-                            <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M16.5823 12.6137L25.4564 3.73956L22.3246 0L14.1129 9.94926L13.9639 9.75904L5.10174 0.896906L2.48223 4.48262L11.2895 12.3167L11.1478 12.4324L0 22.3244L4.2779 24.9181L13.7057 15.0999L13.7826 15.1936L22.4289 25.1155L26.6778 22.5858L16.3606 12.8016L16.5823 12.6137Z" fill="white"/>
-                            </svg>
-                        } 
-                        height={43}
-                        width={45}/>
-                        <p className={style.textBalloonContentSmall}>Ik ben Napoleon, bevelhebber en heerser van Frankrijk.Veldslagen, en rooftochten zijn voor mij dagelijkse kost. Mijn allergrootste droom is het stichten van het grootste museum van Frankrijk. Met een groot museum word ik hopelijk niet meer uitgelachen met mijn kleine gestalte...</p>
-                    </div> : <div className={style.spacer}></div>}
-                    <img className={ churchText ? "" : style.glow } onClick={() => setChurchText(true)} alt="duif" style={{left: 0, bottom: 0, position: "absolute", zIndex: 2}} src="./assets/napoleon.svg"/>
-                    <object aria-label="kerk" className={style.layer1} style={{ height: "100%"}} data="./assets/beelden.svg"></object>
+                <div style={{position: "relative", height:"100%", width: (height * 4.9)}} >
+                    <div className={style.churchWrapper} style={{left: 0, top: 0, position: "absolute", transform: `translateX(${(posFirst/7)+400}px)`, zIndex: 3}}>
+                        {churchText ? <div style={{marginLeft: "20rem"}} className={style.textBalloon}>
+                        <Button
+                            action={() => setChurchText(false)}
+                            button={"smallSquare"} 
+                            content={
+                                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M16.5823 12.6137L25.4564 3.73956L22.3246 0L14.1129 9.94926L13.9639 9.75904L5.10174 0.896906L2.48223 4.48262L11.2895 12.3167L11.1478 12.4324L0 22.3244L4.2779 24.9181L13.7057 15.0999L13.7826 15.1936L22.4289 25.1155L26.6778 22.5858L16.3606 12.8016L16.5823 12.6137Z" fill="white"/>
+                                </svg>
+                            } 
+                            height={43}
+                            width={45}/>
+                            <p className={style.textBalloonContentSmall}>Ik ben Napoleon, bevelhebber en heerser van Frankrijk.Veldslagen, en rooftochten zijn voor mij dagelijkse kost. Mijn allergrootste droom is het stichten van het grootste museum van Frankrijk. Met een groot museum word ik hopelijk niet meer uitgelachen met mijn kleine gestalte...</p>
+                        </div> : <div className={style.spacer}></div>}
+                        <img className={ churchText ? "" : style.glow } onClick={() => setChurchText(true)} style={{marginTop: -180, height: "80%"}} alt="napoleon" src="./assets/napoleon.svg"/>
+                    </div>
+                    <object aria-label="kerk" className={style.layer2} style={{ height: "100%", transform: `translateX(${posFirst/15}px)`}} data="./assets/beelden.svg"></object>
+                    <object aria-label="stad" className={style.layer1} style={{ height: "100%", left: 0, top: 0, transform: 'translateX(-800px)'}} data="./assets/BG4.svg"></object>
                 </div>
+                <div style={{position: "relative", height:"100%", width: (height * 2.1)}} >
+                    <object aria-label="napoleon" className={style.layer2} style={{ height: "50%", bottom: 0, transform: `translateX(${(posSecond/7)+400}px)`}} data="./assets/napoleon2.svg"></object>
+                    <object aria-label="kerk" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/kerkBeelden.svg"></object>
+                </div>
+                <div className={style.gameWrapper} >
+
+                </div>
+                <div style={{position: "relative", height:"100%", width: (height * 3.5), marginLeft: "-10rem"}} >
+                    <object aria-label="napoleon" className={style.layer4} style={{ height: "90%", bottom: 0, transform: `translateX(${(posThird/7)+1200}px)`}} data="./assets/napoleon3.svg"></object>
+                    <div className={style.parallaxTextWrapper}>
+                        <p>Napoleon geraakt toch binnen.</p>
+                        <p>Zijn troepen plunderen de kerk en nemen naast andere kunstwerken ons gekende schilderij mee. Op zijn paard vertrekt Napoleon richting Parijs. </p>
+                    </div>
+                    <object aria-label="stad" className={style.layer3} style={{ height: "100%", transform: `translateX(${(posThird/15)}px)`}} data="./assets/BG5.svg"></object>
+                    <object aria-label="stad" className={style.layer2} style={{ height: "100%", transform: `translateX(${(posThird/25)}px)`}} data="./assets/BG6.svg"></object>
+                    <object aria-label="wolken" className={style.layer1} style={{ height: "20%", left: 400, top: 20}} data="./assets/clouds.svg"></object>
+                </div>
+                <Lottie ref={map} height={'100%'} width={"160rem"} style={{marginLeft: "-25rem", marginRight: 0, zIndex: 3}} options={{
+                        loop: false,
+                        autoplay: false,
+                        animationData: mapAnimation.default,
+                }}/>
+                 <div style={{position: "relative", height:"100%", marginLeft: "-50rem", zIndex: 2, width: (height * 5)}} >
+                    <object aria-label="napoleon" className={style.layer2} style={{ height: "50%", bottom: 0, transform: `translateX(${(posFourth/7)+3100}px)`}} data="./assets/napoleon2.svg"></object>
+                    <object aria-label="galerij" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/galerij.svg"></object>
+                </div>
+
+                <div style={{position: "relative", height:"100%", width: (height * 5)}} >
+                    <object aria-label="parijs" className={style.layer2} style={{ height: "90%", bottom: 50, transform: `translateX(${(posFifth/15)+750}px)`}} data="./assets/parijs.svg"></object>
+                    <object aria-label="stad" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/BG7.svg"></object>
+                </div>
+
+                <Lottie ref={paper} height={'100%'} width={height * 2.1} style={{marginLeft: "-25rem", marginRight: 0, zIndex: 3}} options={{
+                        loop: false,
+                        autoplay: false,
+                        animationData: paperAnimation.default,
+                }}/>
             </div>
         </section>
     )

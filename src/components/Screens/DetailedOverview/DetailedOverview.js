@@ -1,5 +1,4 @@
 import React from 'react';
-import {PinchView} from 'react-pinch-zoom-pan';
 import useWindowSize from "../../../hooks/useWindowSize";
 import MicroMap from "../../Maps/MicroMap/MicroMap"
 import style from "./DetailedOverview.module.css"
