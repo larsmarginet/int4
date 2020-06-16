@@ -10,7 +10,7 @@ import * as buildingAnimation from "./assets/building.json";
 import * as pigeonAnimation from "./assets/pigeon.json";
 import * as lightsAnimation from "./assets/lights.json";
 import * as mapAnimation from "./assets/map.json";
-import pigeonSound from './assets/pigeon.mp3';
+import pigeonSound from '../assets/pigeon.mp3';
 import SecretCode from "../../Games/SecretCode/SecretCode";
 
 
@@ -133,7 +133,7 @@ const ChapterOne = () => {
                 <div className={style.textWrapper} style={{marginLeft: "-10rem"}}>
                     <p>Pastoor Roger staat vol trots voor zijn kerk. Er zit hem iets dwars. Er mist iets in zijn kerk maar hij weet niet goed wat... </p>
                 </div>
-                <div style={{position: "relative", height:"100%", width: (height * 5.)}}>
+                <div style={{position: "relative", height:"100%", width: (height * 5)}}>
                     <object className={style.layer2} data='./assets/kerk.svg' aria-label="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500)}}></object>
                     <object className={style.layer1} data='./assets/BG.svg' aria-label="stad" style={{height: "100%", marginLeft: -2000}}></object>
                 </div>

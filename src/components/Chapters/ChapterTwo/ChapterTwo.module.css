@@ -1,0 +1,85 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainYellow, mainRed, mainLight, shadeBrown from tokens;
+
+.wrapper {
+    width: 100%; 
+    height: 100vh; 
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    background-color: mainBlue;
+}
+
+.story {
+    display: flex;
+    height: 100%;
+    color: white;
+    justify-content: flex-start;
+    font-size: 5rem; 
+    position: relative;
+}
+
+.story:after {
+    content: "";
+    background-image: url(../assets/grain.png);
+    height: 300%;
+    width: 300%;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+    position: fixed;
+    z-index: 5;
+}
+
+.title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: alegreya-sans-sc;
+    color: mainLight;
+    font-size: 6.8rem;
+    margin-left: 3rem;
+}
+
+.titleBar {
+    margin-bottom: 2rem;
+}
+
+.textWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 20rem;
+    font-size: 3rem;
+    line-height: 1.3;
+    width: 50rem;
+    z-index: 99;
+}
+
+.button {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    z-index: 100;
+}
+
+.back {
+    transform: rotate(180deg);
+    margin-right: 1rem;
+}
+
+.layer1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 2;
+}
+
+@media screen and (max-width: 810px) {
+    .button {
+        left: 1rem;
+    }
+}

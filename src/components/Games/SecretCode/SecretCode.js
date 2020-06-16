@@ -10,6 +10,7 @@ import { useStore } from "../../../hooks/UseStore";
 const SecretCode = ({notification}) => {
     const store = useStore();
     const [paused, setPaused] = useState(true);
+    const [show, setShow] = useState(true);
 
     const first = useRef();
     const second = useRef();
@@ -88,18 +89,20 @@ const SecretCode = ({notification}) => {
                     } 
                     width={92}
                     height={86}/>
-            </form> : <Button
+            </form> : <div style={show ? {marginTop: "-5rem"} : {display: "none"}}><Button
                     action={() => {
                         notification();
                         play();
                         store.updateMoney(500);
+                        setShow(false)
                     }}
+
                     button={"button"} 
                     content={
                         <span className={style.btnText}>Claim je prijs</span>
                     } 
                     width={302}
-                    height={72}/>}
+                    height={72}/></div>}
         </div>
     )   
 }

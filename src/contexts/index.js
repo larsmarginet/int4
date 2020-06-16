@@ -17,12 +17,14 @@ const level2 = new LevelModel({
     id: "98892345-99f1-4c39-87d9-c48aaf0aacda",
     name: "chapterTwo",
     code: "BBBBB22222",
+    done: true,
+    unlocked: true
 })
 
 const level3 = new LevelModel({
     id: "e970aba2-10c6-4d7d-b67e-c2fbc7789e6d",
     name: "chapterThree",
-    code: "CCCCC33333"
+    code: "CCCCC33333",
 })
 
 const level4 = new LevelModel({
