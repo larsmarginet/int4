@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useStore } from "../../../hooks/UseStore";
 import style from "./Navigation.module.css";
 import Button from "../Button/Button";
@@ -12,20 +11,21 @@ const Navigation = ({ title, characters }) => {
             <ul className={style.navigationLeft}>
                 
                 <li className={style.link}>
-                    <Link to="/" >
+                    
                         <Button
+                            link={"/"}
                             button={"home"} 
                             height={56}
                             width={49}/>        
-                    </Link>
+                    
                 </li>
                 {characters ? <li>
-                    <Link to="/Characters">
                         <Button
+                            link={"/Characters"}
                             button={"character"}
                             height={49}
                             width={47}/>        
-                    </Link>
+                    
                 </li> : ""}
                 
             </ul>

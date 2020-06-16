@@ -2,12 +2,26 @@ import React from 'react';
 import { useHistory } from "react-router-dom"
 import { useStore } from "../../../hooks/UseStore";
 
-const MacroMap = () => {
+const MacroMap = ({height, width}) => {
     let history = useHistory()
     const store = useStore();
+
+    let w = "100vw";
+    let h = "100vh";
+
+    if (width < 1194) {
+        w = "1194";    
+    } else {
+        w = "100vw";
+    }
+
+    if (height < (width * 0.7)) {
+        h = (width * 0.7);
+    } else {
+        h = "100vh";
+    }
     return (
-        <div style={{ height: "100vh", width: "100vw",overflow: "scroll"}}>
-            <svg height={"100vh"} width={"100vw"} overflow={"scroll"} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg height={h} width={w} overflow={"scroll"} viewBox="0 0 1194 834" preserveAspectRatio="xMidYMin slice" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0)">
                 <rect width="1194" height="834" fill="#3264AF"/>
                 <path d="M1054 876.466L1047.84 844.085L1020.11 864.972L965.7 861.545L908.668 878.505L917.262 916.484L974.848 909.332L1069.86 911.333L1073.95 891.245L1054 876.466Z" fill="#25549B"/>
@@ -518,7 +532,6 @@ const MacroMap = () => {
                 </clipPath>
                 </defs>
             </svg>
-        </div>
     )
 }
 

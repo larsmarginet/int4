@@ -11,8 +11,9 @@ import smallSquare from "./smallSquare.svg"
 import smallSquarePress from "./smallSquarePress.svg"
 
 import style from "./Button.module.css";
+import { Link } from "react-router-dom";
 
-const Button = ({ height, width, button, content, action}) => {
+const Button = ({ height, width, button, content, action, link}) => {
     const [press, setPress] = useState(false);
     let buttonUnpressed = RegularBtn;
     let buttonPressed = RegularBtnPressed;
@@ -32,16 +33,33 @@ const Button = ({ height, width, button, content, action}) => {
         buttonUnpressed = smallSquare;
         buttonPressed = smallSquarePress;
     }
-
-    return (
-        <div style={{height: height, width: width}}>
-        <button onClick={() => {
+    
+    if(link) {
+        return (
+            <div style={{height: height, width: width}}> 
+                <Link to={link} onClick={() => {
                     setPress(true);
                     setTimeout(function() { setPress(false); }, 100);
                     if(action) {action()}
                 }} 
-                className={`${style.button} ${press ? style.press : ""}`}><img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span></button>
-        </div>)
+                className={`${style.button} ${press ? style.press : ""}`}>
+                    <img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span>
+                </Link>
+            </div>
+        )
+    } else {
+        return (
+            <div style={{height: height, width: width}}>
+                <button onClick={() => {
+                        setPress(true);
+                        setTimeout(function() { setPress(false); }, 100);
+                        if(action) {action()}
+                    }} 
+                    className={`${style.button} ${press ? style.press : ""}`}><img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span></button>
+            </div>)
+    }
+
+   
 }
 
 export default Button;

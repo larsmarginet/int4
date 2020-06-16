@@ -9,10 +9,9 @@ import { useHistory } from 'react-router-dom';
 
 const DetailedOverview = () => {
     const {width, height} = useWindowSize();
-    let history = useHistory()
-    const ratio = (height - 80)/width;
+    let history = useHistory();
     return (
-        <section>
+        <section style={{ overflow: 'scroll', width: '100%', height: (height-80)}}>
             <h2 style={{display: "none"}}>Overzicht De Kruisoprichting</h2>
             <div className={style.button}>
               <Button
@@ -23,9 +22,7 @@ const DetailedOverview = () => {
                 } 
                 height={86}/>
             </div>
-           <PinchView backgroundColor='#3F7AD3' maxScale={3} containerRatio={ratio*100}>
-                <MicroMap />
-           </PinchView>
+            <MicroMap width={width} height={height}/>
         </section>
     )
 }

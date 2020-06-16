@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  background-color: "3F7AD3";
 }
 
 /* stylelint-disable */
@@ -24,6 +25,7 @@ html {
   font-size: 1.6rem;
   font-family: 'alegreya-sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
+  
 }
 
 
