@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
+import Avatars from './components/Screens/Avatars/Avatars';
 import Characters from './components/Screens/Characters/Characters';
 import Camera from './components/Screens/Camera/QRCode';
 import Overview from './components/Screens/Overview/Overview';
@@ -14,11 +15,19 @@ import ChapterFive from './components/Chapters/ChapterFive/ChapterFive';
 import ChapterSix from './components/Chapters/ChapterSix/ChapterSix';
 import ChapterSeven from './components/Chapters/ChapterSeven/ChapterSeven';
 import ChapterEight from './components/Chapters/ChapterEight/ChapterEight';
+import { useStore } from './hooks/UseStore';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App({ hideLoader }) {
+  const store = useStore();
+  const history = useHistory();
   useEffect(() => {
     hideLoader();
   });
+
+  if(store.avatar === 'avatar'){
+    history.push("/avatar");
+  }
   return (
     <div className="App">
       <Switch>
@@ -61,6 +70,9 @@ function App({ hideLoader }) {
         </Route>
         <Route path="/chapterEight">
           <ChapterEight />
+        </Route>
+        <Route path="/avatar">
+          <Avatars />
         </Route>
         <Route path="/">
           <Navigation title={"Kaart"} characters={false}/>

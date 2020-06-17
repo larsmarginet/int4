@@ -1,0 +1,75 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainRed, mainRed, mainLight, mainYellow, shadeYellow, shadeBrown from tokens;
+
+.top {
+    display: flex;
+    height: 8rem;
+    background-color: mainYellow;
+    border-bottom: .4rem solid shadeYellow;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: shadeBrown;
+    font-weight: bold;
+    font-size: 4.2rem;
+    text-align: center;
+}
+
+.wrapper {
+    background-color: mainRed;
+}
+
+.slider {
+    height: 100%;
+   
+}
+
+.sliderItem {
+    height: calc(100vh - 18rem);
+    width: 100vw;
+    margin: 5rem auto;
+    outline: none;
+    border: none;
+}
+
+.sliderItemPeter {
+    background: url(./assets/peter.svg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sliderItemJan {
+    background: url(./assets/jan.svg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sliderItemBeatrice {
+    background: url(./assets/beatrice.svg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.name {
+    color: white;
+    font-size: 3rem;
+    font-family: alegreya-sans-sc, sans-serif;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5rem;
+    height: 100%;
+    align-items: center;
+}
+
+.btnText {
+    composes: buttonText from "../../../styles/components.module.css";
+}

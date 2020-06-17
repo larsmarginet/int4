@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./Characters.module.css";
-import Barricade from "../../Games/Barricade/Barricade"
+import Snake from "../../Games/Snake/SnakeGame"
 
 
 const Characters = () => {
     return (
         <section className={style.wrapper}>
-          <Barricade />
+          <Snake />
         </section>
     )
 }
