@@ -168,6 +168,27 @@
     z-index: 99;
 }
 
+.glow {
+    animation: glow 1s infinite alternate;
+}
+
+.pigeonGameWrapper {
+    margin-right: -20rem;
+    padding-top: 5rem;
+    z-index: 98;
+}
+
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0)); 
+    }
+    to { 
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+    }
+  }
+
+
 @media screen and (max-width: 810px) {
     .button {
         left: 1rem;

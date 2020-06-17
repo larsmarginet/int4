@@ -1,11 +1,12 @@
 import React from "react";
 import style from "./Characters.module.css";
+import Barricade from "../../Games/Barricade/Barricade"
 
 
 const Characters = () => {
     return (
         <section className={style.wrapper}>
-          <object data='./assets/schrijven.svg' aria-labelledby="schrijven"></object>
+          <Barricade />
         </section>
     )
 }

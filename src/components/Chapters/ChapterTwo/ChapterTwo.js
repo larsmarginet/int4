@@ -1,10 +1,13 @@
 import React, { useRef, useState }from "react";
+import useSound from 'use-sound';
 import Lottie from 'react-lottie';
 import { useStore } from '../../../hooks/UseStore';
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useHistory } from 'react-router-dom';
 import style from "./ChapterTwo.module.css";
 import Button from '../../Ui/Button/Button';
+import Barricade from '../../Games/Barricade/Barricade'
+import pigeonSound from '../assets/pigeon.mp3';
 import * as armyAnimation from "./assets/army.json";
 import * as mapAnimation from "./assets/map.json";
 import * as paperAnimation from "./assets/krant.json";
@@ -16,10 +19,12 @@ const ChapterTwo = () => {
         history.push('/');
     } 
     const {height} = useWindowSize();
+    const [play] = useSound(pigeonSound);
     const army = useRef();
     const map = useRef();
     const paper = useRef();
     const [churchText, setChurchText] = useState(false);
+    const [pigeonGameText, setPigeonGameText] = useState(false);
     const [posFirst, setPosFirst] = useState(0);
     const [posSecond, setPosSecond] = useState(0);
     const [posThird, setPosThird] = useState(0);
@@ -28,7 +33,7 @@ const ChapterTwo = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        console.log(container);
+        // console.log(container);
             
         if (container > (height * .49) && container < (height * 3.086)) {
             army.current.anim.goToAndStop((container*1.2)-(height * .49)); 
@@ -39,20 +44,20 @@ const ChapterTwo = () => {
         if (container > (height * 8.1) && container < (height * 10.8)) {
             setPosSecond(container-(height * 8.1));
         }
-        if (container > (height * 11.4) && container < (height * 14.4)) {
-            setPosThird(container-(height * 11.4));
+        if (container > (height * 14.06) && container < (height * 15.5)) {
+            setPosThird(container-(height * 14.06));
         }
-        if (container > (height * 14.6) && container < (height * 16.8)) {
-            map.current.anim.goToAndStop(((container)-(height * 14.6))*2); 
+        if (container > (height * 15.5) && container < (height * 17.5)) {
+            map.current.anim.goToAndStop(((container)-(height * 15.5))*2); 
         }
-        if (container > (height * 19.7) && container < (height * 21.4)) {
-            setPosFourth(container-(height * 19.7));
+        if (container > (height * 20.96) && container < (height * 22.5)) {
+            setPosFourth(container-(height * 20.96));
         }
-        if (container > (height * 21.4) && container < (height * 25.4)) {
-            setPosFifth(container-(height * 21.4));
+        if (container > (height * 22.5) && container < (height * 26.4)) {
+            setPosFifth(container-(height * 22.5));
         }
-        if (container > (height * 25.4) && container < (height * 27.4)) {
-            paper.current.anim.goToAndStop(((container)-(height * 25.4))*3);
+        if (container > (height * 26.4) && container < (height * 28.7)) {
+            paper.current.anim.goToAndStop(((container)-(height * 26.4))*3);
         }
     }
     
@@ -110,9 +115,27 @@ const ChapterTwo = () => {
                     <object aria-label="napoleon" className={style.layer2} style={{ height: "50%", bottom: 0, transform: `translateX(${(posSecond/7)+400}px)`}} data="./assets/napoleon2.svg"></object>
                     <object aria-label="kerk" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/kerkBeelden.svg"></object>
                 </div>
-                <div className={style.gameWrapper} >
+                <div className={style.pigeonGameWrapper}>
+                    {pigeonGameText ? <div className={style.textBalloon}>
+                    <Button
+                        action={() => setPigeonGameText(false)}
+                        button={"smallSquare"} 
+                        content={
+                            <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M16.5823 12.6137L25.4564 3.73956L22.3246 0L14.1129 9.94926L13.9639 9.75904L5.10174 0.896906L2.48223 4.48262L11.2895 12.3167L11.1478 12.4324L0 22.3244L4.2779 24.9181L13.7057 15.0999L13.7826 15.1936L22.4289 25.1155L26.6778 22.5858L16.3606 12.8016L16.5823 12.6137Z" fill="white"/>
+                            </svg>
 
+                        } 
+                        height={43}
+                        width={45}/>
+                        <p className={style.textBalloonContent}>Bescherm de kerk tegen dief Napoleon! Kies telkens de beste optie om Napoleon buiten te houden. Kaartje 2 geeft je enkele tips!</p>
+                    </div> : <div className={style.spacer}></div>}
+                    <img className={ pigeonGameText ? "" : style.glow } onClick={() => {
+                        play()
+                        setPigeonGameText(true)
+                        }} alt="duif" src="./assets/duif.svg"/>
                 </div>
+                <Barricade style={{height: "100%"}}/>
                 <div style={{position: "relative", height:"100%", width: (height * 3.5), marginLeft: "-10rem"}} >
                     <object aria-label="napoleon" className={style.layer4} style={{ height: "90%", bottom: 0, transform: `translateX(${(posThird/7)+1200}px)`}} data="./assets/napoleon3.svg"></object>
                     <div className={style.parallaxTextWrapper}>
