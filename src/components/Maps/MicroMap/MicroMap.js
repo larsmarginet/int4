@@ -146,6 +146,15 @@ const MacroMap = ({height, width}) => {
                     <g filter="url(#filter3_d)" onClick={() => history.push(`/Camera/${store.arts[0].levels[4].id}`)}>
                         <ellipse cx="682" cy="307.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
+                    <g id="slot5" filter="url(#filter14_d)">
+                    <path id="Ellipse 721 (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_4" d="M688.998 286.959L703.822 282.485L707.966 295.62L691.849 299.088L688.998 286.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_5" fill-rule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_4">
+                    <path id="Vector 1258_4" d="M698.096 294.189L697.403 291.118L698.692 290.729L699.646 293.311L698.096 294.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_4" d="M699.06 289.623C699.275 290.334 698.872 291.085 698.161 291.299C697.449 291.514 696.699 291.111 696.484 290.4C696.269 289.689 696.672 288.938 697.383 288.723C698.095 288.508 698.846 288.911 699.06 289.623Z" fill="#B0B0B0"/>
+                    </g>
+                    </g>
                     <filter id="filter3_d" x="662" y="290" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -158,6 +167,15 @@ const MacroMap = ({height, width}) => {
                 <g>
                     <g filter="url(#filter3_d)">
                         <ellipse cx="682" cy="307.5" rx="20" ry="17.5" fill="#EAEAEA"/>
+                    </g>
+                    <g id="slot5" filter="url(#filter14_d)">
+                    <path id="Ellipse 721 (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_4" d="M688.998 286.959L703.822 282.485L707.966 295.62L691.849 299.088L688.998 286.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_5" fill-rule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_4">
+                    <path id="Vector 1258_4" d="M698.096 294.189L697.403 291.118L698.692 290.729L699.646 293.311L698.096 294.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_4" d="M699.06 289.623C699.275 290.334 698.872 291.085 698.161 291.299C697.449 291.514 696.699 291.111 696.484 290.4C696.269 289.689 696.672 288.938 697.383 288.723C698.095 288.508 698.846 288.911 699.06 289.623Z" fill="#B0B0B0"/>
+                    </g>
                     </g>
                     <filter id="filter3_d" x="662" y="290" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -197,6 +215,15 @@ const MacroMap = ({height, width}) => {
                     <g filter="url(#filter4_d)" onClick={() => history.push(`/Camera/${store.arts[0].levels[5].id}`)}>
                         <ellipse cx="906" cy="593.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
+                    <g id="slot6" filter="url(#filter11_d)">
+                    <path id="Ellipse 721 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715" d="M912.998 574.959L927.822 570.485L931.966 583.62L915.849 587.088L912.998 574.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_2" fill-rule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859">
+                    <path id="Vector 1258" d="M922.096 582.189L921.403 579.118L922.692 578.729L923.646 581.311L922.096 582.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722" d="M923.06 577.623C923.275 578.334 922.872 579.085 922.161 579.299C921.449 579.514 920.699 579.111 920.484 578.4C920.269 577.689 920.672 576.938 921.383 576.723C922.095 576.508 922.846 576.911 923.06 577.623Z" fill="#B0B0B0"/>
+                    </g>
+                    </g>
                     <filter id="filter4_d" x="886" y="576" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -209,6 +236,15 @@ const MacroMap = ({height, width}) => {
                 <g>
                     <g filter="url(#filter4_d)">
                         <ellipse cx="906" cy="593.5" rx="20" ry="17.5" fill="#EAEAEA"/>
+                    </g>
+                    <g id="slot6" filter="url(#filter11_d)">
+                    <path id="Ellipse 721 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715" d="M912.998 574.959L927.822 570.485L931.966 583.62L915.849 587.088L912.998 574.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_2" fill-rule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859">
+                    <path id="Vector 1258" d="M922.096 582.189L921.403 579.118L922.692 578.729L923.646 581.311L922.096 582.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722" d="M923.06 577.623C923.275 578.334 922.872 579.085 922.161 579.299C921.449 579.514 920.699 579.111 920.484 578.4C920.269 577.689 920.672 576.938 921.383 576.723C922.095 576.508 922.846 576.911 923.06 577.623Z" fill="#B0B0B0"/>
+                    </g>
                     </g>
                     <filter id="filter4_d" x="886" y="576" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -246,6 +282,15 @@ const MacroMap = ({height, width}) => {
                     <g filter="url(#filter5_d)" onClick={() => history.push(`/Camera/${store.arts[0].levels[6].id}`)}>
                         <ellipse cx="476" cy="444.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
+                    <g id="slot7" filter="url(#filter12_d)">
+                    <path id="Ellipse 721 (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_2" d="M483.998 423.959L498.822 419.485L502.966 432.62L486.849 436.088L483.998 423.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_3" fill-rule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_2">
+                    <path id="Vector 1258_2" d="M493.096 431.189L492.403 428.118L493.692 427.729L494.646 430.311L493.096 431.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_2" d="M494.06 426.623C494.275 427.334 493.872 428.085 493.161 428.299C492.449 428.514 491.699 428.111 491.484 427.4C491.269 426.689 491.672 425.938 492.383 425.723C493.095 425.508 493.845 425.911 494.06 426.623Z" fill="#B0B0B0"/>
+                    </g>
+                    </g>
                     <filter id="filter5_d" x="456" y="427" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -258,6 +303,15 @@ const MacroMap = ({height, width}) => {
                 <g>
                     <g filter="url(#filter5_d)">
                         <ellipse cx="476" cy="444.5" rx="20" ry="17.5" fill="#EAEAEA"/>
+                    </g>
+                    <g id="slot7" filter="url(#filter12_d)">
+                    <path id="Ellipse 721 (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_2" d="M483.998 423.959L498.822 419.485L502.966 432.62L486.849 436.088L483.998 423.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_3" fill-rule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_2">
+                    <path id="Vector 1258_2" d="M493.096 431.189L492.403 428.118L493.692 427.729L494.646 430.311L493.096 431.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_2" d="M494.06 426.623C494.275 427.334 493.872 428.085 493.161 428.299C492.449 428.514 491.699 428.111 491.484 427.4C491.269 426.689 491.672 425.938 492.383 425.723C493.095 425.508 493.845 425.911 494.06 426.623Z" fill="#B0B0B0"/>
+                    </g>
                     </g>
                     <filter id="filter5_d" x="456" y="427" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -297,6 +351,15 @@ const MacroMap = ({height, width}) => {
                     <g filter="url(#filter6_d)" onClick={() => history.push(`/Camera/${store.arts[0].levels[7].id}`)}>
                         <ellipse cx="590" cy="354.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
+                    <g id="slot8" filter="url(#filter13_d)">
+                    <path id="Ellipse 721 (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_3" d="M597.998 334.959L612.822 330.485L616.966 343.62L600.849 347.088L597.998 334.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_4" fill-rule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_3">
+                    <path id="Vector 1258_3" d="M607.096 342.189L606.403 339.118L607.692 338.729L608.646 341.311L607.096 342.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_3" d="M608.06 337.623C608.275 338.334 607.872 339.085 607.161 339.299C606.449 339.514 605.699 339.111 605.484 338.4C605.269 337.689 605.672 336.938 606.383 336.723C607.095 336.508 607.846 336.911 608.06 337.623Z" fill="#B0B0B0"/>
+                    </g>
+                    </g>
                     <filter id="filter6_d" x="570" y="337" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -309,6 +372,15 @@ const MacroMap = ({height, width}) => {
                  <g>
                     <g filter="url(#filter6_d)">
                         <ellipse cx="590" cy="354.5" rx="20" ry="17.5" fill="#EAEAEA"/>
+                    </g>
+                    <g id="slot8" filter="url(#filter13_d)">
+                    <path id="Ellipse 721 (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
+                    <path id="Rectangle 715_3" d="M597.998 334.959L612.822 330.485L616.966 343.62L600.849 347.088L597.998 334.959Z" fill="#C8CACE"/>
+                    <path id="Intersect_4" fill-rule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
+                    <g id="Group 859_3">
+                    <path id="Vector 1258_3" d="M607.096 342.189L606.403 339.118L607.692 338.729L608.646 341.311L607.096 342.189Z" fill="#B0B0B0"/>
+                    <path id="Ellipse 722_3" d="M608.06 337.623C608.275 338.334 607.872 339.085 607.161 339.299C606.449 339.514 605.699 339.111 605.484 338.4C605.269 337.689 605.672 336.938 606.383 336.723C607.095 336.508 607.846 336.911 608.06 337.623Z" fill="#B0B0B0"/>
+                    </g>
                     </g>
                     <filter id="filter6_d" x="570" y="337" width="40" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -323,7 +395,10 @@ const MacroMap = ({height, width}) => {
 
                 
                
-                
+                <path id="numFive" d="M686.104 301.425L685.754 304L685.504 304.25L683.229 304H680.329L680.254 306.8L681.804 307.125C683.254 307.425 684.296 307.9 684.929 308.55C685.579 309.183 685.904 310.033 685.904 311.1C685.904 312.15 685.638 313.083 685.104 313.9C684.571 314.7 683.813 315.317 682.829 315.75C681.863 316.2 680.754 316.425 679.504 316.425C678.638 316.425 677.721 316.325 676.754 316.125L676.579 313.525L676.804 313.3C677.904 313.683 678.896 313.875 679.779 313.875C680.696 313.875 681.421 313.667 681.954 313.25C682.488 312.817 682.754 312.25 682.754 311.55C682.754 310.983 682.563 310.542 682.179 310.225C681.796 309.892 681.171 309.65 680.304 309.5L677.904 309.075L677.679 308.8L677.804 301.675L678.204 301.3L679.654 301.35H683.304L685.904 301.225L686.104 301.425Z" fill="#DFDFDF"/>
+                <path id="numSix" d="M907.558 590.975C908.841 590.975 909.849 591.392 910.583 592.225C911.333 593.042 911.708 594.075 911.708 595.325C911.708 596.225 911.499 597.05 911.083 597.8C910.683 598.55 910.083 599.15 909.283 599.6C908.483 600.033 907.524 600.25 906.408 600.25C904.758 600.25 903.491 599.758 902.608 598.775C901.724 597.775 901.283 596.392 901.283 594.625C901.283 592.592 901.916 590.75 903.183 589.1C904.449 587.45 906.241 586.117 908.558 585.1H908.733L911.008 586.575V586.9C909.258 587.567 907.891 588.25 906.908 588.95C905.941 589.65 905.249 590.483 904.833 591.45L905.033 591.675C905.783 591.208 906.624 590.975 907.558 590.975ZM906.558 598.075C907.241 598.075 907.766 597.875 908.133 597.475C908.516 597.058 908.708 596.475 908.708 595.725C908.708 594.942 908.524 594.342 908.158 593.925C907.808 593.508 907.283 593.3 906.583 593.3C905.849 593.3 905.091 593.55 904.308 594.05V594.575C904.308 595.758 904.474 596.642 904.808 597.225C905.158 597.792 905.741 598.075 906.558 598.075Z" fill="#DFDFDF"/>
+                <path id="numSeven" opacity="0.7" d="M475.504 437.35H481.029L482.254 437.3V439.75L478.129 448.75L476.729 452.5L474.054 451.75L473.854 451.225L479.079 440.125H474.954L472.679 440.35L472.479 440.075L472.704 437.275L475.504 437.35Z" fill="#DFDFDF"/>
+                <path id="numEight" d="M589.785 347.125C591.135 347.125 592.185 347.45 592.935 348.1C593.702 348.75 594.085 349.642 594.085 350.775C594.085 351.508 593.894 352.15 593.51 352.7C593.127 353.25 592.585 353.75 591.885 354.2V354.35C592.702 354.75 593.344 355.217 593.81 355.75C594.277 356.267 594.51 356.967 594.51 357.85C594.51 359.2 594.019 360.267 593.035 361.05C592.069 361.833 590.777 362.225 589.16 362.225C587.644 362.225 586.46 361.875 585.61 361.175C584.777 360.475 584.36 359.567 584.36 358.45C584.36 357.583 584.602 356.867 585.085 356.3C585.569 355.733 586.244 355.258 587.11 354.875V354.725C586.427 354.342 585.877 353.883 585.46 353.35C585.044 352.8 584.835 352.1 584.835 351.25C584.835 349.983 585.285 348.983 586.185 348.25C587.085 347.5 588.285 347.125 589.785 347.125ZM589.56 349.425C588.927 349.425 588.435 349.583 588.085 349.9C587.735 350.2 587.56 350.617 587.56 351.15C587.56 351.7 587.752 352.142 588.135 352.475C588.519 352.792 589.069 353.092 589.785 353.375C590.319 353.075 590.735 352.758 591.035 352.425C591.335 352.092 591.485 351.667 591.485 351.15C591.485 350.617 591.31 350.2 590.96 349.9C590.627 349.583 590.16 349.425 589.56 349.425ZM589.21 355.75C588.544 356 588.027 356.292 587.66 356.625C587.31 356.958 587.135 357.425 587.135 358.025C587.135 358.625 587.335 359.108 587.735 359.475C588.152 359.825 588.719 360 589.435 360C590.169 360 590.735 359.825 591.135 359.475C591.552 359.108 591.76 358.65 591.76 358.1C591.76 357.533 591.552 357.092 591.135 356.775C590.719 356.442 590.077 356.1 589.21 355.75Z" fill="#DFDFDF"/>
                 <g filter="url(#filter7_d)">
                 <path d="M369.555 507.641C367.733 501.43 371.353 494.799 373.391 492.26L371.66 490.014L369.994 487.908L369.084 488.503L365.988 493.859L364.51 500.494L364.873 507.795L368.003 514.48L371.799 519.325L376.597 522.682L381.84 524.812L387.396 525.437L391.604 524.995L395.208 523.987L400.666 520.412L403.504 517.046L405.525 513.383L405.708 511.599L404.734 512.055C404.381 512.39 403.32 513.532 401.895 515.422C400.114 517.784 395.453 519.797 391.776 521.009C388.834 521.979 382.057 519.956 379.036 518.824C376.634 517.684 371.376 513.852 369.555 507.641Z" fill="#CD686D"/>
                 </g>
@@ -471,6 +546,42 @@ const MacroMap = ({height, width}) => {
                 <path d="M641.218 188.034L634.787 188.173V188.708L641.218 188.829V188.034Z" fill="#5C404E"/>
                 </g>
                 <defs>
+                <filter id="filter13_d" x="591.664" y="316.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="2.5"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <filter id="filter12_d" x="477.664" y="405.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="2.5"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <filter id="filter11_d" x="906.664" y="556.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="2.5"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <filter id="filter14_d" x="682.664" y="268.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="2.5"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
                 <filter id="filter0_d" x="-70.1875" y="-81.5" width="277.5" height="287" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
