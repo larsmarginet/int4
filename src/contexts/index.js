@@ -95,6 +95,6 @@ const store = new Store();
 
 store.seed([art1, art2, art3]);
 store.updateMoney(1000);
-store.setAvatar('avatar');
+store.setAvatar('beatrice');
 
 export const storeContext = createContext(store);

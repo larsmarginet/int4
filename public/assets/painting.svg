@@ -1,0 +1,15 @@
+<svg width="911" height="688" viewBox="0 0 911 688" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="0.722656" y="211.854" width="672.465" height="862.137" transform="rotate(-18.3374 0.722656 211.854)" fill="#FFF1F0"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="35" y="35" width="841" height="960">
+<rect x="35.3516" y="230.219" width="618.275" height="805.483" transform="rotate(-18.3374 35.3516 230.219)" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="18.7969" y="216.523" width="644.763" height="839.535" transform="rotate(-18.3374 18.7969 216.523)" fill="url(#pattern0)"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.000651042 0.0005)"/>
+</pattern>
+<image id="image0" width="1536" height="2000" xlink:href="./kruisoprichtingPoker.png"/>
+</defs>
+</svg>

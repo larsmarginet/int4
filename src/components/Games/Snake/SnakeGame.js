@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import style from "./SnakeGame.module.css"
 import Snake from "./components/Snake";
 import Food from "./components/Food";
+import Lottie from 'react-lottie';
 import Button from "../../Ui/Button/Button";
+import * as check from "./components/check.json";
 
 const getRandomCoordinates = () => {
     let min = 1;
@@ -124,68 +126,89 @@ const getRandomCoordinates = () => {
     }
   
     onGameOver() {
+      if(this.state.snakeDots.length <= 11) {
         this.setState(initialState)
         this.setState({start: true})
+      }
+        
     }
 
     render() {
         return (
-            <>
-                    <div className={style.gameArea}>
-                        {this.state.start ?  
-                           null :  <div className={style.startGame} >
-                            <Button
-                                action={() => {
-                                    this.start()
-                                    this.setState({start: true})
-                                }} 
-                                button={"button"} 
-                                content={<span className={style.btnText}>start</span>} 
-                                height={86}/>
-                        </div>}
+                <div className={style.gameWrapper}>
+                  <div className={style.gameArea}>
+                  
+                      {this.state.start ?  
+                         null :  <div className={style.startGame} >
+                          <Button
+                              action={() => {
+                                  this.start()
+                                  this.setState({start: true})
+                              }} 
+                              button={"button"} 
+                              content={<span className={style.btnText}>start</span>} 
+                              height={86}/>
+                      </div>}
+                      {this.state.snakeDots.length >= 12 ? 
+                        <div className={style.finished}><p>Gerestaureerd!</p>
+                         <Lottie height={70} width={70} style={{margin: 0}} options={{
+                            loop: false,
+                            autoplay: true,
+                            animationData: check.default}}/>
+                         </div> :
+                        <>
+                          <Snake snakeDots={this.state.snakeDots}/>
+                          <Food dot={this.state.food}/>
+                        </>}
+                    </div>
+                    
+                    <div className={style.controls}>
+                      <p className={style.score}>{this.state.snakeDots.length - 2}</p>
+                      <div className={style.buttonWrapper}>
                        
-                        <Snake snakeDots={this.state.snakeDots}/>
-                        <Food dot={this.state.food}/>
-                    </div>
-                    <div className={style.buttonWrapper}>
-                    <div className={style.btnUp} >
-                        <Button
-                            action={() => this.setState({direction: 'UP'})}
-                            button={"square"} 
-                            content={
-                                <img className={style.up} alt="arrow" src="./assets/arrow.svg" />
-                            } 
-                            height={86}/>
-                    </div>
-                    <div className={style.btnLeft}>
-                        <Button 
-                            action={() => this.setState({direction: 'LEFT'})}
-                            button={"square"} 
-                            content={
-                                <img className={style.left} alt="arrow" src="./assets/arrow.svg" />
-                            } 
-                            height={86}/>
-                    </div> 
-                    <div  className={style.btnDown}>         
-                        <Button 
-                            action={() => this.setState({direction: 'DOWN'})}
-                            button={"square"} 
-                            content={
-                                <img className={style.down} alt="arrow" src="./assets/arrow.svg" />
-                            } 
-                            height={86}/>               
-                    </div>
-                    <div  className={style.btnRight}>
-                        <Button 
-                            action={() => this.setState({direction: 'RIGHT'})}
-                            button={"square"} 
-                            content={
-                                <img alt="arrow" src="./assets/arrow.svg" />
-                            } 
-                            height={86}/>
-                    </div>
+                        <div className={style.btnUp} >
+                            <Button
+                                action={() => this.setState({direction: 'UP'})}
+                                button={"square"} 
+                                content={
+                                    <img className={style.up} alt="arrow" src="./assets/arrow.svg" />
+                                }  
+                                width={92}
+                                height={86}/>
+                        </div>
+                        <div className={style.btnLeft}>
+                            <Button 
+                                action={() => this.setState({direction: 'LEFT'})}
+                                button={"square"} 
+                                content={
+                                    <img className={style.left} alt="arrow" src="./assets/arrow.svg" />
+                                } 
+                                width={92}
+                                height={86}/>
+                        </div> 
+                        <div  className={style.btnDown}>         
+                            <Button 
+                                action={() => this.setState({direction: 'DOWN'})}
+                                button={"square"} 
+                                content={
+                                    <img className={style.down} alt="arrow" src="./assets/arrow.svg" />
+                                } 
+                                width={92}
+                                height={86}/>               
+                        </div>
+                        <div  className={style.btnRight}>
+                            <Button 
+                                action={() => this.setState({direction: 'RIGHT'})}
+                                button={"square"} 
+                                content={
+                                    <img alt="arrow" src="./assets/arrow.svg" />
+                                } 
+                                width={92}
+                                height={86}/>
+                        </div>
+                      </div>
                 </div>
-            </>
+            </div>
         )
     }
 }
