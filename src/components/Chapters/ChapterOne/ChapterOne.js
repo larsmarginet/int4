@@ -98,7 +98,7 @@ const ChapterOne = () => {
                         <p> +500</p>
                 </div> : null}
                 <div className={style.swipe} style={swipe ? {} : {display: "none"}}>
-                    <Lottie height={'100%'} width={'30rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                    <Lottie height={'100%'} width={'50rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
                         loop: true,
                         autoplay: true,
                         animationData: swipeAnimation.default,
