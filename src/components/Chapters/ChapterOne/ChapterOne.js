@@ -13,6 +13,7 @@ import * as mapAnimation from "./assets/map.json";
 import pigeonSound from '../assets/pigeon.mp3';
 import SecretCode from "../../Games/SecretCode/SecretCode";
 import Levels from "../assets/Levels/Levels";
+import Progress from "../assets/Progress/Progress";
 
 
 const ChapterOne = () => {
@@ -26,6 +27,7 @@ const ChapterOne = () => {
     const building = useRef();
     const pigeon = useRef();
     const map = useRef();
+    const [chapter, setChapter] = useState(1);
     const [notification, setNotification] = useState(false);
     const [pigeonText, setPigeonText] = useState(false);
     const [pastorText, setPastorText] = useState(false);
@@ -38,21 +40,36 @@ const ChapterOne = () => {
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
         // console.log(container);
+        if (container > (height * 0) && container < (height * .2)) {
+            setChapter(1)
+        } 
         if (container > (height * .94) && container < (height * 2.9297)) {
             building.current.anim.goToAndStop(container-750); 
         } 
         if (container > (height * 2.9297) && container < (height * 6.3151)) {
             setPosFirst(container);
         } 
+        if (container > (height * 6.4) && container < (height * 6.5)) {
+            setChapter(2)
+        } 
         if (container > (height * 9.5) && container < (height * 12.3268)) {
             setPosSecond(container);
         } 
-        if (container > (height * 14.6094) && container < (height * 17.3)) {
+        if (container > (height * 12.4) && container < (height * 12.5)) {
+            setChapter(3)
+        } 
+        if (container > (height * 14.6094) && container < (height * 17.29)) {
             pigeon.current.anim.goToAndStop((container-(height * 14.6094))*2); 
         }
-        if (container > (height * 17.3) && container < (height * 20.8333)) {
+        if (container > (height * 17.3) && container < (height * 17.4)) {
+            setChapter(4)
+        }
+        if (container > (height * 17.4) && container < (height * 20.8333)) {
             setPosposThird(container)
         } 
+        if (container > (height * 20.9) && container < (height * 21)) {
+            setChapter(5)
+        }
         if (container > (height * 22) && container < (height * 27.7396)) {
             map.current.anim.goToAndStop((container-(height * 22))*2.5); 
         } 
@@ -77,7 +94,9 @@ const ChapterOne = () => {
                         <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                         <p> +500</p>
                 </div> : null}
-               
+               <div className={style.progress}>
+                   <Progress chapter={chapter}/>
+               </div>
                 <p className={style.title}>
                     <svg className={style.titleBar} width="345" height="19" viewBox="0 0 345 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.294922 7.63197L344.295 0.000175428L332.288 19H0.294922V7.63197Z" fill="#FFF1F0"/>

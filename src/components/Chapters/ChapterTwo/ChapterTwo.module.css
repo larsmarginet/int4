@@ -30,6 +30,13 @@
     pointer-events: none;
 }
 
+.progress {
+    position: fixed;
+    bottom: 2rem;
+    left: 45%;
+    z-index: 998;
+}
+
 .title {
     display: flex;
     flex-flow: column;

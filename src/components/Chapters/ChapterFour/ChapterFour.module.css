@@ -311,6 +311,12 @@
     align-self: center;
 }
 
+.progress {
+    position: fixed;
+    bottom: 2rem;
+    left: 45%;
+    z-index: 998;
+}
 
 .great {
     height: 100vh;

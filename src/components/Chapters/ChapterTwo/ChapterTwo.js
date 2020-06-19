@@ -7,7 +7,8 @@ import { useHistory } from 'react-router-dom';
 import style from "./ChapterTwo.module.css";
 import Levels from "../assets/Levels/Levels";
 import Button from '../../Ui/Button/Button';
-import Barricade from '../../Games/Barricade/Barricade'
+import Barricade from '../../Games/Barricade/Barricade';
+import Progress from "../assets/Progress/Progress";
 import pigeonSound from '../assets/pigeon.mp3';
 import * as armyAnimation from "./assets/army.json";
 import * as mapAnimation from "./assets/map.json";
@@ -24,6 +25,7 @@ const ChapterTwo = () => {
     const army = useRef();
     const map = useRef();
     const paper = useRef();
+    const [chapter, setChapter] = useState(1);
     const [churchText, setChurchText] = useState(false);
     const [pigeonGameText, setPigeonGameText] = useState(false);
     const [posFirst, setPosFirst] = useState(0);
@@ -35,13 +37,18 @@ const ChapterTwo = () => {
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
         // console.log(container);
-            
+        if (container > (height * 0) && container < (height * .2)) {
+            setChapter(1)
+        } 
         if (container > (height * .49) && container < (height * 3.086)) {
             army.current.anim.goToAndStop((container*1.2)-(height * .49)); 
         }
         if (container > (height * 3.086) && container < (height * 6.6)) {
             setPosFirst(container-(height * 3.086));
         }
+        if (container > (height * 6.6) && container < (height * 6.7)) {
+            setChapter(2)
+        } 
         if (container > (height * 8.1) && container < (height * 10.8)) {
             setPosSecond(container-(height * 8.1));
         }
@@ -51,12 +58,21 @@ const ChapterTwo = () => {
         if (container > (height * 15.5) && container < (height * 17.5)) {
             map.current.anim.goToAndStop(((container)-(height * 15.5))*2); 
         }
+        if (container > (height * 17.6) && container < (height * 17.7)) {
+            setChapter(3)
+        } 
         if (container > (height * 20.96) && container < (height * 22.5)) {
             setPosFourth(container-(height * 20.96));
         }
-        if (container > (height * 22.5) && container < (height * 26.4)) {
-            setPosFifth(container-(height * 22.5));
+        if (container > (height * 22.6) && container < (height * 22.7)) {
+            setChapter(4)
+        } 
+        if (container > (height * 22.7) && container < (height * 26.3)) {
+            setPosFifth(container-(height * 22.7));
         }
+        if (container > (height * 26.3) && container < (height * 26.4)) {
+            setChapter(5)
+        } 
         if (container > (height * 26.4) && container < (height * 28.7)) {
             paper.current.anim.goToAndStop(((container)-(height * 26.4))*3);
         }
@@ -77,6 +93,9 @@ const ChapterTwo = () => {
                         } 
                         height={86}/>
                 </div>
+                <div className={style.progress}>
+                   <Progress chapter={chapter}/>
+               </div>
                 <p className={style.title}>
                     <svg className={style.titleBar} width="345" height="19" viewBox="0 0 345 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.294922 7.63197L344.295 0.000175428L332.288 19H0.294922V7.63197Z" fill="#FFF1F0"/>

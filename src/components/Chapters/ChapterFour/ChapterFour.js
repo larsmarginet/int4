@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import useWindowSize from "../../../hooks/useWindowSize";
 import Levels from "../assets/Levels/Levels";
 import Cards from "./assets/Cards/Cards";
+import Progress from "../assets/Progress/Progress";
 import Bar from "./assets/Bar/Bar";
 import style from "./ChapterFour.module.css";
 import Button from '../../Ui/Button/Button';
@@ -43,6 +44,7 @@ const ChapterFour = () => {
 
     const willem = useRef();
     const party = useRef();
+    const [chapter, setChapter] = useState(1);
     const [notificationOne, setNotificationOne] = useState(false);
     const [notificationTwo, setNotificationTwo] = useState(false);
     const [pigeonGameText, setPigeonGameText] = useState(false);
@@ -55,30 +57,43 @@ const ChapterFour = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        console.log(container);
+        //console.log(container);
+        if (container > (height * 0) && container < (height * .2)) {
+            setChapter(1)
+        } 
         if (container > (height * .4) && container < (height * 4.056)) {
             setPosFirst(container - (height * .4));
         } 
         if (container > (height * 4.1) && container < (height * 7.1)) {
             setPosSecond(container - (height * 4.1));
         } 
-        if (container > (height * 12.7) && container < (height * 16.0469)) {
+        if (container > (height * 7.1) && container < (height * 7.2)) {
+            setChapter(2)
+        } 
+        if (container > (height * 12.7) && container < (height * 16)) {
             setPosThird(container - (height * 12.7));
         }
-        if (container > (height * 16.05) && container <= (height * 17)) {
+        if (container > (height * 16) && container < (height * 16.05)) {
+            setChapter(3)
+        } 
+        if (container > (height * 16.05) && container <= (height * 16.9)) {
             willem.current.anim.goToAndStop(1);
         }
         if (container > (height * 17) && container < (height * 19.2)) {
             willem.current.anim.goToAndStop(((container)-(height * 17))*2.2);
         } 
-        if (container > (height * 20) && container < (height * 21.04)) {
+        if (container > (height * 19.3) && container < (height * 19.4)) {
+            setChapter(4)
+        } 
+        if (container > (height * 20) && container < (height * 21)) {
             party.current.anim.goToAndStop(1);
         } 
-        if (container > (height * 21.04) && container < (height * 24.5)) {
+        if (container > (height * 21.1) && container < (height * 24.5)) {
             party.current.anim.goToAndStop(((container)-(height * 21.04))*1.6);
         } 
-
-         
+        if (container > (height *  24.6) && container < (height *  24.7)) {
+            setChapter(5)
+        } 
     }
 
     return useObserver(() => (
@@ -104,7 +119,9 @@ const ChapterFour = () => {
                     <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                     <p> +5</p>
             </div> : null}
-           
+            <div className={style.progress}>
+                   <Progress chapter={chapter}/>
+               </div>
             <p className={style.title}>
                 <svg className={style.titleBar} width="345" height="19" viewBox="0 0 345 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.294922 7.63197L344.295 0.000175428L332.288 19H0.294922V7.63197Z" fill="#FFF1F0"/>
