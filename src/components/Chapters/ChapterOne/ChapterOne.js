@@ -12,6 +12,7 @@ import * as lightsAnimation from "./assets/lights.json";
 import * as mapAnimation from "./assets/map.json";
 import pigeonSound from '../assets/pigeon.mp3';
 import SecretCode from "../../Games/SecretCode/SecretCode";
+import Levels from "../assets/Levels/Levels";
 
 
 const ChapterOne = () => {
@@ -60,7 +61,7 @@ const ChapterOne = () => {
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
             <h2 style={{display: "none"}}>Deel 1</h2>
-            <div className={style.story} style={{width: (height * 27)}}>
+            <div className={style.story} style={{width: (height * 30)}}>
                 <div className={style.button}>
                     <Button
                         action={() => history.goBack()}
@@ -205,7 +206,32 @@ const ChapterOne = () => {
                     autoplay: true,
                     animationData: lightsAnimation.default,
                 }}/>
+                <div className={style.great}>
+                    <p className={style.greatTitle}>Geweldig!</p>
+                    <div className={style.greatContentWrapper}>
+                        <p>Je hebt verhaal</p>
+                        <img className={style.greatNumber} src="./assets/1.svg" alt="1" />
+                        <p>volbracht!</p>
+                    </div>
+                    <Levels  level={1}/>
+                </div>
+                <div className={style.next}>
+                    <p className={style.nextTitle}>Een nieuwe postkaart is onderweg!</p>
+                    <div className={style.nextCardWrapper}>
+                        <img className={style.nextNumber} src="./assets/2red.svg" alt="twee" />
+                        <img className={style.nextCard} src='./assets/card.svg' alt="kaartje" />
+                    </div>
+                    <Button
+                        action={() => {
+                            history.push("/overview")
+                            store.arts[0].levels[0].setDone();
+                        }} 
+                        button={"button"} 
+                        content={<span className={style.btnText}>Naar overzicht</span>} 
+                        height={86}/>
+                </div>
             </div>
+           
         </section>
     )
 }

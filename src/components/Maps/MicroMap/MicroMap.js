@@ -147,9 +147,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="682" cy="307.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <g id="slot5" filter="url(#filter14_d)">
-                    <path id="Ellipse 721 (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_4" fillRule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_4" d="M688.998 286.959L703.822 282.485L707.966 295.62L691.849 299.088L688.998 286.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_5" fill-rule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_5" fillRule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_4">
                     <path id="Vector 1258_4" d="M698.096 294.189L697.403 291.118L698.692 290.729L699.646 293.311L698.096 294.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_4" d="M699.06 289.623C699.275 290.334 698.872 291.085 698.161 291.299C697.449 291.514 696.699 291.111 696.484 290.4C696.269 289.689 696.672 288.938 697.383 288.723C698.095 288.508 698.846 288.911 699.06 289.623Z" fill="#B0B0B0"/>
@@ -169,9 +169,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="682" cy="307.5" rx="20" ry="17.5" fill="#EAEAEA"/>
                     </g>
                     <g id="slot5" filter="url(#filter14_d)">
-                    <path id="Ellipse 721 (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_4" fillRule="evenodd" clip-rule="evenodd" d="M694.28 277.498C692.177 278.132 690.981 280.308 691.598 282.353L692.774 286.252L690.602 286.907L689.426 283.009C688.452 279.782 690.342 276.365 693.638 275.37C696.934 274.375 700.399 276.177 701.373 279.403L702.549 283.302L700.377 283.958L699.2 280.059C698.583 278.014 696.383 276.863 694.28 277.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_4" d="M688.998 286.959L703.822 282.485L707.966 295.62L691.849 299.088L688.998 286.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_5" fill-rule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_5" fillRule="evenodd" clip-rule="evenodd" d="M700.035 297.367L696.223 284.735L704.027 282.373L708.192 295.6L700.035 297.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_4">
                     <path id="Vector 1258_4" d="M698.096 294.189L697.403 291.118L698.692 290.729L699.646 293.311L698.096 294.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_4" d="M699.06 289.623C699.275 290.334 698.872 291.085 698.161 291.299C697.449 291.514 696.699 291.111 696.484 290.4C696.269 289.689 696.672 288.938 697.383 288.723C698.095 288.508 698.846 288.911 699.06 289.623Z" fill="#B0B0B0"/>
@@ -216,9 +216,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="906" cy="593.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <g id="slot6" filter="url(#filter11_d)">
-                    <path id="Ellipse 721 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)" fillRule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715" d="M912.998 574.959L927.822 570.485L931.966 583.62L915.849 587.088L912.998 574.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_2" fill-rule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_2" fillRule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
                     <g id="Group 859">
                     <path id="Vector 1258" d="M922.096 582.189L921.403 579.118L922.692 578.729L923.646 581.311L922.096 582.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722" d="M923.06 577.623C923.275 578.334 922.872 579.085 922.161 579.299C921.449 579.514 920.699 579.111 920.484 578.4C920.269 577.689 920.672 576.938 921.383 576.723C922.095 576.508 922.846 576.911 923.06 577.623Z" fill="#B0B0B0"/>
@@ -238,9 +238,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="906" cy="593.5" rx="20" ry="17.5" fill="#EAEAEA"/>
                     </g>
                     <g id="slot6" filter="url(#filter11_d)">
-                    <path id="Ellipse 721 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)" fillRule="evenodd" clip-rule="evenodd" d="M918.28 565.498C916.177 566.132 914.981 568.308 915.598 570.353L916.774 574.252L914.602 574.907L913.426 571.009C912.452 567.782 914.342 564.365 917.638 563.37C920.934 562.375 924.399 564.177 925.373 567.403L926.549 571.302L924.377 571.958L923.2 568.059C922.583 566.014 920.383 564.863 918.28 565.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715" d="M912.998 574.959L927.822 570.485L931.966 583.62L915.849 587.088L912.998 574.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_2" fill-rule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_2" fillRule="evenodd" clip-rule="evenodd" d="M924.035 585.367L920.223 572.735L928.027 570.373L932.192 583.6L924.035 585.367Z" fill="#DFDFDF"/>
                     <g id="Group 859">
                     <path id="Vector 1258" d="M922.096 582.189L921.403 579.118L922.692 578.729L923.646 581.311L922.096 582.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722" d="M923.06 577.623C923.275 578.334 922.872 579.085 922.161 579.299C921.449 579.514 920.699 579.111 920.484 578.4C920.269 577.689 920.672 576.938 921.383 576.723C922.095 576.508 922.846 576.911 923.06 577.623Z" fill="#B0B0B0"/>
@@ -283,9 +283,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="476" cy="444.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <g id="slot7" filter="url(#filter12_d)">
-                    <path id="Ellipse 721 (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_2" fillRule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_2" d="M483.998 423.959L498.822 419.485L502.966 432.62L486.849 436.088L483.998 423.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_3" fill-rule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_3" fillRule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_2">
                     <path id="Vector 1258_2" d="M493.096 431.189L492.403 428.118L493.692 427.729L494.646 430.311L493.096 431.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_2" d="M494.06 426.623C494.275 427.334 493.872 428.085 493.161 428.299C492.449 428.514 491.699 428.111 491.484 427.4C491.269 426.689 491.672 425.938 492.383 425.723C493.095 425.508 493.845 425.911 494.06 426.623Z" fill="#B0B0B0"/>
@@ -305,9 +305,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="476" cy="444.5" rx="20" ry="17.5" fill="#EAEAEA"/>
                     </g>
                     <g id="slot7" filter="url(#filter12_d)">
-                    <path id="Ellipse 721 (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_2" fillRule="evenodd" clip-rule="evenodd" d="M489.28 414.498C487.177 415.132 485.981 417.308 486.598 419.353L487.774 423.252L485.602 423.907L484.426 420.009C483.452 416.782 485.342 413.365 488.638 412.37C491.934 411.375 495.399 413.177 496.373 416.403L497.549 420.302L495.377 420.958L494.201 417.059C493.584 415.014 491.383 413.863 489.28 414.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_2" d="M483.998 423.959L498.822 419.485L502.966 432.62L486.849 436.088L483.998 423.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_3" fill-rule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_3" fillRule="evenodd" clip-rule="evenodd" d="M495.035 434.367L491.223 421.735L499.027 419.373L503.192 432.6L495.035 434.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_2">
                     <path id="Vector 1258_2" d="M493.096 431.189L492.403 428.118L493.692 427.729L494.646 430.311L493.096 431.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_2" d="M494.06 426.623C494.275 427.334 493.872 428.085 493.161 428.299C492.449 428.514 491.699 428.111 491.484 427.4C491.269 426.689 491.672 425.938 492.383 425.723C493.095 425.508 493.845 425.911 494.06 426.623Z" fill="#B0B0B0"/>
@@ -352,9 +352,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="590" cy="354.5" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
                     <g id="slot8" filter="url(#filter13_d)">
-                    <path id="Ellipse 721 (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_3" fillRule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_3" d="M597.998 334.959L612.822 330.485L616.966 343.62L600.849 347.088L597.998 334.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_4" fill-rule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_4" fillRule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_3">
                     <path id="Vector 1258_3" d="M607.096 342.189L606.403 339.118L607.692 338.729L608.646 341.311L607.096 342.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_3" d="M608.06 337.623C608.275 338.334 607.872 339.085 607.161 339.299C606.449 339.514 605.699 339.111 605.484 338.4C605.269 337.689 605.672 336.938 606.383 336.723C607.095 336.508 607.846 336.911 608.06 337.623Z" fill="#B0B0B0"/>
@@ -374,9 +374,9 @@ const MacroMap = ({height, width}) => {
                         <ellipse cx="590" cy="354.5" rx="20" ry="17.5" fill="#EAEAEA"/>
                     </g>
                     <g id="slot8" filter="url(#filter13_d)">
-                    <path id="Ellipse 721 (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
+                    <path id="Ellipse 721 (Stroke)_3" fillRule="evenodd" clip-rule="evenodd" d="M603.28 325.498C601.177 326.132 599.981 328.308 600.598 330.353L601.774 334.252L599.602 334.907L598.426 331.009C597.452 327.782 599.342 324.365 602.638 323.37C605.934 322.375 609.399 324.177 610.373 327.403L611.549 331.302L609.377 331.958L608.2 328.059C607.583 326.014 605.383 324.863 603.28 325.498Z" fill="#B8B8B9"/>
                     <path id="Rectangle 715_3" d="M597.998 334.959L612.822 330.485L616.966 343.62L600.849 347.088L597.998 334.959Z" fill="#C8CACE"/>
-                    <path id="Intersect_4" fill-rule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
+                    <path id="Intersect_4" fillRule="evenodd" clip-rule="evenodd" d="M609.035 345.367L605.223 332.735L613.027 330.373L617.192 343.6L609.035 345.367Z" fill="#DFDFDF"/>
                     <g id="Group 859_3">
                     <path id="Vector 1258_3" d="M607.096 342.189L606.403 339.118L607.692 338.729L608.646 341.311L607.096 342.189Z" fill="#B0B0B0"/>
                     <path id="Ellipse 722_3" d="M608.06 337.623C608.275 338.334 607.872 339.085 607.161 339.299C606.449 339.514 605.699 339.111 605.484 338.4C605.269 337.689 605.672 336.938 606.383 336.723C607.095 336.508 607.846 336.911 608.06 337.623Z" fill="#B0B0B0"/>
@@ -546,8 +546,8 @@ const MacroMap = ({height, width}) => {
                 <path d="M641.218 188.034L634.787 188.173V188.708L641.218 188.829V188.034Z" fill="#5C404E"/>
                 </g>
                 <defs>
-                <filter id="filter13_d" x="591.664" y="316.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter13_d" x="591.664" y="316.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="2.5"/>
@@ -555,8 +555,8 @@ const MacroMap = ({height, width}) => {
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
                 </filter>
-                <filter id="filter12_d" x="477.664" y="405.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter12_d" x="477.664" y="405.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="2.5"/>
@@ -564,8 +564,8 @@ const MacroMap = ({height, width}) => {
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
                 </filter>
-                <filter id="filter11_d" x="906.664" y="556.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter11_d" x="906.664" y="556.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="2.5"/>
@@ -573,8 +573,8 @@ const MacroMap = ({height, width}) => {
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
                 </filter>
-                <filter id="filter14_d" x="682.664" y="268.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter14_d" x="682.664" y="268.567" width="30.6196" height="37.358" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="2.5"/>

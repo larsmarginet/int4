@@ -13,11 +13,17 @@ class LevelModel {
   unlock() {
     this.unlocked = true;
   }
+
+  setDone() {
+    this.done = true;
+  }
 }
 
 decorate(LevelModel, {
     unlocked: observable, 
-    unlock: action
+    done: observable, 
+    unlock: action, 
+    setDone: action
 });
 
 export default LevelModel;

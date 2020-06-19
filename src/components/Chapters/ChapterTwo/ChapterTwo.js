@@ -5,6 +5,7 @@ import { useStore } from '../../../hooks/UseStore';
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useHistory } from 'react-router-dom';
 import style from "./ChapterTwo.module.css";
+import Levels from "../assets/Levels/Levels";
 import Button from '../../Ui/Button/Button';
 import Barricade from '../../Games/Barricade/Barricade'
 import pigeonSound from '../assets/pigeon.mp3';
@@ -64,7 +65,7 @@ const ChapterTwo = () => {
     return (
         <section className={style.wrapper} onScroll={e => scroll(e)}>
         <h2 style={{display: "none"}}>Deel 2</h2>
-            <div className={style.story} style={{width: (height * 30)}}>
+            <div className={style.story} style={{width: (height * 33)}}>
                 <div className={style.button}>
                     <Button
                         action={() => history.goBack()}
@@ -166,6 +167,30 @@ const ChapterTwo = () => {
                         autoplay: false,
                         animationData: paperAnimation.default,
                 }}/>
+                <div className={style.great}>
+                    <p className={style.greatTitle}>Geweldig!</p>
+                    <div className={style.greatContentWrapper}>
+                        <p>Je hebt verhaal</p>
+                        <img className={style.greatNumber} src="./assets/2.svg" alt="2" />
+                        <p>volbracht!</p>
+                    </div>
+                    <Levels  level={2}/>
+                </div>
+                <div className={style.next}>
+                    <p className={style.nextTitle}>Een nieuwe postkaart is onderweg!</p>
+                    <div className={style.nextCardWrapper}>
+                        <img className={style.nextNumber} src="./assets/3red.svg" alt="drie" />
+                        <img className={style.nextCard} src='./assets/card.svg' alt="kaartje" />
+                    </div>
+                    <Button
+                        action={() => {
+                            history.push("/overview")
+                            store.arts[0].levels[1].setDone();
+                        }} 
+                        button={"button"} 
+                        content={<span className={style.btnText}>Naar overzicht</span>} 
+                        height={86}/>
+                </div>
             </div>
         </section>
     )

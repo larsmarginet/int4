@@ -227,6 +227,91 @@
     align-self: center;
 }
 
+.great {
+    height: 100vh;
+    width: 141.11vh;
+    background-image: url(../assets/BG.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greatTitle {
+    background-image: url(../assets/geweldig.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 15%;
+    font-family: 'alegreya-sans-sc', sans-serif;
+   padding: 2rem 4rem 4rem 4rem;
+}
+
+.greatNumber {
+    animation: crescendo 1.5s infinite ease-in-out;     
+}
+
+@keyframes crescendo {
+    0%   {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }
+
+.greatContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'alegreya-sans-sc', sans-serif;
+}
+
+.btnText {
+    composes: buttonText from "../../../styles/components.module.css";
+}
+
+.next {
+    height: 100vh;
+    width: 141.11vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+  
+}
+
+.nextTitle {
+    font-family: 'alegreya-sans-sc', sans-serif;
+}
+
+.nextCard {
+    margin-top: -10rem;
+}
+
+.nextNumber {
+    z-index: 2;
+    margin-left: -5rem;
+    animation: rotating 3s infinite  ease-in-out;
+}
+
+.nextCardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: floating 3s infinite  ease-in-out;     
+}
+
+@keyframes floating {
+    0%   {transform: translateY(0px);}
+    50%   {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes rotating {
+    0%   {transform: rotate(0deg);}
+    50%   {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+
 @media screen and (max-width: 810px) {
     .button {
         left: 1rem;
