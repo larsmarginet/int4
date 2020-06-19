@@ -31,6 +31,12 @@
     z-index: 999;
 }
 
+.swipe {
+    position: fixed;
+    top: 40%;
+    right: 2rem;
+    z-index: 1001;
+}
 
 .notification {
     position: fixed;

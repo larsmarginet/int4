@@ -10,6 +10,7 @@ import Button from '../../Ui/Button/Button';
 import Barricade from '../../Games/Barricade/Barricade';
 import Progress from "../assets/Progress/Progress";
 import pigeonSound from '../assets/pigeon.mp3';
+import * as swipeAnimation from "../assets/swipe.json";
 import * as armyAnimation from "./assets/army.json";
 import * as mapAnimation from "./assets/map.json";
 import * as paperAnimation from "./assets/krant.json";
@@ -26,6 +27,7 @@ const ChapterTwo = () => {
     const map = useRef();
     const paper = useRef();
     const [chapter, setChapter] = useState(1);
+    const [swipe, setSwipe] = useState(true);
     const [churchText, setChurchText] = useState(false);
     const [pigeonGameText, setPigeonGameText] = useState(false);
     const [posFirst, setPosFirst] = useState(0);
@@ -39,6 +41,7 @@ const ChapterTwo = () => {
         // console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
             setChapter(1)
+            setSwipe(false)
         } 
         if (container > (height * .49) && container < (height * 3.086)) {
             army.current.anim.goToAndStop((container*1.2)-(height * .49)); 
@@ -93,6 +96,12 @@ const ChapterTwo = () => {
                         } 
                         height={86}/>
                 </div>
+                <div className={style.swipe} style={swipe ? {} : {display: "none"}}>
+                    <Lottie height={'100%'} width={'30rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: swipeAnimation.default,
+                    }}/></div>
                 <div className={style.progress}>
                    <Progress chapter={chapter}/>
                </div>

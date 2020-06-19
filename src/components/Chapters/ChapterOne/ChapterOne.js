@@ -6,6 +6,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import { useHistory } from 'react-router-dom';
 import style from "./ChapterOne.module.css";
 import Button from '../../Ui/Button/Button';
+import * as swipeAnimation from "../assets/swipe.json";
 import * as buildingAnimation from "./assets/building.json";
 import * as pigeonAnimation from "./assets/pigeon.json";
 import * as lightsAnimation from "./assets/lights.json";
@@ -28,6 +29,7 @@ const ChapterOne = () => {
     const pigeon = useRef();
     const map = useRef();
     const [chapter, setChapter] = useState(1);
+    const [swipe, setSwipe] = useState(true);
     const [notification, setNotification] = useState(false);
     const [pigeonText, setPigeonText] = useState(false);
     const [pastorText, setPastorText] = useState(false);
@@ -41,7 +43,8 @@ const ChapterOne = () => {
         const container = e.currentTarget.scrollLeft;
         // console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
-            setChapter(1)
+            setChapter(1);
+            setSwipe(false)
         } 
         if (container > (height * .94) && container < (height * 2.9297)) {
             building.current.anim.goToAndStop(container-750); 
@@ -94,7 +97,13 @@ const ChapterOne = () => {
                         <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                         <p> +500</p>
                 </div> : null}
-               <div className={style.progress}>
+                <div className={style.swipe} style={swipe ? {} : {display: "none"}}>
+                    <Lottie height={'100%'} width={'30rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: swipeAnimation.default,
+                    }}/></div>
+               <div className={style.progress} >
                    <Progress chapter={chapter}/>
                </div>
                 <p className={style.title}>
@@ -201,7 +210,6 @@ const ChapterOne = () => {
                             <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M16.5823 12.6137L25.4564 3.73956L22.3246 0L14.1129 9.94926L13.9639 9.75904L5.10174 0.896906L2.48223 4.48262L11.2895 12.3167L11.1478 12.4324L0 22.3244L4.2779 24.9181L13.7057 15.0999L13.7826 15.1936L22.4289 25.1155L26.6778 22.5858L16.3606 12.8016L16.5823 12.6137Z" fill="white"/>
                             </svg>
-
                         } 
                         height={43}
                         width={45}/>
@@ -250,7 +258,6 @@ const ChapterOne = () => {
                         height={86}/>
                 </div>
             </div>
-           
         </section>
     )
 }

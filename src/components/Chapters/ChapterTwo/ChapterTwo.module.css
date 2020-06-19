@@ -30,6 +30,13 @@
     pointer-events: none;
 }
 
+.swipe {
+    position: fixed;
+    top: 40%;
+    right: 2rem;
+    z-index: 1001;
+}
+
 .progress {
     position: fixed;
     bottom: 2rem;
