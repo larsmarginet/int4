@@ -97,8 +97,9 @@ const ChapterOne = () => {
                         <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                         <p> +500</p>
                 </div> : null}
-                <div className={style.swipe} style={swipe ? {} : {display: "none"}}>
-                    <Lottie height={'100%'} width={'50rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                <div className={style.swipe} style={swipe ? {pointerEvents: "none"} : {display: "none"}}>
+                    <Lottie height={'100%'} width={'50rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4, }} options={{
+                        renderer: 'svg',
                         loop: true,
                         autoplay: true,
                         animationData: swipeAnimation.default,

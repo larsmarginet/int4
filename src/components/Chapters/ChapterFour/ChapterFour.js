@@ -122,7 +122,7 @@ const ChapterFour = () => {
                     <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                     <p> +5</p>
             </div> : null}
-            <div className={style.swipe} style={swipe ? {} : {display: "none"}}>
+            <div className={style.swipe} style={swipe ? {pointerEvents: "none"} : {display: "none"}}>
                     <Lottie height={'100%'} width={'50rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
                         loop: true,
                         autoplay: true,
