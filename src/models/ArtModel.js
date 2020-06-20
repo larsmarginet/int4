@@ -2,9 +2,8 @@ import { v4 } from "uuid";
 import { decorate, observable, action } from "mobx";
 
 class ArtModel {
-  constructor({ id = v4(), pic, price, name, artist, levels = [], characters = [], unlocked = false }) {
+  constructor({ id = v4(), price, name, artist, levels = [], characters = [], unlocked = false }) {
     this.id = id;
-    this.pic = pic;
     this.name = name;
     this.artist = artist;
     this.levels = levels;

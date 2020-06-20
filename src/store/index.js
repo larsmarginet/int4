@@ -11,8 +11,9 @@ class Store {
   }
 
   seed(arts) {
+    console.log(arts)
     this.arts = arts;
-    console.log(JSON.parse(localStorage.getItem("store")))
+    
   }
 
   setAvatar(avatar) {
