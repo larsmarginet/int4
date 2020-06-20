@@ -90,9 +90,7 @@ const ChapterTwo = () => {
                         action={() => history.goBack()}
                         button={"square"} 
                         content={
-                            <svg className={style.back} width="71" height="36" viewBox="0 0 71 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M38.0377 22.7673L0.239083 26.7291L2.9839 7.83182L40.4752 10.5751L40.4752 0.211637L70.6504 16.3664L38.0377 35.874L38.0377 22.7673Z" fill="#FFDD66"/>
-                            </svg>
+                            <img src='./assets/mapIcon.svg' alt='terug naar kaart' />
                         } 
                         height={86}/>
                 </div>

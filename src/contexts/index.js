@@ -42,12 +42,16 @@ const level5 = new LevelModel({
     id: "6a80d6da-b6ba-4767-b0a3-6517e6ec256b",
     name: "chapterFive",
     code: "EEEEE55555",
+    unlocked: true,
+    done: true
 })
 
 const level6 = new LevelModel({
     id: "c06424b6-461e-4ab1-b914-9e7371e5324a",
     name: "chapterSix",
     code: "FFFFF66666",
+    unlocked: true,
+    done: true
    
 })
 
@@ -55,6 +59,8 @@ const level7 = new LevelModel({
     id: "bfd8a2df-93bf-4411-967e-2dc6a1d0a083",
     name: "chapterSeven",
     code: "GGGGG77777",
+    unlocked: true,
+    done: true
 })
 
 const level8 = new LevelModel({
@@ -75,10 +81,10 @@ const napoleon = new CharacterModel({
 const herbert = new CharacterModel({
     id: "0eb5bc90-efd5-4c20-9e5f-42f496378101", 
     pic: "herbertDetail",
-    name: "Napoleon Bonaparte",
+    name: "Herbert Cockuyt",
     title: "De smid van Pittem",
     quote: '"Mijn hamer en aanbeeld zijn mijn beste vrienden"', 
-    secrets: ["Draagt nooit  onderbroeken", "Verkiest dieren boven mensen", "Eet tijdens zijn veldslagen door graag witte chocolade", "Is allergisch aan witloof"]
+    secrets: ["Houdt ervan in zijn vrije tijd zakdoeken te  borduren", "Mediteert in zijn middagpauze", "Eet het liefst spaghetti", "Heeft een voorliefde voor vlaamse schlagermuziek"]
 })
 
 const non = new CharacterModel({
