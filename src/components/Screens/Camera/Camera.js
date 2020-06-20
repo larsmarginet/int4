@@ -28,6 +28,7 @@ const Camera = () => {
         setText('succes!');
         setResult(result);
         level.unlock();
+        store.update();
       } else if (result !== code) {
         setText('Deze code is niet gelding voor dit level.');
       }

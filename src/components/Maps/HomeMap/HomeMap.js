@@ -13,6 +13,7 @@ const HomeMap = ({height, width}) => {
         store.updateMoney(-amount);
         store.arts[art].unlock();
         play();
+        store.update();
     }
 
     let w = "100vw";

@@ -251,6 +251,7 @@ const ChapterOne = () => {
                         action={() => {
                             history.push("/overview")
                             store.arts[0].levels[0].setDone();
+                            store.update();
                         }} 
                         button={"button"} 
                         content={<span className={style.btnText}>Naar overzicht</span>} 

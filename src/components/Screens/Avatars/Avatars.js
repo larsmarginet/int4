@@ -37,6 +37,7 @@ const Avatar = () => {
                             action={() => {
                                 store.setAvatar('peter');
                                 history.push('/');
+                                store.update();
                             }}
                             button={"button"} 
                             content={<span className={style.btnText}>Selecteer</span>} 
@@ -50,6 +51,7 @@ const Avatar = () => {
                             action={() => {
                                 store.setAvatar('beatrice');
                                 history.push('/');
+                                store.update();
                             }}
                             button={"button"} 
                             content={<span className={style.btnText}>Selecteer</span>} 
@@ -63,6 +65,7 @@ const Avatar = () => {
                             action={() => {
                                 store.setAvatar('jan');
                                 history.push('/');
+                                store.update();
                             }}
                             button={"button"} 
                             content={<span className={style.btnText}>Selecteer</span>} 
