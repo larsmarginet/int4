@@ -19,6 +19,8 @@ test('update money ', () => {
     const store = new Store();
     store.updateMoney(1000);
     expect(store.money).toBe(1000);
+    store.updateMoney(-500);
+    expect(store.money).toBe(500);
 });
 
 
