@@ -2,6 +2,7 @@ import { createContext } from "react";
 import Store from "../store";
 import ArtModel from "../models/ArtModel";
 import LevelModel from "../models/LevelModel";
+import CharacterModel from "../models/CharacterModel";
 
 
 // De Kruisoprichting
@@ -62,10 +63,65 @@ const level8 = new LevelModel({
     code: "HHHHH88888",
 })
 
+const napoleon = new CharacterModel({
+    id: "c980b04b-afae-483d-ab79-08785557d74d", 
+    pic: "napoleonDetail",
+    name: "Napoleon Bonaparte",
+    title: "Keizer der fransen",
+    quote: '"Na Jezus ben ik de meest invloedrijke persoon uit de wereldgeschiedenis"', 
+    secrets: ["Draagt nooit  onderbroeken", "Verkiest dieren boven mensen", "Eet tijdens zijn veldslagen door graag witte chocolade", "Is allergisch aan witloof"]
+})
+
+const herbert = new CharacterModel({
+    id: "0eb5bc90-efd5-4c20-9e5f-42f496378101", 
+    pic: "herbertDetail",
+    name: "Napoleon Bonaparte",
+    title: "De smid van Pittem",
+    quote: '"Mijn hamer en aanbeeld zijn mijn beste vrienden"', 
+    secrets: ["Draagt nooit  onderbroeken", "Verkiest dieren boven mensen", "Eet tijdens zijn veldslagen door graag witte chocolade", "Is allergisch aan witloof"]
+})
+
+const non = new CharacterModel({
+    id: "d1bcdc7d-a89a-4483-a391-f7715fb59f3d", 
+    pic: "nonDetail",
+    name: "Voornaam Naam",
+    title: "De non van Kortrijk",
+    quote: '"Contact met god voelt zo normaal als ademen"', 
+    secrets: ["Kent alle verzen van de bijbel uit haar hoofd", "Heeft een kruisje hangen in iedere kamer van haar woning", "Heeft een hekel aan Spinnen", "Is stiekem smoorverliefd op Herbert, de smid van Pittem"]
+})
+
+const vanDyck = new CharacterModel({
+    id: "6e50820b-3abe-4598-ba69-33c8656ae922", 
+    pic: "vanDyckDetail",
+    name: "Antoon Van Dyck",
+    title: "Schilder van Antwerpen",
+    quote: '"Ik maak de beste schilderwerken als ik teveel gedronken heb"', 
+    secrets: ["Gaat elke week  naar de kapper", "Is vegetariër", "Wordt misselijk van het kleur groen", "Is allergisch aan lelijke kunstwerken"]
+})
+
+const willem = new CharacterModel({
+    id: "d7b1c243-e370-4749-8e55-593f117cd7c6", 
+    pic: "willemDetail",
+    name: "Willem I",
+    title: "Koning der Nederlanden",
+    quote: '"Willem is mijn bijnaam, origineel noem ik Bert"', 
+    secrets: ["Heeft nooit leren lezen", "Eet elke ochtend rijstpap", "Heeft sinds zijn jonge jaren last van een verstopte neus", "Is een grote fan van Tango muziek"]
+})
+
+const flik = new CharacterModel({
+    id: "18003f97-ec86-47a0-9127-1d70307eb514", 
+    pic: "flikDetail",
+    name: "voornaam Naam",
+    title: "De Agente  van Kortrijkn",
+    quote: '"Ik kan tegen onrecht daarom werd ik politie agente"', 
+    secrets: ["Haar handboeien hebben een roze kleur", "Heeft altijd een reserve politiepet bij de hand", "Haar sterrenbeeld is Stier", "Is verslaafd aan rode drop"]
+})
+
 const art1 = new ArtModel({
     id: "e5dd7975-56d2-4bea-9e3f-005bbec8a104",
     name: "De Kruisoprichting",
     levels: [level1, level2, level3, level4, level5, level6, level7, level8], 
+    characters: [napoleon, herbert, non, vanDyck, willem, flik],
     price: 1000
 })
 

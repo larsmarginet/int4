@@ -33,10 +33,10 @@ const ChapterFour = () => {
     const [playPigeon] = useSound(pigeonSound);
     const [playMusic, {stop}] = useSound(musicSound, {
         sprite: {
-          DJ: [0, 14684],
-          flute: [14684, 20557],
-          pop: [35571, 15087],
-          rock: [50658, 10669],
+            rock: [0, 53000],
+            DJ: [61000, 34000],
+            flute: [97000, 41000],
+            pop: [138000, 46000], 
         },
         onend: () => {
             setVinyl(false)
@@ -100,7 +100,7 @@ const ChapterFour = () => {
     }
 
     return useObserver(() => (
-        <section className={style.wrapper} onScroll={e => scroll(e)}>
+        <main className={style.wrapper} onScroll={e => scroll(e)}>
         <h2 style={{display: "none"}}>Deel 1</h2>
         <div className={style.story} style={{width: (height * 33)}}>
             <div className={style.button}>
@@ -296,7 +296,7 @@ const ChapterFour = () => {
                 </div>  
             </div> : ""}
         </div>
-        </section>
+        </main>
     ))
 }
 

@@ -10,7 +10,7 @@ const DetailedOverview = () => {
     const {width, height} = useWindowSize();
     let history = useHistory();
     return (
-        <section style={{ overflow: 'scroll', width: '100%', height: (height-80)}}>
+        <main style={{ overflow: 'scroll', width: '100%', height: (height-80)}}>
             <h2 style={{display: "none"}}>Overzicht De Kruisoprichting</h2>
             <div className={style.button}>
               <Button
@@ -22,7 +22,7 @@ const DetailedOverview = () => {
                 height={86}/>
             </div>
             <MicroMap width={width} height={height}/>
-        </section>
+        </main>
     )
 }
 

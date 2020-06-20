@@ -46,7 +46,7 @@ const CameraLegacy = () => {
   }
 
     return (
-      <div className={style.wrapper}>
+      <main className={style.wrapper}>
         <div className={style.button}>
           <Button
             action={() => history.goBack()}
@@ -92,7 +92,7 @@ const CameraLegacy = () => {
             </>
         }
         <p className={style.text}>{text}</p>
-      </div>
+      </main>
     )
   }
 

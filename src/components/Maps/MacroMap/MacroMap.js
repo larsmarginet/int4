@@ -316,15 +316,6 @@ const MacroMap = ({height, width}) => {
                     <g filter="url(#filter3_d)" onClick={() => history.push('/DetailedOverview')}>
                         <ellipse cx="361" cy="332.893" rx="20" ry="17.5" fill="#3E79D0"/>
                     </g>
-                    <g id="slot5" filter="url(#filter6_d)">
-                        <path id="Ellipse 721 (Stroke)" fillRule="evenodd" clipRule="evenodd" d="M373.28 303.498C371.177 304.132 369.981 306.308 370.598 308.353L371.774 312.252L369.602 312.907L368.426 309.009C367.452 305.782 369.342 302.365 372.638 301.37C375.934 300.375 379.399 302.177 380.373 305.403L381.549 309.302L379.377 309.958L378.2 306.059C377.583 304.014 375.383 302.863 373.28 303.498Z" fill="#B8B8B9"/>
-                        <path id="Rectangle 715" d="M367.998 312.959L382.822 308.485L386.966 321.62L370.849 325.088L367.998 312.959Z" fill="#C8CACE"/>
-                        <path id="Intersect_12" fillRule="evenodd" clipRule="evenodd" d="M379.035 323.367L375.223 310.735L383.027 308.373L387.192 321.6L379.035 323.367Z" fill="#DFDFDF"/>
-                        <g id="Group 859">
-                        <path id="Vector 1258" d="M377.096 320.189L376.403 317.118L377.692 316.729L378.646 319.311L377.096 320.189Z" fill="#B0B0B0"/>
-                        <path id="Ellipse 722" d="M378.06 315.623C378.275 316.334 377.872 317.085 377.161 317.299C376.449 317.514 375.699 317.111 375.484 316.4C375.269 315.689 375.672 314.938 376.383 314.723C377.095 314.508 377.846 314.911 378.06 315.623Z" fill="#B0B0B0"/>
-                        </g>
-                    </g>
                     <filter id="filter3_d" x="340" y="315.393" width="42" height="40" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                     <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>

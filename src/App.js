@@ -4,6 +4,7 @@ import Navigation from "./components/Ui/Navigation/Navigation"
 import Home from './components/Screens/Home/Home';
 import Avatars from './components/Screens/Avatars/Avatars';
 import Characters from './components/Screens/Characters/Characters';
+import Character from './components/Screens/Character/Character';
 import Camera from './components/Screens/Camera/QRCode';
 import Overview from './components/Screens/Overview/Overview';
 import DetailedOverview from './components/Screens/DetailedOverview/DetailedOverview';
@@ -34,6 +35,9 @@ function App({ hideLoader }) {
         <Route path="/characters">
           <Navigation title={"Personages"} characters={true}/>
           <Characters />
+        </Route>
+        <Route path={"/character/:id"}>
+          <Character />
         </Route>
         <Route path="/camera/:id">
           <Navigation title={"Kaartje"} characters={true}/>

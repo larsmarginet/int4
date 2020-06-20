@@ -1,0 +1,115 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainRed, mainBlue, shadeBlue from tokens;
+
+
+.wrapper {
+    width: 100%; 
+    height: 100vh; 
+    background-color: mainRed;
+    overflow: hidden;
+    background-image: url(./assets/BG.svg);
+    background-size: cover;
+}
+
+.bar {
+    background-color: mainBlue;
+    padding: .8rem 3rem;
+    border-bottom: .4rem solid shadeBlue;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    align-items: center;
+}
+
+.title {
+    justify-self: center;
+    font-size: 6rem;
+    color: white;
+    font-family: 'alegreya-sans-sc', sans-serif;
+}
+
+.subTitle {
+    background-image: url(./assets/title.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -2rem auto;
+    padding: 2rem;
+    width: 45rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    font-family: 'alegreya-sans-sc', sans-serif;
+}
+
+.pic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    max-height: 80vh;
+}
+
+.back {
+    transform: rotate(180deg);
+    margin-right: 1rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.info {
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: bold;
+    margin: -7rem 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.quote {
+    font-size: 3rem;
+}
+
+.secrets {
+    list-style-image: url(./assets/dot.svg);
+    margin-left: 2rem;
+}
+
+.secretsTitle {
+    background-image: url(./assets/secret.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    padding: .5rem 0;
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+}
+
+@media screen and (max-width: 810px) {
+    .navigation {
+        padding: .7rem 1rem;
+    }
+    .title {
+        font-size: 4rem;
+    }
+
+    .subTitle {
+        font-size: 3rem;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .title {
+        font-size: 2rem;
+    }
+    .subTitle {
+        font-size: 2rem;
+        width: 80vw;
+    }
+}

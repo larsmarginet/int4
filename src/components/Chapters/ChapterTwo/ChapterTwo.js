@@ -82,7 +82,7 @@ const ChapterTwo = () => {
     }
     
     return (
-        <section className={style.wrapper} onScroll={e => scroll(e)}>
+        <main className={style.wrapper} onScroll={e => scroll(e)}>
         <h2 style={{display: "none"}}>Deel 2</h2>
             <div className={style.story} style={{width: (height * 33)}}>
                 <div className={style.button}>
@@ -220,7 +220,7 @@ const ChapterTwo = () => {
                         height={86}/>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

@@ -5,10 +5,10 @@ import HomeMap from "../../Maps/HomeMap/HomeMap";
 const Home = () => {
     const {width, height} = useWindowSize();
     return (
-        <section style={{ overflow: 'scroll', width: '100%', height: (height-80)}}>
+        <main style={{ overflow: 'scroll', width: '100%', height: (height-80)}}>
             <h2 style={{display: "none"}}>Overzicht</h2>
             <HomeMap width={width} height={height}/>
-        </section>
+        </main>
     )
 }
 
