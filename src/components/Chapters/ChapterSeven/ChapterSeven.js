@@ -10,7 +10,9 @@ const ChapterSeven = () => {
     } 
     
     return (
-        <p>Deel 7</p>
+        <div>
+            <object data="./assets/leugendetector.svg" aria-label='leugendetector'></object>
+        </div>
     )
 }
 
