@@ -12,6 +12,7 @@ const HomeMap = ({height, width}) => {
     const buy = (amount, art) => {
         store.updateMoney(-amount);
         store.arts[art].unlock();
+        store.arts[art].levels[0].setTimestamp();
         play();
         store.update();
     }

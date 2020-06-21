@@ -38,6 +38,8 @@ const Camera = () => {
     console.error(err)
   }
 
+  const date = new Date();
+
     return (
       <div className={style.camera}>
         <div className={style.button}>
@@ -75,8 +77,7 @@ const Camera = () => {
                         height={86}
                         width={305} />
                 </Link>
-            </div> : <p className={style.btnText}>{text}</p>}
-            
+            </div> : <div className={style.linkWrapper}><p className={style.btnText}>{text}</p>{ (store.arts[0].levels[number-1].timestamp <= (date.getTime() - 86400000)) ?  <Link className={style.link} to="/">Ik heb geen kaartje ontvangen</Link> : "" }</div>}
           </div>
       </div>
     )
