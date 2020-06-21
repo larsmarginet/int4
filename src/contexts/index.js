@@ -73,7 +73,7 @@ const napoleon = new CharacterModel({
     pic: "napoleonDetail",
     name: "Napoleon Bonaparte",
     title: "Keizer der fransen",
-    quote: '"Na Jezus ben ik de meest invloedrijke persoon uit de wereldgeschiedenis"', 
+    quote: '"Na Columbus ben ik de meest invloedrijke persoon uit de wereldgeschiedenis"', 
     secrets: ["Draagt nooit  onderbroeken", "Verkiest dieren boven mensen", "Eet tijdens zijn veldslagen door graag witte chocolade", "Is allergisch aan witloof"]
 })
 
@@ -89,9 +89,9 @@ const herbert = new CharacterModel({
 const non = new CharacterModel({
     id: "d1bcdc7d-a89a-4483-a391-f7715fb59f3d", 
     pic: "nonDetail",
-    name: "Voornaam Naam",
+    name: "Zuster Agatha",
     title: "De non van Kortrijk",
-    quote: '"Contact met god voelt zo normaal als ademen"', 
+    quote: '"Een zwart uniform schijnt in de mode te zijn"', 
     secrets: ["Kent alle verzen van de bijbel uit haar hoofd", "Heeft een kruisje hangen in iedere kamer van haar woning", "Heeft een hekel aan Spinnen", "Is stiekem smoorverliefd op Herbert, de smid van Pittem"]
 })
 
@@ -100,7 +100,7 @@ const vanDyck = new CharacterModel({
     pic: "vanDyckDetail",
     name: "Antoon Van Dyck",
     title: "Schilder van Antwerpen",
-    quote: '"Ik maak de beste schilderwerken als ik teveel gedronken heb"', 
+    quote: '"Ik maak de beste schilderwerken als ik wafels gegeten heb"', 
     secrets: ["Gaat elke week  naar de kapper", "Is vegetariër", "Wordt misselijk van het kleur groen", "Is allergisch aan lelijke kunstwerken"]
 })
 
@@ -116,17 +116,62 @@ const willem = new CharacterModel({
 const flik = new CharacterModel({
     id: "18003f97-ec86-47a0-9127-1d70307eb514", 
     pic: "flikDetail",
-    name: "voornaam Naam",
-    title: "De Agente  van Kortrijkn",
-    quote: '"Ik kan tegen onrecht daarom werd ik politie agente"', 
+    name: "Inspecteur Zwaantjens",
+    title: "Politie van Kortrijk",
+    quote: '"Een blauw uniform schijnt in de mode te zijn"', 
     secrets: ["Haar handboeien hebben een roze kleur", "Heeft altijd een reserve politiepet bij de hand", "Haar sterrenbeeld is Stier", "Is verslaafd aan rode drop"]
+})
+
+const directeur = new CharacterModel({
+    id: "9e413862-d5cf-4842-82f3-7a88731f02f5", 
+    pic: "directeurDetail",
+    name: "Bert Bosschaert",
+    title: "Directeur van het MSK",
+    quote: '"Het duurste kunstwerk in onze galerij is 1.000.000 franken waard"', 
+    secrets: ["Heeft graag orde en netheid", "Heeft een voorliefde voor  rode wijn", "Gaat graag gaan vissen in zijn vrije tijd", "Zat in zijn jonge jaren bij de jeugdbeweging"]
+})
+
+const pastoor = new CharacterModel({
+    id: "fd4206a1-3847-40bf-9f3e-fa295291e71d", 
+    pic: "pastoorDetail",
+    name: "Roger De Bakker",
+    title: "Pastoor van Kortrijk",
+    quote: '"Toen ik twaalf jaar oud was wist ik dat ik pastoor wilde worden"', 
+    secrets: ["Heeft vier jaar dienst gedaan bij het plaatselijke brandweer korps", "Is stiekem getrouwd met zuster Agatha", "Kent alle verzen van de bijbel uit haar hoofd", "Tuiniert graag in zijn vrije tijd"]
+})
+
+const verfmans = new CharacterModel({
+    id: "60503cdd-28dc-4cfc-be89-c15cac21d6c7", 
+    pic: "verfmansDetail",
+    name: "Bertrang Verfmans",
+    title: "Gepassioneerd antiquair",
+    quote: '"Ik heb een neus voor het doen van zaken!"', 
+    secrets: ["Heeft zijn vader nooit gekend", "Is oorspronkelijk van Knokke afkomstig", "Moet door de amputatie aan zijn rechter been met een stok door het leven gaan", "Is allergisch aan gras"]
+})
+
+const carlier = new CharacterModel({
+    id: "83757648-874d-4ec6-95f2-43b686d7a974", 
+    pic: "carlierDetail",
+    name: "Albert Carlier",
+    title: "Transporteur bij B.V.B.A De Melkmakers",
+    quote: '"Ik heb eeen voorliefde voor alles wat veel geld waard is"', 
+    secrets: ["Is kaal en draagt daarom een pruik", "Heeft alleen maar blauwe kleren in zijn kast hangen", "Draagt alleen maar merkkledij", "Gaat gaan tennisen in zijn vrije tijd"]
+})
+
+const thierry = new CharacterModel({
+    id: "dcdb45ac-4581-43ca-bc19-461d0b4278fe", 
+    pic: "thierryDetail",
+    name: "Thierry",
+    title: "De booschapper",
+    quote: '"Roekoe roekoe roekoe"', 
+    secrets: ["Roekoe, roekoe, roekoe", "Roekoe, roekoe, roekoe, roekoe, roekoe", "Roekoe, roekoe", "Roekoe, roekoe, roekoe, roekoe, roekoe, roekoe, roekoe, roekoe"]
 })
 
 const art1 = new ArtModel({
     id: "e5dd7975-56d2-4bea-9e3f-005bbec8a104",
     name: "De Kruisoprichting",
     levels: [level1, level2, level3, level4, level5, level6, level7, level8], 
-    characters: [napoleon, herbert, non, vanDyck, willem, flik],
+    characters: [napoleon, herbert, non, vanDyck, willem, flik, directeur, pastoor, verfmans, carlier, thierry],
     price: 1000
 })
 

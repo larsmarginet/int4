@@ -57,6 +57,13 @@ input[type=number] {
 }
 
 @font-face {
+  font-family: 'alegreya-sans';
+  src:    url(./styles/fonts/AlegreyaSans-Black.woff) format('woff'), 
+          url(./styles/fonts/AlegreyaSans-Black.woff2) format('woff2');
+  font-weight: 900;
+}
+
+@font-face {
   font-family: 'alegreya-sans-sc';
   src:    url(./styles/fonts/AlegreyaSansSC-Bold.woff) format('woff'), 
           url(./styles/fonts/AlegreyaSansSC-Bold.woff2) format('woff2');

@@ -179,7 +179,7 @@ const Characters = () => {
 
             <g id="DIRECTEUR">
               {store.arts[0].levels[3].unlocked ?
-              <g id="DIRECTEUR UNLOCKED">
+              <g id="DIRECTEUR UNLOCKED" onClick={() => history.push('/character/9e413862-d5cf-4842-82f3-7a88731f02f5')}>
                 <g id="Union">
                 <mask id="path-94-outside-1" maskUnits="userSpaceOnUse" x="287.648" y="77.5636" width="276" height="672" fill="black">
                 <rect fill="white" x="287.648" y="77.5636" width="276" height="672"/>
@@ -242,7 +242,7 @@ const Characters = () => {
 
             <g id="ANTIQUAIR">
               {store.arts[0].levels[5].unlocked ? 
-              <g id="ANTIQUAIR UNLOCKED">
+              <g id="ANTIQUAIR UNLOCKED" onClick={() => history.push('/character/60503cdd-28dc-4cfc-be89-c15cac21d6c7')}>
               <g id="Group 160">
               <g id="Union_2">
               <mask id="path-130-outside-3" maskUnits="userSpaceOnUse" x="432" y="125.26" width="306" height="670" fill="black">
@@ -460,7 +460,7 @@ const Characters = () => {
 
             <g id="CALLIER">
             {store.arts[0].levels[5].unlocked ? 
-            <g id="CALLIER UNLOCKED">
+            <g id="CALLIER UNLOCKED" onClick={() => history.push('/character/83757648-874d-4ec6-95f2-43b686d7a974')}>
             <g id="Group 141">
             <g id="Group 140">
             <rect id="Rectangle 11" x="197.871" y="271.933" width="47.7533" height="53.101" fill="#3789D5"/>
@@ -716,7 +716,7 @@ const Characters = () => {
             </g>
 
 
-            <g id="PASTOOR">
+            <g id="PASTOOR" onClick={() => history.push("/character/fd4206a1-3847-40bf-9f3e-fa295291e71d")}>
             {store.arts[0].levels[0].unlocked ? 
             <g id="PASTOOR UNLOCKED">
             <g id="Union_10">
@@ -839,7 +839,7 @@ const Characters = () => {
 
 
 
-            <g id="DUIF">
+            <g id="DUIF" onClick={() => history.push("/character/dcdb45ac-4581-43ca-bc19-461d0b4278fe")}>
             <g id="Group_6">
             <path id="Vector_98" d="M1102.32 753.334C1102.32 753.334 1121.17 765.444 1121.96 776.85C1122.75 788.255 1121.7 811.771 1117.16 815.735C1112.62 819.742 1117.86 823.573 1117.86 823.573C1117.86 823.573 1126.67 814.37 1128.74 811.331C1130.81 808.292 1139.05 788.255 1147.99 780.417C1156.93 772.578 1209.86 769.848 1209.86 769.848L1108.79 746.067L1102.32 753.334Z" fill="#5C414E"/>
             <path id="Vector_99" d="M1065.99 599.775C1065.99 599.775 1089.68 567.496 1107.6 585.419C1125.53 603.342 1125.75 647.424 1129.27 658.037C1132.79 668.606 1129.01 678.69 1148.69 694.324C1168.38 709.957 1244.25 747.037 1257.11 747.521C1269.97 748.005 1280.8 751.572 1280.06 755.844C1279.31 760.116 1266.45 759.103 1250.07 761.393C1233.68 763.683 1130.33 777.951 1115.22 770.376C1100.07 762.802 1050.14 743.514 1053.13 712.731C1056.17 681.949 1079.51 630.998 1077.83 625.185C1074.05 611.929 1073.3 611.577 1067.27 611.049C1061.23 610.564 1054.85 612.942 1054.85 611.049C1054.85 609.155 1057.36 605.456 1057.8 605.016C1058.24 604.619 1065.99 599.775 1065.99 599.775Z" fill="#FEF1F0"/>
