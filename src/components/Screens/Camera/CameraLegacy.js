@@ -46,6 +46,8 @@ const CameraLegacy = () => {
     qrReader1.current.openImageDialog()
   }
 
+  const date = new Date();
+
     return (
       <main className={style.wrapper}>
         <div className={style.button}>
@@ -70,12 +72,15 @@ const CameraLegacy = () => {
           onScan={handleScan}
           legacyMode
         />
-        {result === 'noResult' ? <Button
+        {result === 'noResult' ? <div className={style.linkWrapper}>
+          <Button
             action={openImageDialog}
             button={"button"} 
             content={<span className={style.btnText}>scan</span>} 
             height={86}
             width={305} /> 
+            {number === 0 ? (store.arts[0].levels[0].timestamp <= (date.getTime() - 1)) ? <Link className={style.linkDark} to="/">Ik heb geen kaartje ontvangen</Link> : "" : (store.arts[0].levels[number-1].timestamp <= (date.getTime() - 1)) ?  <Link className={style.linkDark} to="/">Ik heb geen kaartje ontvangen</Link> : "" }
+            </div>
             :
             <>
                 <Link to={`/${level.name}`}>

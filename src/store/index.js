@@ -11,7 +11,6 @@ class Store {
   }
 
   seed(arts) {
-    console.log(arts)
     this.arts = arts;
     
   }

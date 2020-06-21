@@ -77,7 +77,7 @@ const Camera = () => {
                         height={86}
                         width={305} />
                 </Link>
-            </div> : <div className={style.linkWrapper}><p className={style.btnText}>{text}</p>{ (store.arts[0].levels[number-1].timestamp <= (date.getTime() - 86400000)) ?  <Link className={style.link} to="/">Ik heb geen kaartje ontvangen</Link> : "" }</div>}
+            </div> : <div className={style.linkWrapper}><p className={style.btnText}>{text}</p>{number === 0 ? (store.arts[0].levels[0].timestamp <= (date.getTime() - 86400000)) ? <Link className={style.link} to="/">Ik heb geen kaartje ontvangen</Link> : "" : (store.arts[0].levels[number-1].timestamp <= (date.getTime() - 86400000)) ?  <Link className={style.link} to="/">Ik heb geen kaartje ontvangen</Link> : "" }</div>}
           </div>
       </div>
     )
