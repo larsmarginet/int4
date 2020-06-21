@@ -10,49 +10,56 @@ const level1 = new LevelModel({
     id: "8aa4a176-fe94-487b-a424-bf4c21286b0c",
     name: "chapterOne",
     code: "AAAAA11111",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level2 = new LevelModel({
     id: "98892345-99f1-4c39-87d9-c48aaf0aacda",
     name: "chapterTwo",
     code: "BBBBB22222",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level3 = new LevelModel({
     id: "e970aba2-10c6-4d7d-b67e-c2fbc7789e6d",
     name: "chapterThree",
     code: "CCCCC33333",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level4 = new LevelModel({
     id: "8f47d43c-ac8b-44e4-9c8f-c9ddb2df22c3",
     name: "chapterFour",
     code: "DDDDD44444",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level5 = new LevelModel({
     id: "6a80d6da-b6ba-4767-b0a3-6517e6ec256b",
     name: "chapterFive",
     code: "EEEEE55555",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level6 = new LevelModel({
     id: "c06424b6-461e-4ab1-b914-9e7371e5324a",
     name: "chapterSix",
     code: "FFFFF66666",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level7 = new LevelModel({
     id: "bfd8a2df-93bf-4411-967e-2dc6a1d0a083",
     name: "chapterSeven",
     code: "GGGGG77777",
-    
+    unlocked: true,
+    done: true,
 })
 
 const level8 = new LevelModel({

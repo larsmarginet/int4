@@ -101,7 +101,7 @@ const ChapterFour = () => {
 
     return useObserver(() => (
         <main className={style.wrapper} onScroll={e => scroll(e)}>
-        <h2 style={{display: "none"}}>Deel 1</h2>
+        <h2 style={{display: "none"}}>Deel 4</h2>
         <div className={style.story} style={{width: (height * 33)}}>
             <div className={style.button}>
                 <Button

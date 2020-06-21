@@ -1,0 +1,144 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainYellow, mainRed, mainLight, shadeBrown from tokens;
+
+.wrapper {
+    width: 100%; 
+    height: 100vh; 
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    background-color: mainBlue;
+}
+
+.story {
+    display: flex;
+    height: 100%;
+    color: white;
+    justify-content: flex-start;
+    font-size: 5rem; 
+    position: relative;
+    
+}
+
+.story:after {
+    content: "";
+    background-image: url(../assets/grain.png);
+    height: 300%;
+    width: 300%;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.swipe {
+    position: fixed;
+    top: 20%;
+    right: 2rem;
+    z-index: 1001;
+}
+
+.button {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    z-index: 100;
+}
+
+.back {
+    transform: rotate(180deg);
+    margin-right: 1rem;
+}
+
+.title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: alegreya-sans-sc;
+    color: mainLight;
+    font-size: 6.8rem;
+    margin-left: 3rem;
+}
+
+.titleBar {
+    margin-bottom: 2rem;
+}
+
+.progress {
+    position: fixed;
+    bottom: 2rem;
+    left: 45%;
+    z-index: 998;
+}
+
+.glow {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0)); 
+    }
+    to { 
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+    }
+  }
+
+.textWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 20rem;
+    font-size: 3rem;
+    line-height: 1.3;
+    width: 52rem;
+    z-index: 99;
+}
+
+.flikWrapper {
+    padding-top: 5rem;
+    width: 100rem;
+}
+
+.layer1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.layer3 {
+    position: absolute;
+    z-index: 3;
+}
+
+.layer4 {
+    position: absolute;
+    z-index: 4;
+}
+
+.textBalloon {
+    width: 50rem;
+    padding: 3rem 5rem;
+    height: 47rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(../assets/textBalloon.svg);
+}
+
+.textBalloonContent {
+    color: shadeBrown;
+    font-size: 2.7rem;
+    line-height: 1.4;
+}
+
+.spacer {
+    width: 50rem;
+    height: 47rem;
+    z-index: 99;
+}
