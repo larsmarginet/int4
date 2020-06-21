@@ -1,0 +1,69 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainYellow, mainRed, mainLight, shadeBrown from tokens;
+
+.wrapper {
+    height: 100vh;
+}
+
+.lieDetector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    z-index: 15;
+}
+
+.questionWrapper {
+    position: absolute;
+    bottom: -15rem;
+    right: -100rem;
+    z-index: 16;
+}
+
+.questions {
+    background-color: mainLight;
+    box-shadow: 2rem 2rem 0 0 mainRed;
+    transform: rotate(-20deg);
+    padding: 3rem;
+    width: 55rem;
+    height: 65rem;
+ 
+}
+
+.questionsTitle {
+    font-family: 'alegreya-sans-sc', sans-serif;
+    color: shadeBrown;
+    margin-bottom: 4rem;
+}
+
+.btnText {
+    color: white;
+    font-family: 'alegreya-sans', sans-serif;
+    font-size: 2rem;
+    max-width: 7rem;
+}
+
+.answer {
+    position: absolute;
+    bottom: 14rem;
+    font-size: 2.7rem;
+    right: -15rem;
+    z-index: 17;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.answerContentWrapper {
+    width: 41.2rem;
+    height: 20.6rem;
+}
+
+.answerContent {
+    background-image: url(./assets/answer.svg);
+    width: 41.2rem;
+    height: 20.6rem;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    line-height: 1.2;
+}

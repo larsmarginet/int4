@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RegularBtn from "./button.svg"
 import RegularBtnPressed from "./buttonPressed.svg"
 import home from "./home.svg"
@@ -34,13 +34,19 @@ const Button = ({ height, width, button, content, action, link}) => {
         buttonPressed = smallSquarePress;
     }
     
+    useEffect(() => {
+        return () => {
+          setPress(false)
+        }
+      }, [press])
+
     if(link) {
         return (
             <div style={{height: height, width: width}}> 
                 <Link to={link} onClick={() => {
                     setPress(true);
-                    setTimeout(function() { setPress(false); }, 100);
-                    if(action) {action()}
+                    setTimeout(() => { setPress(false); }, 100);
+                    if(action) {setTimeout(() => {action()}, 100)}
                 }} 
                 className={`${style.button} ${press ? style.press : ""}`}>
                     <img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span>
@@ -53,7 +59,7 @@ const Button = ({ height, width, button, content, action, link}) => {
                 <button onClick={() => {
                         setPress(true);
                         setTimeout(function() { setPress(false); }, 100);
-                        if(action) {action()}
+                        if(action) {setTimeout(() => {action()}, 100)}
                     }} 
                     className={`${style.button} ${press ? style.press : ""}`}><img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span></button>
             </div>)
