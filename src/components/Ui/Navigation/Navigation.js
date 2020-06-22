@@ -10,25 +10,20 @@ const Navigation = ({ title, characters }) => {
     return useObserver(() => (
         <nav className={style.navigation}>
             <ul className={style.navigationLeft}>
-                
                 <li className={style.link}>
-                    
-                        <Button
-                            link={"/"}
-                            button={"home"} 
-                            height={56}
-                            width={49}/>        
-                    
+                    <Button
+                        link={"/"}
+                        button={"home"} 
+                        height={56}
+                        width={49}/>        
                 </li>
                 {characters ? <li>
-                        <Button
-                            link={"/Characters"}
-                            button={"character"}
-                            height={49}
-                            width={47}/>        
-                    
+                    <Button
+                        link={"/Characters"}
+                        button={"character"}
+                        height={49}
+                        width={47}/>        
                 </li> : ""}
-                
             </ul>
             <div className={style.titleWrapper}>
                 <h1 className={style.title}>{title}</h1>

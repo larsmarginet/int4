@@ -1,3 +1,6 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value shadeBrown from tokens;
+
 .pigeonWrapper {
     position: absolute;
     right: 2rem;
@@ -40,4 +43,4 @@
     to { 
         filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
     }
-  }
+}

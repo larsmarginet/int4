@@ -19,62 +19,61 @@ const Avatar = () => {
         <path d="M-1.52588e-05 5.17675L85.3268 10.2575L81.5991 81.0833L5.21853 85.4835L-1.52588e-05 5.17675Z" fill="#2E5A9C"/>
         <path d="M6.90428 -7.45951e-06L92.2311 5.08074L88.5034 75.9066L12.1228 80.3068L6.90428 -7.45951e-06Z" fill="#3F7AD3"/>
         <path d="M52.3797 35.3186L14.5811 31.3568L17.3259 50.2541L54.8172 47.5108L54.8172 57.8743L84.9924 41.7195L52.3797 22.2119L52.3797 35.3186Z" fill="#FFF1F0"/>
-        </svg>
-        
+        </svg>  
     };
     return (
-        <>
-        <section className={style.top}>
-            <h2 className={style.title}>Kies een avatar</h2>
-        </section>
-        <section className={style.wrapper}>
-            <h2 style={{display: "none"}}>Kies een avatar</h2>
-            <Slider className={style.slider} { ...settings }>
-                <div className={`${style.sliderItem} ${style.sliderItemPeter}`} >
-                    <div className={style.button}>
-                    <p className={style.name}>Peter Padweg</p>
-                        <Button
-                            action={() => {
-                                store.setAvatar('peter');
-                                history.push('/');
-                                store.update();
-                            }}
-                            button={"button"} 
-                            content={<span className={style.btnText}>Selecteer</span>} 
-                            height={86}/>
+        <main>
+            <section className={style.top}>
+                <h2 className={style.title}>Kies een avatar</h2>
+            </section>
+            <section className={style.wrapper}>
+                <h2 style={{display: "none"}}>Kies een avatar</h2>
+                <Slider className={style.slider} { ...settings }>
+                    <div className={`${style.sliderItem} ${style.sliderItemPeter}`} >
+                        <div className={style.button}>
+                        <p className={style.name}>Peter Padweg</p>
+                            <Button
+                                action={() => {
+                                    store.setAvatar('peter');
+                                    history.push('/');
+                                    store.update();
+                                }}
+                                button={"button"} 
+                                content={<span className={style.btnText}>Selecteer</span>} 
+                                height={86}/>
+                        </div>
                     </div>
-                </div>
-                <div className={`${style.sliderItem} ${style.sliderItemBeatrice}`} >
-                    <div className={style.button}>
-                    <p className={style.name}>Beatrice Blauwhart</p>
-                        <Button
-                            action={() => {
-                                store.setAvatar('beatrice');
-                                history.push('/');
-                                store.update();
-                            }}
-                            button={"button"} 
-                            content={<span className={style.btnText}>Selecteer</span>} 
-                            height={86}/>
+                    <div className={`${style.sliderItem} ${style.sliderItemBeatrice}`} >
+                        <div className={style.button}>
+                        <p className={style.name}>Beatrice Blauwhart</p>
+                            <Button
+                                action={() => {
+                                    store.setAvatar('beatrice');
+                                    history.push('/');
+                                    store.update();
+                                }}
+                                button={"button"} 
+                                content={<span className={style.btnText}>Selecteer</span>} 
+                                height={86}/>
+                        </div>
                     </div>
-                </div>
-                <div className={`${style.sliderItem} ${style.sliderItemJan}`} >
-                    <div className={style.button}>
-                    <p className={style.name}>Jan Jaapus</p>
-                        <Button
-                            action={() => {
-                                store.setAvatar('jan');
-                                history.push('/');
-                                store.update();
-                            }}
-                            button={"button"} 
-                            content={<span className={style.btnText}>Selecteer</span>} 
-                            height={86}/>
-                    </div>
-                </div>                
-            </Slider>
-        </section>
-        </>
+                    <div className={`${style.sliderItem} ${style.sliderItemJan}`} >
+                        <div className={style.button}>
+                        <p className={style.name}>Jan Jaapus</p>
+                            <Button
+                                action={() => {
+                                    store.setAvatar('jan');
+                                    history.push('/');
+                                    store.update();
+                                }}
+                                button={"button"} 
+                                content={<span className={style.btnText}>Selecteer</span>} 
+                                height={86}/>
+                        </div>
+                    </div>                
+                </Slider>
+            </section>
+        </main>
     )
 }
 

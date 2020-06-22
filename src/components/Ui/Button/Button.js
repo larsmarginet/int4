@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
-import RegularBtn from "./button.svg"
-import RegularBtnPressed from "./buttonPressed.svg"
-import home from "./home.svg"
-import homePress from "./homePress.svg"
-import character from "./character.svg"
-import characterPress from "./characterPress.svg"
-import square from "./squareButton.svg"
-import squarePress from "./squareButtonPress.svg"
-import smallSquare from "./smallSquare.svg"
-import smallSquarePress from "./smallSquarePress.svg"
-
+import RegularBtn from "./assets/button.svg"
+import RegularBtnPressed from "./assets/buttonPressed.svg"
+import home from "./assets/home.svg"
+import homePress from "./assets/homePress.svg"
+import character from "./assets/character.svg"
+import characterPress from "./assets/characterPress.svg"
+import square from "./assets/squareButton.svg"
+import squarePress from "./assets/squareButtonPress.svg"
+import smallSquare from "./assets/smallSquare.svg"
+import smallSquarePress from "./assets/smallSquarePress.svg"
 import style from "./Button.module.css";
 import { Link } from "react-router-dom";
 
@@ -40,7 +39,7 @@ const Button = ({ height, width, button, content, action, link}) => {
         }
       }, [press])
 
-    if(link) {
+    if (link) {
         return (
             <div style={{height: height, width: width}}> 
                 <Link to={link} onClick={() => {
@@ -62,10 +61,9 @@ const Button = ({ height, width, button, content, action, link}) => {
                         if(action) {setTimeout(() => {action()}, 100)}
                     }} 
                     className={`${style.button} ${press ? style.press : ""}`}><img alt="button" src={press ? buttonPressed : buttonUnpressed}/> <span className={style.text}>{content}</span></button>
-            </div>)
+            </div>
+        )
     }
-
-   
 }
 
 export default Button;

@@ -20,38 +20,32 @@ const SecretCode = ({notification}) => {
     const sixth = useRef();
 
     const [play] = useSound(moneySound);
-
     const lock = useRef("");
   
-
     const submit = e => {
         e.preventDefault()
         if(first.current.value !== "" && second.current.value !== "" && third.current.value !== "" && fourth.current.value !== "" && fifth.current.value !== "" && sixth.current.value !== "") {
             if (first.current.value === "1" && second.current.value === "7" && third.current.value === "2" && fourth.current.value === "8" && fifth.current.value === "3" && sixth.current.value === "5") {
                 setPaused(true)
                 lock.current.animate([
-                    // keyframes
                     { opacity: 1 }, 
                     { opacity: 0 }
                   ], { 
-                    // timing options
                     duration: 400,
                     iterations: 1
                   });
                   setTimeout(() => { setPaused(false) },390);
             } else {
                 lock.current.animate([
-                    // keyframes
                     { transform: 'translate(30px)' }, 
                     { transform: 'translate(-30px)' },
                     { transform: 'translate(15px)' }, 
                     { transform: 'translate(8px)' }, 
                     { transform: 'translate(0px)' }, 
                   ], { 
-                    // timing options
                     duration: 400,
                     iterations: 1
-                  });
+                });
             }
         }
     }
@@ -66,7 +60,6 @@ const SecretCode = ({notification}) => {
                     isPaused: paused,
                     animationData: chestAnimation.default
                 }}/>}
-            
             {paused ? 
             <form ref={lock} onSubmit={submit} className={style.form}>
                 <div className={style.inputWrapper}>
@@ -89,20 +82,22 @@ const SecretCode = ({notification}) => {
                     } 
                     width={92}
                     height={86}/>
-            </form> : <div style={show ? {marginTop: "-5rem"} : {display: "none"}}><Button
+            </form> : 
+            <div style={show ? {marginTop: "-5rem"} : {display: "none"}}>
+                <Button
                     action={() => {
                         notification();
                         play();
                         store.updateMoney(500);
                         setShow(false)
                     }}
-
                     button={"button"} 
                     content={
                         <span className={style.btnText}>Claim je prijs</span>
                     } 
                     width={302}
-                    height={72}/></div>}
+                    height={72}/>
+            </div>}
         </div>
     )   
 }

@@ -41,7 +41,6 @@ const ChapterOne = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        // console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
             setChapter(1);
             setSwipe(false)
@@ -134,13 +133,11 @@ const ChapterOne = () => {
                         setPigeonText(true)
                         }} alt="duif" style={{zIndex: 6}} src="./assets/duif.svg"/>
                 </div>
-               
                 <Lottie ref={building} height={'100%'} width={'250rem'} isClickToPauseDisabled={true} style={{marginLeft: "-10rem", marginRight: 0, zIndex: 4}} options={{
                     loop: false,
                     autoplay: false,
                     animationData: buildingAnimation.default,
                 }}/>
-
                 <div className={style.pastorWrapper} style={{ transform: `translateX(${((posFirst/10)-600)}px)`, zIndex: 55}}>
                     {pastorText ? <div className={`${style.textBalloon} ${style.textBalloonMargin}`}>
                     <Button
@@ -157,7 +154,6 @@ const ChapterOne = () => {
                     </div> : <div  className={style.spacer}></div>}
                     <img onClick={() => setPastorText(true)} className={pastorText ? "" : style.glow} style={{marginTop: -150}}  src='./assets/pastoor.svg' alt="pastoor"/>
                 </div>
-                
                 <div className={style.textWrapper} style={{marginLeft: "-10rem"}}>
                     <p>Pastoor Roger staat vol trots voor zijn kerk. Er zit hem iets dwars. Er mist iets in zijn kerk maar hij weet niet goed wat... </p>
                 </div>
@@ -240,7 +236,7 @@ const ChapterOne = () => {
                         <img className={style.greatNumber} src="./assets/1.svg" alt="1" />
                         <p>volbracht!</p>
                     </div>
-                    <Levels  level={1}/>
+                    <Levels level={1}/>
                 </div>
                 <div className={style.next}>
                     <p className={style.nextTitle}>Een nieuwe postkaart is onderweg!</p>

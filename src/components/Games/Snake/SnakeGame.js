@@ -28,11 +28,6 @@ const getRandomCoordinates = () => {
   class SnakeGame extends Component {
   
     state = initialState;
-  
-    // componentDidMount() {
-    //     setInterval(this.moveSnake, this.state.speed);
-    //     document.onkeydown = this.onKeyDown;
-    // }
 
     start() {
         setInterval(this.moveSnake, this.state.speed);
@@ -137,7 +132,6 @@ const getRandomCoordinates = () => {
         return (
                 <div className={style.gameWrapper}>
                   <div className={style.gameArea}>
-                  
                       {this.state.start ?  
                          null :  <div className={style.startGame} >
                           <Button
@@ -161,7 +155,6 @@ const getRandomCoordinates = () => {
                           <Food dot={this.state.food}/>
                         </>}
                     </div>
-                    
                     <div className={style.controls}>
                       <p className={style.score}>{this.state.snakeDots.length - 2}</p>
                       <div className={style.buttonWrapper}>

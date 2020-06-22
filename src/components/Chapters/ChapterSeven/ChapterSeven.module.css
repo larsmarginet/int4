@@ -15,8 +15,7 @@
     color: white;
     justify-content: flex-start;
     font-size: 5rem; 
-    position: relative;
-    
+    position: relative;  
 }
 
 .story:after {
@@ -82,7 +81,7 @@
     to { 
         filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
     }
-  }
+}
 
 .textWrapper {
     display: flex;
@@ -192,7 +191,7 @@
     background-size: contain;
     margin-top: 15%;
     font-family: 'alegreya-sans-sc', sans-serif;
-   padding: 2rem 4rem 4rem 4rem;
+    padding: 2rem 4rem 4rem 4rem;
 }
 
 .greatNumber {
@@ -207,7 +206,7 @@
     0%   {transform: scale(1);}
     50% {transform: scale(1.2);}
     100% {transform: scale(1);}
-  }
+}
 
 .greatContentWrapper {
     display: flex;
@@ -237,8 +236,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
-  
+    justify-content: space-around;  
 }
 
 .nextTitle {

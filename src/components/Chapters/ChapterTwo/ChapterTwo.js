@@ -38,7 +38,6 @@ const ChapterTwo = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        // console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
             setChapter(1)
             setSwipe(false)
@@ -141,7 +140,6 @@ const ChapterTwo = () => {
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 2.1)}} >
                     <object aria-label="napoleon" className={style.layer2} style={{ height: "50%", bottom: 0, transform: `translateX(${(posSecond/7)+400}px)`}} data="./assets/napoleon2.svg"></object>
-                    
                     <object aria-label="kerk" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/kerkBeelden.svg"></object>
                 </div>
                 <div className={style.pigeonGameWrapper}>
@@ -189,7 +187,6 @@ const ChapterTwo = () => {
                     <object aria-label="parijs" className={style.layer2} style={{ height: "90%", bottom: 50, transform: `translateX(${(posFifth/15)+750}px)`}} data="./assets/parijs.svg"></object>
                     <object aria-label="stad" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/BG7.svg"></object>
                 </div>
-
                 <Lottie ref={paper} height={'100%'} width={height * 2.1} style={{marginLeft: "-25rem", marginRight: 0, zIndex: 3}} options={{
                         loop: false,
                         autoplay: false,
