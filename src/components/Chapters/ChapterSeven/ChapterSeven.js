@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { useStore } from '../../../hooks/UseStore';
 import useSound from 'use-sound';
 import useWindowSize from "../../../hooks/useWindowSize";
@@ -8,6 +8,7 @@ import Progress from "../assets/Progress/Progress";
 import style from "./ChapterSeven.module.css";
 import Button from '../../Ui/Button/Button';
 import * as swipeAnimation from "../assets/swipe.json";
+import * as fingerprintAnimation from "./assets/fingerprint.json";
 import pigeonSound from '../assets/pigeon.mp3';
 import Levels from "../assets/Levels/Levels";
 import Interrogation from "../../Games/Interrogation/Interrogation";
@@ -20,23 +21,28 @@ const ChapterSeven = () => {
         history.push('/');
     } 
     const [play] = useSound(pigeonSound);
-
+    const fingerprint = useRef("");
+   
     const [chapter, setChapter] = useState(1);
     const [swipe, setSwipe] = useState(true);
     const [flikText, setFlikText] = useState(false);
     const [pigeonText, setPigeonText] = useState(false);
     const [posFirst, setPosFirst] = useState(height * .2);
     const [posSecond, setPosSecond] = useState(height * 28.7);
-
+    
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
+        fingerprint.current.anim.pause()
         //console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
             setChapter(1)
             setSwipe(false)
+            
         } 
         if (container > (height * .2) && container < (height * 4.4)) {
             setPosFirst(container - (height * .2));
+            fingerprint.current.anim.goToAndStop(1)
+            fingerprint.current.anim.pause()
         } 
         if (container > (height * 4.5) && container < (height * 4.6)) {
             setChapter(2)
@@ -61,7 +67,7 @@ const ChapterSeven = () => {
         <div className={style.story} style={{width: (height * 35)}}>
             <div className={style.button}>
                 <Button
-                    action={() => history.goBack()}
+                    action={() => history.push('/DetailedOverview')}
                     button={"square"} 
                     content={
                         <img src='./assets/mapIcon.svg' alt='terug naar kaart' />
@@ -114,13 +120,45 @@ const ChapterSeven = () => {
             <object data="./assets/mugshotBertrang.svg" style={{height: "100%"}}  aria-label="Bertrang"></object>
             <img src="./assets/bricks.svg" style={{marginLeft: "3rem", marginRight: "2rem", height: "100%"}} alt="muur" />
             <object data="./assets/mugshotSmid.svg" style={{height: "100%"}}  aria-label="Smid" ></object>
-            <div>
-                <img src="./assets/test.svg" alt="test" style={{height: "100%", marginLeft: "10rem"}}/>
+            <div className={style.fingerprintWrapper}>
+                <div className={style.testWrapper}>
+                    <div className={style.textBalloon}>
+                        <p className={style.textBalloonContent}>Voor je mevrouw Zwaantjens helpt willen we weten of je wel betrouwbaar bent... Leg je vinger op onze betrouwbaarheidstest!</p>
+                    </div> 
+                    <img alt="duif" style={{zIndex: 6}} src="./assets/duif.svg"/>
+                </div>
+                <div className={style.fingerprint}
+                onTouchStart={() => fingerprint.current.anim.play()}
+                onTouchEnd={() =>  {
+                    fingerprint.current.anim.pause()
+                    if(fingerprint.current.anim.currentFrame >= 160) {
+                        fingerprint.current.anim.goToAndStop( fingerprint.current.anim.firstFrame + fingerprint.current.anim.totalFrames-1, true)
+                    } else {
+                        fingerprint.current.anim.goToAndStop(0)
+                    };
+                }}
+                onMouseDown={() => fingerprint.current.anim.play()}
+                onMouseUp={() =>  {
+                    fingerprint.current.anim.pause()
+                    if(fingerprint.current.anim.currentFrame >= 160) {
+                        fingerprint.current.anim.goToAndStop( fingerprint.current.anim.firstFrame + fingerprint.current.anim.totalFrames-1, true)
+                    } else {
+                        fingerprint.current.anim.goToAndStop(0)
+                    };
+                }}
+            ></div>
+                <Lottie ref={fingerprint} height={'100%'} width={'150rem'} isClickToPauseDisabled={true} style={{margin: 0, zIndex: 4}} options={{
+                        loop: false,
+                        autoplay: false,
+                        isStopped: true, 
+                        isPaused: true,
+                        animationData: fingerprintAnimation.default,
+                    }}/>
             </div>
             <div style={{position: "relative", height:"100%", width: (height * 1.5)}}>
-                <object  className={style.layer3} style={{height: "40%", top: 20, left: 200}} data="./assets/donut.svg" aria-label="donut"></object>
-                <object  className={style.layer2} style={{height: "90%", top: -5, left: 350}} data="./assets/leugendetector.svg" aria-label="leugendetector"></object>
-                <object  className={style.layer1} style={{height: "20%", bottom: 0, left: 0}} data="./assets/wood.svg" aria-label="hout"></object>
+                <object className={style.layer3} style={{height: "40%", top: 20, left: 200}} data="./assets/donut.svg" aria-label="donut"></object>
+                <object className={style.layer2} style={{height: "90%", top: -5, left: 350}} data="./assets/leugendetector.svg" aria-label="leugendetector"></object>
+                <object className={style.layer1} style={{height: "20%", bottom: 0, left: 0}} data="./assets/wood.svg" aria-label="hout"></object>
             </div>
             <div style={{position: "relative", height:"100%", width: (height * 6.2)}}>
                 <div  className={style.pigeonWrapper}>

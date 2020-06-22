@@ -26,7 +26,7 @@ const CameraLegacy = () => {
   const handleScan = (result) => {
     if(result){
       if(result === code ){
-        setText('succes!');
+        setText('gelukt!');
         setResult(result);
         level.unlock();
         store.update();

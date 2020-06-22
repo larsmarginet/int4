@@ -48,6 +48,7 @@ const ChapterFour = () => {
     const [chapter, setChapter] = useState(1);
     const [swipe, setSwipe] = useState(true);
     const [notificationOne, setNotificationOne] = useState(false);
+    const [notificationCount, setNotificationCount] = useState(0);
     const [notificationTwo, setNotificationTwo] = useState(false);
     const [pigeonGameText, setPigeonGameText] = useState(false);
     const [modal, setModal] = useState(false);
@@ -105,7 +106,7 @@ const ChapterFour = () => {
         <div className={style.story} style={{width: (height * 33)}}>
             <div className={style.button}>
                 <Button
-                    action={() => history.goBack()}
+                    action={() => history.push('/overview')}
                     button={"square"} 
                     content={
                         <img src='./assets/mapIcon.svg' alt='terug naar kaart' />
@@ -166,8 +167,12 @@ const ChapterFour = () => {
                     <div className={style.tableWrapper}>
                         <img onClick={() => {
                             setNotificationOne(true);
-                            store.updateMoney(3)
-                            play();
+                            console.log(notificationCount)
+                            if(notificationCount < 1){
+                                store.updateMoney(3)
+                                play();
+                            }
+                            setNotificationCount(2)
                             }} style={{width: "40%", zIndex: 3}}  src='./assets/chips.svg' alt="chips"/>
                         
                         <object data='./assets/drink.svg' aria-label="tafel" style={{width: "15%"}}></object>

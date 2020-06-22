@@ -1,0 +1,23 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value mainBlue, shadeBlue, mainYellow, mainRed, mainLight, shadeBrown from tokens;
+
+.wrapper {
+    width: 100%; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: mainBlue;
+}
+
+.text {
+    color: white;
+    font-family: alegreya-sans-sc;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.btnText {
+    composes: buttonText from "../../../styles/components.module.css";
+}

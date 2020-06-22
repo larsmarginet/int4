@@ -14,7 +14,7 @@ const DetailedOverview = () => {
             <h2 style={{display: "none"}}>Overzicht De Kruisoprichting</h2>
             <div className={style.button}>
               <Button
-                action={() => history.goBack()}
+                action={() => history.push('/overview')}
                 button={"square"} 
                 content={
                     <img className={style.back} alt="arrow" src="./assets/arrow.svg" />

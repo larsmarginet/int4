@@ -84,7 +84,7 @@ const ChapterOne = () => {
             <div className={style.story} style={{width: (height * 30)}}>
                 <div className={style.button}>
                     <Button
-                        action={() => history.goBack()}
+                        action={() => history.push('/overview')}
                         button={"square"} 
                         content={
                            <img src='./assets/mapIcon.svg' alt='terug naar kaart' />
@@ -162,7 +162,8 @@ const ChapterOne = () => {
                     <p>Pastoor Roger staat vol trots voor zijn kerk. Er zit hem iets dwars. Er mist iets in zijn kerk maar hij weet niet goed wat... </p>
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 5)}}>
-                    <object className={style.layer2} data='./assets/kerk.svg' aria-label="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500)}}></object>
+                    <object className={style.layer3} data='./assets/kerk.svg' aria-label="kerk" style={{height: "100%", top: 0, left: ((posFirst/10)-500), pointerEvents: "none"}}></object>
+                    <object className={style.layer2} data='./assets/bel1.svg' aria-label="stad" style={{height: "30%",top: 0, marginLeft: 500}}></object>
                     <object className={style.layer1} data='./assets/BG.svg' aria-label="stad" style={{height: "100%", marginLeft: -2000}}></object>
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 2)}}>
@@ -181,7 +182,7 @@ const ChapterOne = () => {
                     }}/>
                 </div>
                 <div style={{position: "relative", height:"100%", marginLeft: -50, width: (height * 3.8)}}>
-                    <div className={`${style.layer3} ${style.dyckWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posThird/7)-1110)}px)`, zIndex: 6}}>
+                    <div className={`${style.layer4} ${style.dyckWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posThird/7)-1110)}px)`, zIndex: 6}}>
                         {dyckText ? <div className={`${style.textBalloonReverse} ${style.textBalloonBigMargin}`}>
                         <Button
                             action={() => setDyckText(false)}

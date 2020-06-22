@@ -145,10 +145,31 @@
     z-index: 99;
 }
 
+.testWrapper {
+    position: absolute;
+    bottom: 0;
+    left: -20rem;
+    padding-top: 5rem;
+    z-index: 99;
+}
+
 .spacer {
     width: 50rem;
     height: 47rem;
     z-index: 99;
+}
+
+.fingerprintWrapper {
+    position: relative;
+}
+
+.fingerprint {
+    position: absolute;
+    bottom: 0;
+    width: 25rem;
+    height: 20rem;
+    left: 42%;
+    z-index: 999;
 }
 
 .great {

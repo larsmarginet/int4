@@ -87,7 +87,7 @@ const ChapterTwo = () => {
             <div className={style.story} style={{width: (height * 33)}}>
                 <div className={style.button}>
                     <Button
-                        action={() => history.goBack()}
+                        action={() => history.push('/overview')}
                         button={"square"} 
                         content={
                             <img src='./assets/mapIcon.svg' alt='terug naar kaart' />
@@ -135,11 +135,13 @@ const ChapterTwo = () => {
                         </div> : <div className={style.spacer}></div>}
                         <img className={ churchText ? "" : style.glow } onClick={() => setChurchText(true)} style={{marginTop: -180, height: "80%"}} alt="napoleon" src="./assets/napoleon.svg"/>
                     </div>
-                    <object aria-label="kerk" className={style.layer2} style={{ height: "100%", transform: `translateX(${posFirst/15}px)`}} data="./assets/beelden.svg"></object>
-                    <object aria-label="stad" className={style.layer1} style={{ height: "100%", left: 0, top: 0, transform: 'translateX(-800px)'}} data="./assets/BG4.svg"></object>
+                    <object aria-label="kerk" className={style.layer2} style={{pointerEvents: 'none', height: "100%", transform: `translateX(${posFirst/15}px)`}} data="./assets/beelden.svg"></object>
+                    <object className={style.layer1} data='./assets/bel2.svg' aria-label="stad" style={{height: "30%",top: 0, marginLeft: 350}}></object>
+                    <object aria-label="stad" className={style.layer1} style={{pointerEvents: 'none', height: "100%", left: 0, top: 0, transform: 'translateX(-800px)'}} data="./assets/BG4.svg"></object>
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 2.1)}} >
                     <object aria-label="napoleon" className={style.layer2} style={{ height: "50%", bottom: 0, transform: `translateX(${(posSecond/7)+400}px)`}} data="./assets/napoleon2.svg"></object>
+                    
                     <object aria-label="kerk" className={style.layer1} style={{ height: "100%", left: 0, top: 0}} data="./assets/kerkBeelden.svg"></object>
                 </div>
                 <div className={style.pigeonGameWrapper}>
