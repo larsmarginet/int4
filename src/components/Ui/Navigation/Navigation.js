@@ -3,6 +3,7 @@ import { useStore } from "../../../hooks/UseStore";
 import style from "./Navigation.module.css";
 import Button from "../Button/Button";
 import { useObserver } from "mobx-react-lite";
+import { Link } from "react-router-dom"
 
 const Navigation = ({ title, characters }) => {
     const store = useStore();
@@ -37,7 +38,7 @@ const Navigation = ({ title, characters }) => {
                     <img className={style.coin} src={`./assets/coin.svg`} alt="munt"/>
                     <p className={style.money}>{store.money}</p>    
                 </div>
-                <div className={style.avatarWrapper}><img className={style.avatar} src={`./assets/${store.avatar}.svg`} alt="avatar"/></div>
+                <Link to="/avatar" className={style.avatarWrapper}><img className={style.avatar} src={`./assets/${store.avatar}.svg`} alt="avatar"/></Link>
             </div>
         </nav>
     ))

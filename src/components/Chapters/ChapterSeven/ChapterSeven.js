@@ -30,7 +30,7 @@ const ChapterSeven = () => {
 
     const scroll = (e) => {
         const container = e.currentTarget.scrollLeft;
-        console.log(container);
+        //console.log(container);
         if (container > (height * 0) && container < (height * .2)) {
             setChapter(1)
             setSwipe(false)
