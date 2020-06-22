@@ -221,8 +221,8 @@ const ChapterSeven = () => {
                         </div>
                         <Button
                             action={() => {
-                                history.push("/detailedOverview")
                                 store.arts[0].levels[6].setDone();
+                                history.push("/detailedOverview");
                                 store.update();
                             }} 
                             button={"button"} 
