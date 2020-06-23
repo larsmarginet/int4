@@ -140,6 +140,9 @@ const ChapterFour = () => {
                     <p>Na al die tijd is het schilderij is nog steeds in handen van directeur Bosschaert. De inwoners van Kortrijk zijn de wanhoop nabij, er lijkt geen enkele manier te zijn om hun prachtwerk terug te krijgen.</p>
                 </div>
                 <div style={{position: "relative", height:"100%", width: (height * 3.5)}}>
+                    <div style={{position: "absolute", zIndex: 5, top: "4rem", left: "100rem", fontSize: "2.7rem", width: "60rem"}}>
+                        <p>Naast zijn passie voor kunst is Bosschaert een fervent gokker. De zaken in zijn museum gaan slecht. Er komen amper bezoekers en meneer Bosschaert dreigt al zijn geld te verliezen.Met zijn laatste centen gaat hij naar het casino. Meneer Bosschaert heeft altijd geluk gehad met zijn kunstwerken, waarom nu niet met zijn centen?</p>
+                    </div>
                     <div className={`${style.layer4} ${style.directeurWrapper}`} style={{height: "100%", bottom: 0, left: 0, transform: `translateX(${((posFirst/7)+1000)}px)`}}>
                         {directeurText ? <div style={{marginLeft: "40rem"}} className={`${style.textBalloonBig}`}>
                             <Button
@@ -191,7 +194,7 @@ const ChapterFour = () => {
                     <object className={style.layer1} data='./assets/poker.svg' aria-label="poker" style={{ top: 50, left: 0, height: "90%"}}></object>
                 </div>
                 <div style={{position: "relative", height:"100%", marginLeft: "15rem", width: (height * 4.3)}}>
-                    <div className={style.layer3} style={{top: "45%", right: 0}}><p style={{ fontSize: "3rem"}}>Een tijdje later las Willem I in de krant: </p></div>
+                    <div className={style.layer3} style={{top: "45%", right: 0}}><p style={{fontWeight: "bold", fontSize: "3rem"}}>Een tijdje later las Willem I in de krant: </p></div>
                     <object className={style.layer3} style={{bottom: 0, left: "20%", transform: `translateX(${posThird/10}px)`, height: "70%" }} data='./assets/menu.svg'aria-label='Thierry'></object>
                     <div className={style.layer2} style={{ bottom: 0, left: "25%",  transform: `translateX(${posThird/15}px)`, height: "90%"}} >
                         <Bar click={() => setModal(true)} />
